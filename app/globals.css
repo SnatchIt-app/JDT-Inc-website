@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 10 10 10;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Reusable utility: a hairline divider in the editorial style */
+.hairline {
+  @apply border-t border-black/10;
+}
+
+/* Display text treatment */
+.display {
+  @apply font-serif tracking-tightest;
+}
+
+/* Eyebrow label used across sections */
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-black/60;
+}
+
+.eyebrow::before {
+  content: "";
+  @apply inline-block h-px w-6 bg-black/40;
+}
+
+/* Link underline animation */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+/* Selection */
+::selection {
+  background: #0a0a0a;
+  color: #ffffff;
+}
