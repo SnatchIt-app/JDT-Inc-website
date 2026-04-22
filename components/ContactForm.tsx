@@ -1,21 +1,54 @@
 "use client";
 
 import { useState } from "react";
+import { BUDGET_RANGES, SERVICE_INTERESTS } from "@/lib/crm";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+/**
+ * Public contact form — submits to /api/contact which creates a Lead row
+ * in the CRM database. Fields: name, email, company, phone, service
+ * interest, estimated budget, message.
+ */
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
+    setErrorMsg(null);
 
-    // TODO: Wire up to Formspree, Resend, or a Next.js route handler.
-    // For now this is a frontend-only placeholder that simulates a submit.
-    await new Promise((r) => setTimeout(r, 700));
-    setStatus("sent");
-    (e.target as HTMLFormElement).reset();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") || ""),
+      email: String(formData.get("email") || ""),
+      company: String(formData.get("company") || ""),
+      phone: String(formData.get("phone") || ""),
+      serviceInterest: String(formData.get("serviceInterest") || ""),
+      estimatedBudget: String(formData.get("estimatedBudget") || ""),
+      message: String(formData.get("message") || ""),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body?.error ?? "Request failed");
+      }
+      setStatus("sent");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(
+        err instanceof Error ? err.message : "Something went wrong."
+      );
+    }
   }
 
   return (
@@ -24,7 +57,24 @@ export default function ContactForm() {
         <Field name="name" label="Name" required />
         <Field name="email" label="Email" type="email" required />
       </div>
-      <Field name="company" label="Company" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <Field name="company" label="Company" />
+        <Field name="phone" label="Phone" type="tel" />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <SelectField
+          name="serviceInterest"
+          label="Service interest"
+          options={SERVICE_INTERESTS as readonly string[]}
+          placeholder="Select a service"
+        />
+        <SelectField
+          name="estimatedBudget"
+          label="Estimated budget"
+          options={BUDGET_RANGES as readonly string[]}
+          placeholder="Select a range"
+        />
+      </div>
       <Field name="message" label="What are you looking to build?" textarea />
 
       <div className="flex items-center gap-6 pt-4">
@@ -48,7 +98,7 @@ export default function ContactForm() {
         )}
         {status === "error" && (
           <p className="text-sm text-red-600">
-            Something went wrong. Try again?
+            {errorMsg ?? "Something went wrong. Try again?"}
           </p>
         )}
       </div>
@@ -101,6 +151,50 @@ function Field({
       >
         {label}
       </label>
+    </div>
+  );
+}
+
+function SelectField({
+  name,
+  label,
+  options,
+  placeholder,
+}: {
+  name: string;
+  label: string;
+  options: readonly string[];
+  placeholder: string;
+}) {
+  return (
+    <div className="relative pt-6">
+      <label
+        htmlFor={name}
+        className="absolute left-0 top-0 text-xs uppercase tracking-[0.2em] text-black/50"
+      >
+        {label}
+      </label>
+      <select
+        id={name}
+        name={name}
+        defaultValue=""
+        className="w-full appearance-none bg-transparent border-b border-black/20 pb-3 text-base text-ink focus:border-ink focus:outline-none transition-colors pr-6"
+      >
+        <option value="" disabled>
+          {placeholder}
+        </option>
+        {options.map((o) => (
+          <option key={o} value={o}>
+            {o}
+          </option>
+        ))}
+      </select>
+      <span
+        aria-hidden
+        className="pointer-events-none absolute right-0 bottom-3 text-black/40"
+      >
+        ↓
+      </span>
     </div>
   );
 }

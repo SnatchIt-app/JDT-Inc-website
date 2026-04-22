@@ -7,6 +7,7 @@ export const site = {
   url: "https://jdtinc.com",
   location: "Miami, FL",
   email: "hello@jdtinc.com",
+  calendly: "https://calendly.com/gnvprod/30min",
   nav: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { site } from "@/lib/site";
 
 const sans = Inter({
@@ -43,6 +41,11 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Root layout — just the HTML shell, fonts, and global metadata.
+ * Navbar/Footer live in `app/(site)/layout.tsx` so that /admin routes
+ * can have their own chrome.
+ */
 export default function RootLayout({
   children,
 }: {
@@ -51,9 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body className="font-sans bg-paper text-ink antialiased">
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
