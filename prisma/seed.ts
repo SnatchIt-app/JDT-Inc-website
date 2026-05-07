@@ -19,7 +19,7 @@ function daysFromNow(days: number): Date {
 }
 
 async function main() {
-  const email = process.env.ADMIN_EMAIL ?? "admin@jdtinc.com";
+  const email = process.env.ADMIN_EMAIL ?? "admin@jdt-inc.com";
   const password = process.env.ADMIN_PASSWORD ?? "ChangeMe123!";
   const name = process.env.ADMIN_NAME ?? "JDT Admin";
 

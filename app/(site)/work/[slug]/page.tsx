@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
+import JsonLd from "@/components/JsonLd";
 import { caseStudies, getCaseStudy } from "@/lib/caseStudies";
+import { site } from "@/lib/site";
+import { articleSchema, breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 
 type Params = { params: { slug: string } };
 
@@ -14,9 +17,22 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Params): Metadata {
   const study = getCaseStudy(params.slug);
   if (!study) return { title: "Case study" };
+  const url = `${site.url}/work/${study.slug}`;
   return {
     title: `${study.client} — Case Study`,
     description: study.summary,
+    alternates: { canonical: `/work/${study.slug}` },
+    openGraph: {
+      title: `${study.client} — ${study.title}`,
+      description: study.summary,
+      url,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${study.client} — Case Study`,
+      description: study.summary,
+    },
   };
 }
 
@@ -27,8 +43,24 @@ export default function CaseStudyPage({ params }: Params) {
   const currentIndex = caseStudies.findIndex((c) => c.slug === study.slug);
   const next = caseStudies[(currentIndex + 1) % caseStudies.length];
 
+  const url = `${site.url}/work/${study.slug}`;
+  const graph = jsonLdGraph([
+    breadcrumbSchema([
+      { name: "Home", url: `${site.url}/` },
+      { name: "Work", url: `${site.url}/work` },
+      { name: study.client, url },
+    ]),
+    articleSchema({
+      url,
+      headline: study.title,
+      description: study.summary,
+      datePublished: `${study.year}-01-01`,
+    }),
+  ]);
+
   return (
     <>
+      <JsonLd data={graph} />
       <Section padded={false} className="pt-40 sm:pt-48 pb-20 sm:pb-28">
         <Link
           href="/work"

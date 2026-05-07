@@ -3,17 +3,31 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
+import JsonLd from "@/components/JsonLd";
 import { site } from "@/lib/site";
+import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
     "Let's build a growth system for your business. Book a strategy call with JDT Inc. or send us the details of your project.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: `Contact — ${site.name}`,
+    url: `${site.url}/contact`,
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: `${site.url}/` },
+    { name: "Contact", url: `${site.url}/contact` },
+  ]);
+
   return (
     <>
+      <JsonLd data={jsonLdGraph([breadcrumbs])} />
       {/* HERO */}
       <Section padded={false} className="pt-40 sm:pt-48 pb-20 sm:pb-24">
         <p className="eyebrow">Contact · {site.location}</p>

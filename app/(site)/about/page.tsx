@@ -1,17 +1,31 @@
 import type { Metadata } from "next";
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
+import JsonLd from "@/components/JsonLd";
 import { site } from "@/lib/site";
+import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "JDT Inc. is a Miami-based digital marketing agency pairing AI-driven strategy with senior creative and media execution.",
+    "JDT Inc. is a Miami-based AI-powered marketing and growth systems agency. Senior strategy, editorial creative, and AI-assisted execution.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: `About — ${site.name}`,
+    url: `${site.url}/about`,
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: `${site.url}/` },
+    { name: "About", url: `${site.url}/about` },
+  ]);
+
   return (
     <>
+      <JsonLd data={jsonLdGraph([breadcrumbs])} />
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <p className="eyebrow">About — {site.location}</p>
         <h1 className="display mt-8 text-hero max-w-5xl">

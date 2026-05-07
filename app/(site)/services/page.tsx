@@ -1,17 +1,33 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
+import JsonLd from "@/components/JsonLd";
 import { services } from "@/lib/services";
+import { site } from "@/lib/site";
+import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Brand strategy, content, funnels, visual design, performance advertising, and development — the full stack of services JDT Inc. brings to ambitious brands.",
+    "Meta Ads, Google Ads, AI automation, content production, creative direction, lead generation, CRM systems, and funnel optimization — the full stack JDT Inc. brings to ambitious brands.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: `Services — ${site.name}`,
+    url: `${site.url}/services`,
+    type: "website",
+  },
 };
 
 export default function ServicesPage() {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: `${site.url}/` },
+    { name: "Services", url: `${site.url}/services` },
+  ]);
+
   return (
     <>
+      <JsonLd data={jsonLdGraph([breadcrumbs])} />
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <p className="eyebrow">Services</p>
         <h1 className="display mt-8 text-hero max-w-5xl">
@@ -28,17 +44,27 @@ export default function ServicesPage() {
       <Section padded={false} className="border-t border-black/10">
         <div className="divide-y divide-black/10">
           {services.map((s, i) => (
-            <div
+            <Link
               key={s.slug}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-10 py-16 sm:py-20"
+              href={`/services/${s.slug}`}
+              className="group grid grid-cols-1 lg:grid-cols-12 gap-10 py-16 sm:py-20 hover:bg-paper-muted/60 transition-colors duration-500"
+              aria-label={`${s.title} — service detail`}
             >
-              <div className="lg:col-span-4">
-                <p className="text-xs uppercase tracking-[0.2em] text-black/50">
-                  0{i + 1}
-                </p>
-                <h2 className="display mt-6 text-4xl sm:text-5xl leading-[1.02]">
-                  {s.title}
-                </h2>
+              <div className="lg:col-span-4 flex items-start justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-black/50">
+                    0{i + 1}
+                  </p>
+                  <h2 className="display mt-6 text-4xl sm:text-5xl leading-[1.02]">
+                    {s.title}
+                  </h2>
+                </div>
+                <span
+                  className="hidden lg:inline-flex shrink-0 items-center justify-center w-10 h-10 rounded-full border border-black/15 text-ink transition-all duration-500 ease-out-expo group-hover:translate-x-1 group-hover:bg-ink group-hover:text-paper"
+                  aria-hidden
+                >
+                  →
+                </span>
               </div>
 
               <div className="lg:col-span-5">
@@ -65,7 +91,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </Section>

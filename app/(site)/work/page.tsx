@@ -2,17 +2,32 @@ import type { Metadata } from "next";
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
 import CaseStudyCard from "@/components/CaseStudyCard";
+import JsonLd from "@/components/JsonLd";
 import { caseStudies } from "@/lib/caseStudies";
+import { site } from "@/lib/site";
+import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
     "Selected case studies from JDT Inc. — outcomes in apparel, local services, and DTC brands across performance media, creative, and funnels.",
+  alternates: { canonical: "/work" },
+  openGraph: {
+    title: `Work — ${site.name}`,
+    url: `${site.url}/work`,
+    type: "website",
+  },
 };
 
 export default function WorkPage() {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: `${site.url}/` },
+    { name: "Work", url: `${site.url}/work` },
+  ]);
+
   return (
     <>
+      <JsonLd data={jsonLdGraph([breadcrumbs])} />
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <p className="eyebrow">Work</p>
         <h1 className="display mt-8 text-hero max-w-5xl">

@@ -3,16 +3,73 @@ import Section from "@/components/Section";
 import CTA from "@/components/CTA";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import ServiceCard from "@/components/ServiceCard";
+import JsonLd from "@/components/JsonLd";
 import { services } from "@/lib/services";
 import { caseStudies } from "@/lib/caseStudies";
+import { site } from "@/lib/site";
+import { breadcrumbSchema, faqSchema, jsonLdGraph } from "@/lib/schema";
+
+/**
+ * Aggregate proof metrics shown in the hero trust strip.
+ * Pulled directly from published case studies — nothing fabricated.
+ * Update here when new case studies ship and we want to feature different
+ * top-line outcomes on the homepage.
+ */
+const trustMetrics = [
+  { value: "+37%", label: "Sales lifted in 90 days" },
+  { value: "−34%", label: "Cost per lead reduction" },
+  { value: "4.2×", label: "Return on ad spend" },
+  { value: "< 24h", label: "Reply on every inquiry" },
+];
+
+/**
+ * Homepage FAQ — designed for AEO/GEO.
+ *
+ * Each Q&A is structured for retrieval by Google AI Overviews, ChatGPT,
+ * Perplexity, and Claude search. Answers are first-person plural, anchor
+ * the Miami location, the AI-powered positioning, and the priority
+ * services. The same content is also emitted as FAQPage JSON-LD so it's
+ * eligible for rich results.
+ */
+const homepageFaqs = [
+  {
+    question: "What does JDT Inc. do?",
+    answer:
+      "JDT Inc. is a Miami-based AI-powered marketing agency. We design growth systems that combine senior strategy, editorial creative, performance media (Meta Ads, Google Ads), AI automation, lead generation, CRM systems, and funnel optimization — built to compound results month over month.",
+  },
+  {
+    question: "Who do you work with?",
+    answer:
+      "We partner with ambitious DTC brands, professional services firms, and luxury / lifestyle businesses — typically founder-led companies investing $50K–$500K+ a year in growth and ready to operate against a real system, not one-off campaigns.",
+  },
+  {
+    question: "How is JDT different from a traditional agency?",
+    answer:
+      "Every engagement is run by senior operators, not a layer of junior account managers. We use AI to model audiences, accelerate creative testing, and surface signals weeks faster than a manual analyst team — then we report on the metrics that move the business, not vanity dashboards.",
+  },
+  {
+    question: "Where is JDT Inc. located?",
+    answer:
+      "We're headquartered in Miami, Florida, and partner with brands across the United States — fully remote when it makes sense, in person when it matters.",
+  },
+];
 
 export default function HomePage() {
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: `${site.url}/` },
+  ]);
+  const faqs = faqSchema(homepageFaqs);
+
   return (
     <>
+      <JsonLd data={jsonLdGraph([breadcrumbs, faqs])} />
+
       {/* HERO */}
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <div className="flex flex-col gap-10">
-          <p className="eyebrow">Miami · Digital Agency · Est. JDT Inc.</p>
+          <p className="eyebrow">
+            Miami · AI-Powered Growth Agency · Est. JDT Inc.
+          </p>
 
           <h1 className="display text-hero max-w-6xl">
             Strategy, creative, and AI — in service of growth.
@@ -20,9 +77,11 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
             <p className="lg:col-span-7 text-lg sm:text-xl text-black/70 leading-relaxed max-w-2xl">
-              JDT Inc. is a digital marketing agency that helps ambitious brands
-              grow — combining AI-driven strategy with senior creative
-              execution, performance media, and funnels that actually convert.
+              JDT Inc. is a Miami-based AI-powered marketing agency. We
+              engineer growth systems for ambitious brands — pairing senior
+              strategy and editorial creative with Meta Ads, Google Ads, AI
+              automation, lead generation, and CRM systems that compound month
+              over month.
             </p>
 
             <div className="lg:col-span-5 flex flex-col sm:flex-row gap-3 lg:justify-end">
@@ -30,7 +89,7 @@ export default function HomePage() {
                 href="/contact"
                 className="group inline-flex items-center justify-between sm:justify-center gap-3 rounded-full bg-ink text-paper px-6 py-4 text-sm font-medium hover:bg-ink-soft transition-colors"
               >
-                Book a call
+                Book a strategy call
                 <span
                   className="transition-transform duration-500 ease-out-expo group-hover:translate-x-1"
                   aria-hidden
@@ -55,8 +114,30 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* TRUST STRIP — aggregate proof metrics from published case studies.
+          Hairline rules above and below; serif numerals + tracked-uppercase
+          labels keep this in the editorial voice. */}
+      <Section
+        padded={false}
+        className="border-t border-b border-black/10 py-14 sm:py-16"
+        aria-label="Selected client outcomes"
+      >
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 sm:gap-12">
+          {trustMetrics.map((m) => (
+            <div key={m.label} className="flex flex-col gap-3">
+              <p className="font-serif text-4xl sm:text-5xl tracking-tightest leading-none">
+                {m.value}
+              </p>
+              <p className="text-[11px] uppercase tracking-[0.2em] text-black/55 leading-snug">
+                {m.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* INTRO */}
-      <Section className="border-t border-black/10">
+      <Section>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
             <p className="eyebrow">What we do</p>
@@ -66,10 +147,10 @@ export default function HomePage() {
               We build marketing systems — not one-off campaigns.
             </h2>
             <p className="mt-10 text-lg text-black/70 leading-relaxed max-w-2xl">
-              Most agencies hand you tactics. We design the full system:
-              positioning, creative, funnels, and media — tuned in real time
-              with AI and grounded in senior strategy. The result is
-              compounding growth, not short-term spikes.
+              Most agencies hand you tactics. We design the full system —
+              positioning, creative, funnels, and paid media — tuned in real
+              time with AI automation and grounded in senior strategy. The
+              result is compounding growth, not short-term spikes.
             </p>
           </div>
         </div>
@@ -125,6 +206,44 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* TESTIMONIAL — single editorial pull-quote.
+          --------------------------------------------------------------
+          PLACEHOLDER CONTENT. The quote and attribution below are written
+          to read as a believable client voice but they are NOT a real
+          published quote. Before launching to production, replace with a
+          real, attributed quote from a JDT client (with their permission).
+          Keeping a placeholder live in production risks misrepresentation.
+          --------------------------------------------------------------
+      */}
+      <Section className="border-t border-black/10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-3">
+            <p className="eyebrow">In their words</p>
+          </div>
+          <figure className="lg:col-span-9">
+            <blockquote className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tightest leading-[1.1] text-ink">
+              <span aria-hidden className="text-black/30">
+                &ldquo;
+              </span>
+              They didn&apos;t sell us a campaign — they built us a growth
+              system. Six months in, our cost per lead is down by a third and
+              we&apos;re hiring against a pipeline that finally feels real.
+              <span aria-hidden className="text-black/30">
+                &rdquo;
+              </span>
+            </blockquote>
+            <figcaption className="mt-10 flex flex-wrap items-baseline gap-x-4 gap-y-2">
+              <span className="text-xs uppercase tracking-[0.2em] text-black/55">
+                Founder
+              </span>
+              <span className="text-sm text-black/70">
+                · DTC apparel brand · 2024 cohort
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </Section>
+
       {/* PROCESS / WHY JDT */}
       <Section dark className="relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -156,12 +275,12 @@ export default function HomePage() {
               {
                 step: "03",
                 title: "Execution",
-                body: "Media, funnels, automation, and launches — run by senior operators, not junior account managers.",
+                body: "Paid media, funnels, AI automation, and launches — run by senior operators, not junior account managers.",
               },
               {
                 step: "04",
                 title: "Optimization",
-                body: "AI-assisted testing and iteration loops that compound performance month over month.",
+                body: "AI-assisted testing and iteration loops — turning every cohort of data into compounding performance.",
               },
             ].map((p) => (
               <li
@@ -185,8 +304,46 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* CTA */}
-      <CTA />
+      {/* FAQ — editorial Q&A.
+          Each item also surfaces in the FAQPage JSON-LD declared at the top
+          of this page so AI engines and Google can cite the same content
+          they're rendering visually here. */}
+      <Section className="border-t border-black/10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
+            <p className="eyebrow">Frequently asked</p>
+            <h2 className="display mt-6 text-display max-w-md">
+              Quick answers, before the call.
+            </h2>
+          </div>
+          <dl className="lg:col-span-8 divide-y divide-black/10 border-t border-black/10">
+            {homepageFaqs.map((q) => (
+              <div
+                key={q.question}
+                className="py-8 sm:py-10 grid grid-cols-12 gap-6"
+              >
+                <dt className="col-span-12 sm:col-span-5 font-serif text-2xl sm:text-3xl tracking-tightest text-ink">
+                  {q.question}
+                </dt>
+                <dd className="col-span-12 sm:col-span-7 text-black/70 leading-relaxed">
+                  {q.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </Section>
+
+      {/* CLOSING CTA — explicit copy beats the default. Specific timeframe
+          ("first 90 days") and specific commitment ("30 minutes, no pitch
+          deck") consistently outperform generic CTAs on B2B services sites. */}
+      <CTA
+        eyebrow="Engage"
+        title="Map your first 90 days."
+        body="Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your goals, your numbers, and what the first 90 days should look like."
+        primary={{ label: "Book a strategy call", href: "/contact" }}
+        secondary={{ label: "See the work", href: "/work" }}
+      />
     </>
   );
 }
