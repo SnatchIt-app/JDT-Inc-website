@@ -48,7 +48,7 @@ export default function LocationsIndex() {
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
           JDT Inc. is headquartered in Miami, Florida. We work across the
-          city's primary commercial neighborhoods — and partner with
+          city&apos;s primary commercial neighborhoods — and partner with
           ambitious brands across the United States from our base in the
           Magic City.
         </p>
