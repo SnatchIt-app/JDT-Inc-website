@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/caseStudies";
 import { cn } from "@/lib/cn";
@@ -13,6 +14,13 @@ type Props = {
 
 export default function CaseStudyCard({ study, index = 0, size = "md" }: Props) {
   const dark = study.cover === "ink";
+  const hasHero = Boolean(study.heroImage);
+
+  // Per-case-study accent — used as a hairline indicator only,
+  // never as a flood color. Falls back to ink when no accent is set.
+  const accentRule = study.accent?.rule ?? (dark ? "border-paper/20" : "border-gray-200");
+  const accentText = study.accent?.text ?? (dark ? "text-paper/60" : "text-gray-500");
+  const accentDot = study.accent?.bg;
 
   return (
     <motion.article
@@ -32,17 +40,54 @@ export default function CaseStudyCard({ study, index = 0, size = "md" }: Props) 
             "relative overflow-hidden rounded-2xl border",
             dark
               ? "bg-ink text-paper border-ink"
-              : "bg-paper-muted text-ink border-black/5",
-            size === "lg" ? "aspect-[16/10]" : "aspect-[4/3]"
+              : "bg-paper-muted text-ink border-gray-200/70",
+            size === "lg" ? "aspect-[16/10]" : "aspect-[4/3]",
           )}
         >
+          {/* Hero image — sits behind the editorial overlay. Falls back to
+              the existing flat tint when no asset is present. */}
+          {hasHero && (
+            <Image
+              src={study.heroImage as string}
+              alt={`${study.client} — ${study.industry}`}
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-700"
+              priority={index === 0}
+            />
+          )}
+
+          {/* Soft top-to-bottom gradient so type stays legible over imagery. */}
+          {hasHero && (
+            <div
+              aria-hidden
+              className={cn(
+                "absolute inset-0",
+                dark
+                  ? "bg-gradient-to-b from-ink/55 via-ink/30 to-ink/85"
+                  : "bg-gradient-to-b from-paper/30 via-transparent to-paper/85",
+              )}
+            />
+          )}
+
+          {/* Per-case-study accent dot (top-left) — restrained brand cue. */}
+          {accentDot && (
+            <span
+              aria-hidden
+              className={cn(
+                "absolute top-6 left-6 sm:top-8 sm:left-8 inline-block w-2 h-2 rounded-full",
+                accentDot,
+              )}
+            />
+          )}
+
           <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-between">
             <div className="flex items-start justify-between">
               <div>
                 <p
                   className={cn(
                     "text-xs uppercase tracking-[0.2em]",
-                    dark ? "text-paper/60" : "text-black/50"
+                    dark ? "text-paper/70" : "text-gray-600",
                   )}
                 >
                   {study.industry}
@@ -50,7 +95,7 @@ export default function CaseStudyCard({ study, index = 0, size = "md" }: Props) 
                 <p
                   className={cn(
                     "mt-2 font-serif text-3xl sm:text-4xl tracking-tightest",
-                    dark ? "text-paper" : "text-ink"
+                    dark ? "text-paper" : "text-ink",
                   )}
                 >
                   {study.client}
@@ -59,7 +104,7 @@ export default function CaseStudyCard({ study, index = 0, size = "md" }: Props) 
               <span
                 className={cn(
                   "text-xs uppercase tracking-[0.2em]",
-                  dark ? "text-paper/60" : "text-black/50"
+                  dark ? "text-paper/70" : "text-gray-600",
                 )}
               >
                 {study.year}
@@ -72,14 +117,17 @@ export default function CaseStudyCard({ study, index = 0, size = "md" }: Props) 
                   <div
                     key={m.label}
                     className={cn(
-                      "border-t pt-3",
-                      dark ? "border-paper/20" : "border-black/15"
+                      "border-t pt-3 transition-colors",
+                      // Use accent rule on hover for the per-study cue.
+                      study.accent
+                        ? `${dark ? "border-paper/20" : "border-gray-200"} group-hover:${study.accent.rule}`
+                        : (dark ? "border-paper/20" : "border-gray-200"),
                     )}
                   >
                     <p
                       className={cn(
                         "font-serif text-2xl sm:text-3xl tracking-tightest",
-                        dark ? "text-paper" : "text-ink"
+                        dark ? "text-paper" : "text-ink",
                       )}
                     >
                       {m.value}
@@ -87,7 +135,7 @@ export default function CaseStudyCard({ study, index = 0, size = "md" }: Props) 
                     <p
                       className={cn(
                         "mt-1 text-[11px] uppercase tracking-[0.18em]",
-                        dark ? "text-paper/60" : "text-black/50"
+                        dark ? "text-paper/65" : "text-gray-500",
                       )}
                     >
                       {m.label}
@@ -96,11 +144,11 @@ export default function CaseStudyCard({ study, index = 0, size = "md" }: Props) 
                 ))}
               </div>
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-4">
                 <p
                   className={cn(
                     "text-sm max-w-md",
-                    dark ? "text-paper/80" : "text-black/70"
+                    dark ? "text-paper/85" : "text-gray-700",
                   )}
                 >
                   {study.title}
@@ -109,8 +157,10 @@ export default function CaseStudyCard({ study, index = 0, size = "md" }: Props) 
                   className={cn(
                     "shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-500 ease-out-expo group-hover:translate-x-1",
                     dark
-                      ? "border-paper/30 text-paper"
-                      : "border-black/20 text-ink"
+                      ? "border-paper/30 text-paper group-hover:border-paper"
+                      : "border-gray-300 text-ink group-hover:border-ink",
+                    // On hover, lift the arrow border to the accent color.
+                    study.accent && `group-hover:${study.accent.rule}`,
                   )}
                   aria-hidden
                 >

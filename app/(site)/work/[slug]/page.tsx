@@ -4,6 +4,7 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
 import JsonLd from "@/components/JsonLd";
+import EditorialImage from "@/components/EditorialImage";
 import { caseStudies, getCaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
 import {
@@ -103,18 +104,33 @@ export default function CaseStudyPage({ params }: Params) {
         </div>
       </Section>
 
-      {/* Metrics band */}
+      {/* Hero image — only renders when the case study supplies one. */}
+      {study.heroImage && (
+        <Section padded={false} className="border-t border-gray-200/60">
+          <EditorialImage
+            src={study.heroImage}
+            alt={`${study.client} — ${study.title}`}
+            aspect="16/10"
+            full
+            priority
+          />
+        </Section>
+      )}
+
+      {/* Metrics band — accent rule color when set, otherwise paper hairline. */}
       <Section dark padded={false} className="py-16 sm:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
           {study.metrics.map((m) => (
             <div
               key={m.label}
-              className="border-t border-paper/20 pt-6"
+              className={`border-t pt-6 ${study.accent?.rule ?? "border-paper/20"}`}
             >
               <p className="font-serif text-5xl sm:text-6xl tracking-tightest">
                 {m.value}
               </p>
-              <p className="mt-3 text-xs uppercase tracking-[0.2em] text-paper/60">
+              <p
+                className={`mt-3 text-xs uppercase tracking-[0.2em] ${study.accent?.text ?? "text-paper/60"}`}
+              >
                 {m.label}
               </p>
             </div>
@@ -252,6 +268,31 @@ export default function CaseStudyPage({ params }: Params) {
                 </span>
               </figcaption>
             </figure>
+          </div>
+        </Section>
+      )}
+
+      {/* Gallery — additional engagement visuals (creative, dashboards,
+          on-set). Only renders when the case study supplies images. */}
+      {study.gallery && study.gallery.length > 0 && (
+        <Section className="border-t border-gray-200/60 bg-gray-50">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+            <div>
+              <p className="eyebrow">Visuals</p>
+              <h2 className="display mt-6 text-display max-w-3xl">
+                In production.
+              </h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {study.gallery.map((src, i) => (
+              <EditorialImage
+                key={src}
+                src={src}
+                alt={`${study.client} — visual ${i + 1}`}
+                aspect="4/5"
+              />
+            ))}
           </div>
         </Section>
       )}

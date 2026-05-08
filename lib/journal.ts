@@ -268,7 +268,7 @@ export const articles: Article[] = [
     topic: "ai-marketing",
     isPillar: true,
     publishedAt: "2026-05-07",
-    readingMinutes: 9,
+    readingMinutes: 7,
     tags: ["AI marketing", "Operations", "Field notes"],
     excerpt:
       "AI compresses the slow parts of marketing — research, variant generation, reporting — and leaves the judgment work intact. Here's what that actually looks like in production.",
@@ -276,7 +276,7 @@ export const articles: Article[] = [
       metaTitle:
         "What AI Actually Changes About Marketing — JDT Inc.",
       metaDescription:
-        "AI compresses the slow parts of marketing — audience research, variant generation, reporting — and leaves the judgment work to senior operators. Field notes from JDT Inc.",
+        "AI compresses the slow parts of marketing — research, variant generation, reporting. Senior operators still own the judgment. Field notes from JDT Inc.",
       primaryKeyword: "AI marketing",
       secondaryKeywords: [
         "AI-powered marketing",
@@ -313,6 +313,10 @@ export const articles: Article[] = [
         type: "p",
         text: "The output isn't a report; it's a working document the creative team uses to brief variants. The compression is real — what used to be a six-week research engagement now ships in five days. The quality is not just preserved, it's better, because the model reads everything instead of sampling.",
       },
+      {
+        type: "p",
+        text: "What's harder to express is the second-order effect. When research stops being a six-week capital expense and becomes a Tuesday afternoon, the team stops rationing it. We re-cluster audiences every month. We rerun the call-transcript pipeline whenever a campaign underperforms. The cost of curiosity drops, and curiosity is what separates senior creative from competent creative.",
+      },
       { type: "h3", text: "2. Variant generation" },
       {
         type: "p",
@@ -322,6 +326,10 @@ export const articles: Article[] = [
         type: "p",
         text: "Used well, AI here is a pool-widener. We write a brand-voice constraint document, generate 10× the testing pool, and then a senior writer culls. The writer's job changes — less typing, more judgment — but it doesn't disappear. The agencies that ship raw AI output to clients are the ones whose work has noticeably degraded over the last 18 months.",
       },
+      {
+        type: "p",
+        text: "The taste filter is the entire game in this layer. A model can produce a hundred plausible headlines; only a writer who has shipped against this audience can spot the three that read like the brand and the ninety-seven that read like a competitor. Treating that filtering capacity as the bottleneck — and protecting it — is what keeps an AI-assisted creative system editorial rather than industrial.",
+      },
       { type: "h3", text: "3. Measurement and anomaly detection" },
       {
         type: "p",
@@ -330,6 +338,10 @@ export const articles: Article[] = [
       {
         type: "p",
         text: "This layer is unglamorous. It's also where AI's compounding return on time investment is highest, because the work happens whether the team is awake or not.",
+      },
+      {
+        type: "p",
+        text: "There is a quieter benefit too. Anomaly-detection systems force a discipline that most agencies skip — the discipline of defining, in writing, what normal looks like for the account. CPMs in this band, conversion rates in that band, audience saturation curves shaped this way. Once normal is codified, deviation is detectable. Once deviation is detectable, the team stops arguing about whether something is broken and starts deciding what to do about it.",
       },
       { type: "divider" },
       { type: "h2", text: "Where AI quietly fails", id: "failure-modes" },
@@ -382,6 +394,10 @@ export const articles: Article[] = [
         type: "p",
         text: "There is also no badge that says 'AI-powered' anywhere on the work, because the AI is upstream of the output, not in it. Clients see better creative, faster experiments, cleaner reporting, and a meaningfully smaller gap between what they decide on Monday and what's live by Friday. They don't see the model.",
       },
+      {
+        type: "p",
+        text: "The shift is cultural before it is technical. Teams that were used to month-long planning cycles start operating in weeks. Teams that were used to weekly reviews start running a daily loop. The pace is set by the slowest review, not the fastest model — and the slowest review is almost always still a senior operator deciding what's worth doing. The model just makes more options available for that decision.",
+      },
       { type: "h2", text: "How to evaluate an AI marketing agency" },
       {
         type: "p",
@@ -399,6 +415,10 @@ export const articles: Article[] = [
       {
         type: "p",
         text: "An agency that can answer all three concretely — with named workflows, named reviewers, named failure modes — is operating an AI-native practice. An agency that answers in adjectives is selling the same retainer with new vocabulary.",
+      },
+      {
+        type: "p",
+        text: "It is worth saying plainly: the agencies that win the next decade will not be the ones with the loudest AI marketing. They will be the ones whose internal operations are quietly different. Most clients will never read the system prompt that drafts their performance digest, never see the audience-clustering pipeline that produced this quarter's creative brief, never know which of their inbound leads were scored by a model trained on their own closed-won data. They will only notice that the work is sharper, the cycles are tighter, and the senior people on the engagement seem to have more time for the questions that actually matter.",
       },
       { type: "divider" },
       {

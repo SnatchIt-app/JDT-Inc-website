@@ -6,6 +6,20 @@ const config: Config = {
     "./components/**/*.{ts,tsx}",
     "./lib/**/*.{ts,tsx}",
   ],
+  // Per-case-study accent classes are stored as strings inside data
+  // files (lib/caseStudies.ts) — Tailwind's JIT scanner can't always
+  // detect them as literal class names. Safelist the canonical set so
+  // the build always includes them.
+  safelist: [
+    "border-snatch",
+    "text-snatch",
+    "bg-snatch",
+    "group-hover:border-snatch",
+    "border-xperts",
+    "text-xperts",
+    "bg-xperts",
+    "group-hover:border-xperts",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -33,6 +47,28 @@ const config: Config = {
           DEFAULT: "#8a7c6a",
           soft: "#b8ad9d",
         },
+        // Editorial gray scale, slightly warm-tinted so it sits inside
+        // the cream/ink palette without reading as cold. Used for
+        // hairline rules, secondary type, dividers, and the new gray-
+        // muted section backgrounds.
+        gray: {
+          50: "#f7f5f1",
+          100: "#ecebe6",
+          200: "#dcdad3",
+          300: "#bfbcb3",
+          400: "#9a968b",
+          500: "#75716a",
+          600: "#5a5751",
+          700: "#403e3a",
+          800: "#272624",
+          900: "#161513",
+        },
+        // Per-case-study brand accents. NOT brand colors of JDT — these
+        // surface only on the relevant case study card / page hairlines
+        // so each engagement reads in its own register without breaking
+        // the editorial chrome.
+        snatch: { DEFAULT: "#D90429", soft: "#F0586F" },
+        xperts: { DEFAULT: "#0F8B8D", soft: "#5BB1B3" },
       },
       letterSpacing: {
         tightest: "-0.04em",

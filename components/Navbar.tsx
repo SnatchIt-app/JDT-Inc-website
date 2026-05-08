@@ -100,7 +100,7 @@ export default function Navbar() {
           className="inline-flex items-center gap-3 text-ink"
           aria-label={`${site.name} home`}
         >
-          <Logo variant="mark" size={26} />
+          <Logo variant="mark" size={28} onPaper />
           <span className="hidden sm:inline text-sm font-medium tracking-[0.18em] uppercase">
             {site.shortName}
           </span>

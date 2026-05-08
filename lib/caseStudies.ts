@@ -27,6 +27,21 @@ export type CaseStudy = {
   title: string;
   summary: string;
   cover: string; // background treatment id for styling
+  /**
+   * Per-case-study accent class fragments. Keep them as full Tailwind
+   * class strings so they're literal in the source — the JIT compiler
+   * needs to see the full class name to include it in the build.
+   * Example: { rule: "border-snatch", text: "text-snatch", bg: "bg-snatch" }
+   * When omitted, defaults to ink/black.
+   */
+  accent?: { rule: string; text: string; bg: string };
+  /**
+   * Image paths under /public. Drop the file at the matching path in
+   * /public and it appears automatically. When the path is absent, the
+   * image slot is gracefully omitted — no broken-image icon.
+   */
+  heroImage?: string;
+  gallery?: string[];
   metrics: Metric[];
   /** Display names for the services rendered in the sidebar. */
   services: string[];
@@ -66,6 +81,13 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "We paired JDT Inc.'s AI-driven audience modeling with a full inbound funnel to launch 22NatiON's new collection across channels — targeting a fitness-focused female buyer with a narrative built to convert.",
     cover: "ink",
+    // 22nation stays in the editorial ink/cream palette — no accent.
+    heroImage: "/work/22nation/cover.png",
+    gallery: [
+      "/work/22nation/visual-01.png",
+      "/work/22nation/visual-02.png",
+      "/work/22nation/visual-03.png",
+    ],
     metrics: [
       { value: "+26%", label: "Conversion rate" },
       { value: "Ongoing", label: "Engagement" },
@@ -131,6 +153,9 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "For Carpet Cleaning Xperts, we ran a precision acquisition campaign built around new homeowners and local commercial offices — with AI-driven targeting handling the heavy lifting.",
     cover: "light",
+    accent: { rule: "border-xperts", text: "text-xperts", bg: "bg-xperts" },
+    heroImage: "/work/carpet-cleaning-xperts/cover.png",
+    gallery: ["/work/carpet-cleaning-xperts/visual-01.png"],
     metrics: [
       { value: "+28%", label: "Revenue in 60 days" },
       { value: "Bilingual", label: "Creative across EN / ES" },
@@ -184,6 +209,9 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "JDT Inc. operates the full marketing ecosystem for Snatch It — branding, art direction, the website, Meta Ads, content, and the systems that tie them together. Built for a nightlife marketplace where the audience is fast-moving, image-led, and demands a real point of view.",
     cover: "ink",
+    accent: { rule: "border-snatch", text: "text-snatch", bg: "bg-snatch" },
+    heroImage: "/work/snatch-it/cover.png",
+    gallery: ["/work/snatch-it/logo.png"],
     metrics: [
       { value: "Full-stack", label: "Marketing engagement" },
       { value: "EN / ES", label: "Bilingual rollout" },
