@@ -11,7 +11,14 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Meta Ads, Google Ads, AI automation, content production, creative direction, lead generation, CRM systems, and funnel optimization — the full stack JDT Inc. brings to ambitious brands.",
-  alternates: { canonical: "/services" },
+  alternates: {
+    canonical: "/services",
+    languages: {
+      "en-US": "/services",
+      "es-US": "/es/services",
+      "x-default": "/services",
+    },
+  },
   openGraph: {
     title: `Services — ${site.name}`,
     url: `${site.url}/services`,

@@ -28,13 +28,13 @@ export default async function OGImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#ffffff",
-          color: "#0a0a0a",
+          backgroundColor: "#faf8f4",
+          color: "#0c0a09",
           padding: "72px 80px",
           fontFamily: "Georgia, serif",
         }}
       >
-        {/* Top row: brand mark + location */}
+        {/* Top row: framed JDT mark + location */}
         <div
           style={{
             display: "flex",
@@ -44,11 +44,41 @@ export default async function OGImage() {
             fontSize: 18,
             letterSpacing: "0.16em",
             textTransform: "uppercase",
-            color: "#0a0a0a",
+            color: "#0c0a09",
           }}
         >
-          <span>{site.name}</span>
-          <span style={{ color: "rgba(10,10,10,0.55)" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              border: "2px solid #0c0a09",
+              padding: "10px 18px",
+              gap: 2,
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "Georgia, serif",
+                fontWeight: 700,
+                fontSize: 26,
+                letterSpacing: 1,
+              }}
+            >
+              JDT
+            </span>
+            <span
+              style={{
+                fontFamily: "system-ui, sans-serif",
+                fontSize: 9,
+                letterSpacing: 3,
+              }}
+            >
+              INC.
+            </span>
+          </div>
+          <span style={{ color: "rgba(12,10,9,0.55)" }}>
             {site.location}
           </span>
         </div>

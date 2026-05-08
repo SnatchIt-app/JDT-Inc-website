@@ -1,9 +1,9 @@
 /**
- * Favicon — minimal "J" mark in the JDT ink palette.
+ * Favicon — square architectural JDT mark on ink background.
  *
- * Generated at build time via ImageResponse so we don't have to commit
- * binary assets. Can be replaced later with a custom logo file in /public
- * without changing any other code.
+ * Generated at build time via ImageResponse so we don't ship a binary
+ * PNG. Renders crisp at the 32px tab size; the same composition is
+ * used at 180px in apple-icon.tsx for higher-DPI surfaces.
  */
 
 import { ImageResponse } from "next/og";
@@ -19,19 +19,40 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          backgroundColor: "#0a0a0a",
+          backgroundColor: "#0c0a09",
           color: "#ffffff",
-          fontSize: 22,
-          fontFamily: "Georgia, 'Times New Roman', serif",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          letterSpacing: "-0.04em",
+          padding: 3,
         }}
       >
-        J
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "1.5px solid #ffffff",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 1,
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontWeight: 700,
+              fontSize: 12,
+              lineHeight: 1,
+              letterSpacing: 0.5,
+            }}
+          >
+            JDT
+          </span>
+        </div>
       </div>
     ),
-    { ...size }
+    { ...size },
   );
 }

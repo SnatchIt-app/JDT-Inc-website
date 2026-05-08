@@ -21,6 +21,7 @@ import {
   articles,
   getArticle,
   getArticlesByTopic,
+  isLive,
   topics,
 } from "@/lib/journal";
 import { site } from "@/lib/site";
@@ -33,7 +34,10 @@ import {
 type Params = { params: { slug: string } };
 
 export function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }));
+  // Only generate static pages for live articles. Drafts and future-
+  // scheduled posts won't be in the build output, so even direct URL
+  // access returns the 404 page.
+  return articles.filter((a) => isLive(a)).map((a) => ({ slug: a.slug }));
 }
 
 export function generateMetadata({ params }: Params): Metadata {
@@ -65,7 +69,9 @@ export function generateMetadata({ params }: Params): Metadata {
 
 export default function ArticlePage({ params }: Params) {
   const a = getArticle(params.slug);
-  if (!a) notFound();
+  // Hard gate: drafts and future-dated scheduled posts 404 even if
+  // someone has the URL. This complements generateStaticParams above.
+  if (!a || !isLive(a)) notFound();
 
   const topic = topics.find((t) => t.slug === a.topic);
   const related = getArticlesByTopic(a.topic)

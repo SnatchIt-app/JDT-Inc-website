@@ -390,6 +390,103 @@ curl -s http://localhost:3000/api/cron/follow-ups \
 3. Check **Vercel → Crons** — you'll see both jobs listed. Each invocation's response body is viewable in the log.
 4. You can also trigger a run manually from the Cron page ("Run now") without leaving Vercel.
 
+## MCP server — Cowork / Claude integration
+
+The CRM exposes itself as a **Model Context Protocol (MCP)** server at
+`POST /api/mcp` so Cowork (and Claude.ai with custom connectors) can read
+and act on leads directly. No third-party CRM, no separate service —
+the JDT Next.js app is the MCP server.
+
+### Endpoint
+
+```
+POST https://<your-domain>/api/mcp
+Authorization: Bearer $MCP_SECRET
+Content-Type: application/json
+```
+
+The endpoint speaks plain JSON-RPC 2.0. It is **stateless** — every request
+is independent — so it works on Vercel without session storage. Auth is a
+static bearer token (same pattern as `CRON_SECRET`); leave `MCP_SECRET`
+blank to disable the endpoint entirely.
+
+### Tools exposed
+
+All tools wrap the corresponding function in `lib/leads.ts`. `deleteLead`
+is **not** exposed — destructive operations have to happen in the admin UI.
+
+| Tool | What it does |
+|---|---|
+| `list_leads` | Filter by status / priority / source / temperature / free-text / date range. Returns up to 200, newest first. |
+| `get_lead` | One lead with notes + activity timeline. |
+| `create_lead` | Creates a lead and fires the new-lead Resend notification. |
+| `change_status` | Move a lead between pipeline stages. |
+| `change_priority` | Low / Medium / High. |
+| `change_temperature` | Cold / Warm / Hot. |
+| `mark_contacted` | Stamp `lastContactedAt`. |
+| `set_follow_up` | Set or clear `nextFollowUpAt`. |
+| `add_note` | Append a note to the timeline. |
+| `dashboard_stats` | Same snapshot the `/admin` dashboard renders. |
+| `due_follow_ups` | Active leads with `nextFollowUpAt <= now`. |
+| `daily_digest` | Overdue + Hot + last-24h-new — the digest email payload. |
+
+Every write is attributed to a service-account admin (`MCP_ADMIN_EMAIL`,
+auto-created on first call) so the activity log shows which changes came
+from the MCP versus the admin UI.
+
+### Setup
+
+1. Generate a token: `openssl rand -base64 32`.
+2. Add to `.env` (and Vercel → Environment Variables):
+   ```
+   MCP_SECRET="<the token>"
+   MCP_ADMIN_EMAIL="mcp-agent@jdtinc.com"
+   ```
+3. Deploy.
+4. Add as a custom connector in Cowork:
+   - URL: `https://<your-domain>/api/mcp`
+   - Auth: bearer token (paste the same `MCP_SECRET`)
+
+### Smoke-test it
+
+```bash
+# initialize
+curl -s https://<your-domain>/api/mcp \
+  -H "Authorization: Bearer $MCP_SECRET" \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}' | jq
+
+# list available tools
+curl -s https://<your-domain>/api/mcp \
+  -H "Authorization: Bearer $MCP_SECRET" \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}' | jq
+
+# call a tool
+curl -s https://<your-domain>/api/mcp \
+  -H "Authorization: Bearer $MCP_SECRET" \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":3,"method":"tools/call",
+       "params":{"name":"dashboard_stats","arguments":{}}}' | jq
+```
+
+Wrong / missing token → `401`. Unknown tool → result with `isError: true`.
+
+### Where the code lives
+
+```
+app/api/mcp/route.ts     thin Next.js entry — delegates to handler
+lib/mcp/handler.ts       JSON-RPC dispatch + bearer auth (no new deps)
+lib/mcp/tools.ts         tool registry, zod schemas, wraps lib/leads.ts
+lib/mcp/admin.ts         resolves the service-account admin id once
+```
+
+To add a tool: implement (or reuse) the function in `lib/leads.ts`, add
+an entry to the `tools` array in `lib/mcp/tools.ts` with a description and
+zod schema. The dispatcher and `tools/list` endpoint pick it up automatically.
+
+---
+
 ## AI service layer (future Naive integration)
 
 The CRM is wired for future AI features through a thin, provider-agnostic layer under `lib/ai/`:

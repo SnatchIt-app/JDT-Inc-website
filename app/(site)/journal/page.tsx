@@ -24,7 +24,14 @@ export const metadata: Metadata = {
   title: "Journal",
   description:
     "Field notes from JDT Inc. — long-form writing on AI marketing, performance media, funnel optimization, and the systems behind compounding growth.",
-  alternates: { canonical: "/journal" },
+  alternates: {
+    canonical: "/journal",
+    languages: {
+      "en-US": "/journal",
+      "es-US": "/es/journal",
+      "x-default": "/journal",
+    },
+  },
   openGraph: {
     title: `Journal — ${site.name}`,
     url: `${site.url}/journal`,

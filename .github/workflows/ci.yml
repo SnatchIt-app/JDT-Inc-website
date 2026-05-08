@@ -1,0 +1,42 @@
+# CI — runs on every PR and on every push to main.
+#
+# Three gates, in order:
+#   1. TypeScript typecheck — catches structural breaks
+#   2. Next.js lint — catches accessibility + Next-specific issues
+#   3. Editorial linter — catches AI tells, keyword stuffing, brand
+#      voice violations, missing fields, length issues
+#
+# Step 3 is what protects the brand. If a writer pastes an LLM draft
+# without editing, this catches it before the PR can merge.
+
+name: ci
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: TypeScript typecheck
+        run: npx tsc --noEmit -p tsconfig.json
+
+      - name: Next.js lint
+        run: npm run lint
+
+      - name: Editorial linter
+        run: npm run editorial:lint

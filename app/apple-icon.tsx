@@ -1,5 +1,5 @@
 /**
- * Apple touch icon — same mark as /icon, scaled to 180x180.
+ * Apple touch icon — same JDT mark scaled to 180×180.
  */
 
 import { ImageResponse } from "next/og";
@@ -15,19 +15,50 @@ export default function AppleIcon() {
         style={{
           width: "100%",
           height: "100%",
-          backgroundColor: "#0a0a0a",
+          backgroundColor: "#0c0a09",
           color: "#ffffff",
-          fontSize: 120,
-          fontFamily: "Georgia, 'Times New Roman', serif",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          letterSpacing: "-0.04em",
+          padding: 18,
         }}
       >
-        J
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "4px solid #ffffff",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 6,
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontWeight: 700,
+              fontSize: 70,
+              lineHeight: 1,
+              letterSpacing: 2,
+            }}
+          >
+            JDT
+          </span>
+          <span
+            style={{
+              fontFamily: "system-ui, sans-serif",
+              fontSize: 14,
+              lineHeight: 1,
+              letterSpacing: 4,
+            }}
+          >
+            INC.
+          </span>
+        </div>
       </div>
     ),
-    { ...size }
+    { ...size },
   );
 }

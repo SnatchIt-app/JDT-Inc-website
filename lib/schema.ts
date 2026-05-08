@@ -64,7 +64,13 @@ export function organizationSchema() {
         ? { postalCode: site.address.postalCode }
         : {}),
     },
-    sameAs: site.socials.map((s) => s.href),
+    sameAs: [
+      ...site.socials.map((s) => s.href),
+      // Pull in any populated authority profiles (LinkedIn company,
+      // Clutch, Crunchbase, etc.). Empty strings are filtered out so
+      // ungated placeholders don't pollute the schema.
+      ...Object.values(site.authorityProfiles).filter((u) => Boolean(u)),
+    ],
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -126,7 +132,40 @@ export function localBusinessSchema() {
       "Brand strategy",
       "Performance marketing",
     ],
+    paymentAccepted: site.paymentAccepted.join(", "),
+    currenciesAccepted: site.currenciesAccepted,
+    openingHoursSpecification: site.hours.map((h) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: h.days,
+      opens: h.opens,
+      closes: h.closes,
+    })),
+    ...(site.authorityProfiles.googleBusinessProfile
+      ? { hasMap: site.authorityProfiles.googleBusinessProfile }
+      : {}),
     parentOrganization: { "@id": `${site.url}/#organization` },
+  };
+}
+
+/**
+ * AggregateRating — only emit when authentic reviews exist (gated by
+ * the caller). Schema spam from invented ratings is the single
+ * fastest way to lose Google trust; this helper is intentionally
+ * called from nowhere by default.
+ */
+export function aggregateRatingSchema(opts: {
+  ratingValue: number;
+  reviewCount: number;
+  bestRating?: number;
+  worstRating?: number;
+}) {
+  return {
+    "@type": "AggregateRating",
+    itemReviewed: { "@id": `${site.url}/#organization` },
+    ratingValue: opts.ratingValue,
+    reviewCount: opts.reviewCount,
+    bestRating: opts.bestRating ?? 5,
+    worstRating: opts.worstRating ?? 1,
   };
 }
 
@@ -212,6 +251,60 @@ export function articleSchema(opts: {
     },
     publisher: { "@id": `${site.url}/#organization` },
     mainEntityOfPage: opts.url,
+  };
+}
+
+/**
+ * Person schema — used for the founder block on About and anywhere
+ * else we publish founder bylines. The Person is linked to the
+ * Organization via `worksFor` so AI engines and Google can resolve
+ * the founder ↔ company relationship cleanly.
+ */
+export function personSchema(opts: {
+  name: string;
+  jobTitle: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  sameAs?: string[];
+}) {
+  return {
+    "@type": "Person",
+    "@id": `${site.url}/about#person-${opts.name.toLowerCase().replace(/\s+/g, "-")}`,
+    name: opts.name,
+    jobTitle: opts.jobTitle,
+    ...(opts.description ? { description: opts.description } : {}),
+    ...(opts.image ? { image: opts.image } : {}),
+    ...(opts.url ? { url: opts.url } : {}),
+    ...(opts.sameAs ? { sameAs: opts.sameAs } : {}),
+    worksFor: { "@id": `${site.url}/#organization` },
+  };
+}
+
+/**
+ * Review schema — used on case study pages when a real, authorized
+ * client testimonial exists. Never emitted for placeholder content
+ * (we don't claim aggregate ratings on text we wrote ourselves).
+ *
+ * Linked to the Organization @id via itemReviewed so the rating
+ * attaches to JDT, not to the case study page.
+ */
+export function reviewSchema(opts: {
+  body: string;
+  authorName: string;
+  authorRole?: string;
+  caseStudyUrl: string;
+}) {
+  return {
+    "@type": "Review",
+    "@id": `${opts.caseStudyUrl}#review`,
+    reviewBody: opts.body,
+    author: {
+      "@type": "Person",
+      name: opts.authorName,
+      ...(opts.authorRole ? { jobTitle: opts.authorRole } : {}),
+    },
+    itemReviewed: { "@id": `${site.url}/#organization` },
   };
 }
 

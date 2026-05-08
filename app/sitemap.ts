@@ -14,7 +14,9 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { caseStudies } from "@/lib/caseStudies";
 import { services } from "@/lib/services";
-import { articles, topics } from "@/lib/journal";
+import { articles, isLive, topics } from "@/lib/journal";
+import { miami } from "@/lib/locations";
+import { servicesEs } from "@/lib/services.es";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -56,7 +58,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.85,
     },
+    {
+      url: `${site.url}/locations`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${site.url}/locations/miami`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
+
+  // Per-neighborhood landing pages — local SEO money URLs targeting
+  // "[neighborhood] marketing agency" keywords.
+  const neighborhoodRoutes: MetadataRoute.Sitemap = miami.neighborhoods.map(
+    (n) => ({
+      url: `${site.url}/locations/miami/${n.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.82,
+    }),
+  );
 
   // Topic cluster hubs — strong internal authority surfaces. Crawl
   // monthly; the URLs are stable even as articles are added.
@@ -67,14 +92,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Individual articles. Each carries its own publish date so
-  // `lastModified` can later track edits without a sitemap rewrite.
-  const articleRoutes: MetadataRoute.Sitemap = articles.map((a) => ({
-    url: `${site.url}/journal/${a.slug}`,
-    lastModified: a.updatedAt ? new Date(a.updatedAt) : new Date(a.publishedAt),
-    changeFrequency: "monthly",
-    priority: a.isPillar ? 0.85 : 0.65,
-  }));
+  // Individual articles — only live ones (drafts/scheduled-future
+  // are excluded from the sitemap so search engines don't get URLs
+  // that 404).
+  const articleRoutes: MetadataRoute.Sitemap = articles
+    .filter((a) => isLive(a))
+    .map((a) => ({
+      url: `${site.url}/journal/${a.slug}`,
+      lastModified: a.updatedAt
+        ? new Date(a.updatedAt)
+        : new Date(a.publishedAt),
+      changeFrequency: "monthly",
+      priority: a.isPillar ? 0.85 : 0.65,
+    }));
 
   // Per-service landing pages — these are money keywords and rank highly
   // in priority. Sitting just under the homepage and services index.
@@ -92,11 +122,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  // Spanish-locale URLs. Homepage, services index, journal, and the 4
+  // priority Spanish service pages.
+  const esRoutes: MetadataRoute.Sitemap = [
+    {
+      url: `${site.url}/es`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${site.url}/es/services`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${site.url}/es/journal`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    ...servicesEs.map((s) => ({
+      url: `${site.url}/es/services/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    })),
+  ];
+
   return [
     ...staticRoutes,
     ...serviceRoutes,
+    ...neighborhoodRoutes,
     ...caseStudyRoutes,
     ...topicRoutes,
     ...articleRoutes,
+    ...esRoutes,
   ];
 }

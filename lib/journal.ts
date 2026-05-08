@@ -201,6 +201,18 @@ export type Block =
 
 // ─── Article ─────────────────────────────────────────────────────────
 
+/**
+ * Article lifecycle status.
+ *   - draft: not visible publicly. Editors are still working on it.
+ *   - scheduled: ready to ship; will become public when publishAt
+ *     <= the current time (or the daily cron flips it).
+ *   - published: visible everywhere — index, topic, sitemap, RSS.
+ *
+ * The page templates filter via `isLive(article)` so drafts and
+ * future-dated scheduled posts never leak to production.
+ */
+export type ArticleStatus = "draft" | "scheduled" | "published";
+
 export type Article = {
   slug: string;
   title: string;
@@ -208,8 +220,12 @@ export type Article = {
   dek: string;
   topic: TopicSlug;
   isPillar?: boolean;
-  /** ISO date string. */
+  /** Lifecycle gate. Defaults to "published" when omitted. */
+  status?: ArticleStatus;
+  /** ISO date string. For scheduled posts, this is the target publish time. */
   publishedAt: string;
+  /** Optional explicit publish time for scheduling logic. */
+  publishAt?: string;
   updatedAt?: string;
   readingMinutes: number;
   tags: string[];
@@ -407,7 +423,36 @@ export const articles: Article[] = [
 
 // ─── Helpers ────────────────────────────────────────────────────────
 
+/**
+ * Whether an article should render to the public.
+ *
+ *   - status === "published" → always live
+ *   - status === "scheduled" → live only if publishAt has passed
+ *   - status === "draft" → never live
+ *   - status undefined → treated as "published" (back-compat for existing data)
+ *
+ * Page templates and getters all funnel through this gate so a single
+ * source of truth controls visibility everywhere.
+ */
+export function isLive(article: Article, now: Date = new Date()) {
+  const status = article.status ?? "published";
+  if (status === "published") return true;
+  if (status === "draft") return false;
+  if (status === "scheduled") {
+    const target = article.publishAt ?? article.publishedAt;
+    return new Date(target).getTime() <= now.getTime();
+  }
+  return false;
+}
+
+/** Public articles only (filtered by isLive). */
+export function getPublicArticles() {
+  return articles.filter((a) => isLive(a));
+}
+
 export function getArticle(slug: string) {
+  // We don't filter by isLive here — the page template enforces it.
+  // Tools (linters, generators, RSS) need access to drafts.
   return articles.find((a) => a.slug === slug);
 }
 
@@ -416,13 +461,13 @@ export function getTopic(slug: string) {
 }
 
 export function getArticlesByTopic(topicSlug: TopicSlug) {
-  return articles
+  return getPublicArticles()
     .filter((a) => a.topic === topicSlug)
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
 }
 
 export function getRecentArticles(limit = 6) {
-  return [...articles]
+  return [...getPublicArticles()]
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
     .slice(0, limit);
 }

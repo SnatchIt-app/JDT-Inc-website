@@ -6,7 +6,12 @@ import CTA from "@/components/CTA";
 import JsonLd from "@/components/JsonLd";
 import { caseStudies, getCaseStudy } from "@/lib/caseStudies";
 import { site } from "@/lib/site";
-import { articleSchema, breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
+import {
+  articleSchema,
+  breadcrumbSchema,
+  jsonLdGraph,
+  reviewSchema,
+} from "@/lib/schema";
 
 type Params = { params: { slug: string } };
 
@@ -56,6 +61,19 @@ export default function CaseStudyPage({ params }: Params) {
       description: study.summary,
       datePublished: `${study.year}-01-01`,
     }),
+    // Only emit Review JSON-LD when we have an authorized real quote.
+    // Placeholder testimonials render visually but are excluded from
+    // schema so we never claim a rating we can't substantiate.
+    ...(study.testimonial?.isReal
+      ? [
+          reviewSchema({
+            body: study.testimonial.quote,
+            authorName: study.testimonial.attribution,
+            authorRole: study.testimonial.role,
+            caseStudyUrl: url,
+          }),
+        ]
+      : []),
   ]);
 
   return (
@@ -107,18 +125,57 @@ export default function CaseStudyPage({ params }: Params) {
       {/* Sections */}
       <Section>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4">
-            <p className="eyebrow">Services</p>
-            <ul className="mt-6 flex flex-col gap-2.5 text-sm text-black/75">
-              {study.services.map((s) => (
-                <li key={s} className="flex gap-3">
-                  <span aria-hidden className="text-black/30">
-                    —
-                  </span>
-                  {s}
-                </li>
-              ))}
-            </ul>
+          <div className="lg:col-span-4 flex flex-col gap-12">
+            <div>
+              <p className="eyebrow">Services</p>
+              <ul className="mt-6 flex flex-col gap-2.5 text-sm text-black/75">
+                {study.services.map((s, i) => {
+                  const slug = study.serviceSlugs?.[i];
+                  return (
+                    <li key={s} className="flex gap-3">
+                      <span aria-hidden className="text-black/30">
+                        —
+                      </span>
+                      {slug ? (
+                        <Link
+                          href={`/services/${slug}`}
+                          className="link-underline"
+                        >
+                          {s}
+                        </Link>
+                      ) : (
+                        s
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            {study.timeline && (
+              <div>
+                <p className="eyebrow">Timeline</p>
+                <p className="mt-6 font-serif text-2xl tracking-tightest">
+                  {study.timeline}
+                </p>
+              </div>
+            )}
+
+            {study.stack && study.stack.length > 0 && (
+              <div>
+                <p className="eyebrow">Stack</p>
+                <ul className="mt-6 flex flex-col gap-2 text-sm text-black/75">
+                  {study.stack.map((tool) => (
+                    <li key={tool} className="flex gap-3">
+                      <span aria-hidden className="text-black/30">
+                        —
+                      </span>
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           <div className="lg:col-span-8 flex flex-col gap-16">
@@ -135,6 +192,69 @@ export default function CaseStudyPage({ params }: Params) {
           </div>
         </div>
       </Section>
+
+      {/* OUTCOMES — narrative breakdown beyond the metrics band. */}
+      {study.outcomes && study.outcomes.length > 0 && (
+        <Section className="border-t border-black/10 bg-paper-muted">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow">Outcomes</p>
+              <h2 className="display mt-6 text-display max-w-md">
+                What changed.
+              </h2>
+            </div>
+            <ul className="lg:col-span-8 divide-y divide-black/10 border-t border-black/10">
+              {study.outcomes.map((o) => (
+                <li
+                  key={o.value}
+                  className="py-8 sm:py-10 grid grid-cols-12 gap-6"
+                >
+                  <h3 className="col-span-12 sm:col-span-5 font-serif text-2xl sm:text-3xl tracking-tightest">
+                    {o.value}
+                  </h3>
+                  <p className="col-span-12 sm:col-span-7 text-black/70 leading-relaxed">
+                    {o.body}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Section>
+      )}
+
+      {/* TESTIMONIAL — pull-quote from the engagement.
+          PLACEHOLDER content is rendered visually but excluded from
+          Review JSON-LD (see the schema graph above). Replace with a
+          real, authorized quote and set isReal: true to enable the
+          schema layer. */}
+      {study.testimonial && (
+        <Section className="border-t border-black/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-3">
+              <p className="eyebrow">In their words</p>
+            </div>
+            <figure className="lg:col-span-9">
+              <blockquote className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tightest leading-[1.1] text-ink">
+                <span aria-hidden className="text-black/30">
+                  &ldquo;
+                </span>
+                {study.testimonial.quote}
+                <span aria-hidden className="text-black/30">
+                  &rdquo;
+                </span>
+              </blockquote>
+              <figcaption className="mt-10 flex flex-wrap items-baseline gap-x-4 gap-y-2">
+                <span className="text-xs uppercase tracking-[0.2em] text-black/55">
+                  {study.testimonial.attribution}
+                </span>
+                <span className="text-sm text-black/70">
+                  · {study.testimonial.role}
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        </Section>
+      )}
 
       {/* Next case study */}
       <Section className="border-t border-black/10">

@@ -54,7 +54,20 @@ export function generateMetadata({ params }: Params): Metadata {
     title: svc.seo.metaTitle,
     description: svc.seo.metaDescription,
     keywords: [svc.seo.primaryKeyword, ...svc.seo.secondaryKeywords],
-    alternates: { canonical: `/services/${svc.slug}` },
+    alternates: {
+      canonical: `/services/${svc.slug}`,
+      // hreflang only when an ES counterpart exists. The four
+      // priority Spanish services match these slugs 1:1.
+      ...(["meta-ads", "ai-automation", "lead-generation", "funnel-optimization"].includes(svc.slug)
+        ? {
+            languages: {
+              "en-US": `/services/${svc.slug}`,
+              "es-US": `/es/services/${svc.slug}`,
+              "x-default": `/services/${svc.slug}`,
+            },
+          }
+        : {}),
+    },
     openGraph: {
       title: svc.seo.metaTitle,
       description: svc.seo.metaDescription,

@@ -1,0 +1,75 @@
+# Scheduled publishing.
+#
+# Runs once a day. Looks for articles with status="scheduled" whose
+# publishAt is in the past, flips them to status="published", and
+# opens a PR with the change.
+#
+# Why a PR and not a direct commit:
+#   - keeps every published article reviewable
+#   - preserves the "human in the loop" principle
+#   - makes audit trail trivial (every publish has a PR + reviewer)
+#
+# To auto-merge instead, switch to a direct commit on main + enable
+# branch protection elsewhere. We deliberately don't.
+
+name: scheduled-publish
+
+on:
+  schedule:
+    # Daily at 13:00 UTC (09:00 ET) — a sane "morning publish" window.
+    - cron: "0 13 * * *"
+  workflow_dispatch: # manual trigger from the GitHub UI
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Promote scheduled articles
+        id: promote
+        run: |
+          # Promote scheduled articles whose publishAt has passed.
+          npx tsx scripts/promote-scheduled.ts > /tmp/promoted.txt || exit_code=$?
+          if [ -s /tmp/promoted.txt ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            {
+              echo "summary<<EOF"
+              cat /tmp/promoted.txt
+              echo "EOF"
+            } >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Open PR with promotions
+        if: steps.promote.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: scheduled-publish/${{ github.run_id }}
+          title: "editorial: promote scheduled articles"
+          body: |
+            Automated promotion of scheduled articles whose `publishAt`
+            has passed.
+
+            ${{ steps.promote.outputs.summary }}
+
+            Reviewer: please confirm copy is final, then merge to publish.
+          commit-message: "editorial: promote scheduled articles"
+          add-paths: |
+            lib/journal.ts

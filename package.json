@@ -11,20 +11,28 @@
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
-    "db:seed": "tsx prisma/seed.ts"
+    "db:seed": "tsx prisma/seed.ts",
+    "editorial:new": "tsx scripts/new-article.ts",
+    "editorial:lint": "tsx scripts/lint-content.ts",
+    "editorial:lint:strict": "tsx scripts/lint-content.ts -- --strict",
+    "editorial:links": "tsx scripts/suggest-links.ts",
+    "editorial:gaps": "tsx scripts/analyze-gaps.ts",
+    "editorial:brief": "tsx scripts/generate-brief.ts",
+    "editorial:draft": "tsx scripts/generate-draft.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",
+    "@vercel/analytics": "^2.0.1",
     "bcryptjs": "^2.4.3",
     "framer-motion": "^11.3.19",
     "jose": "^5.6.3",
     "next": "14.2.5",
-    "resend": "^4.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "resend": "^4.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

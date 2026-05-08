@@ -156,8 +156,28 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* ATMOSPHERIC BREATHING MOMENT — warm-paper panel.
+          A single editorial line on cream paper. No image required;
+          the move is composition + warmth. Drop a full-bleed art-
+          directed image into this section later by replacing the
+          inner block with a <figure> — the rhythm is already set. */}
+      <Section className="bg-paper-warm border-t border-black/5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-3">
+            <p className="eyebrow text-ink/70 before:bg-accent">
+              Practice
+            </p>
+          </div>
+          <p className="lg:col-span-9 font-serif tracking-tightest text-3xl sm:text-4xl lg:text-5xl leading-[1.08] text-ink max-w-4xl">
+            We work like an editorial publication that ships paid media.
+            Senior hands, restrained creative, systems that compound — and
+            a refusal to flatten the brand for a short-term number.
+          </p>
+        </div>
+      </Section>
+
       {/* SERVICES PREVIEW */}
-      <Section padded={false} className="pb-24 sm:pb-32">
+      <Section padded={false} className="pt-24 sm:pt-32 pb-24 sm:pb-32">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
           <div>
             <p className="eyebrow">Services</p>

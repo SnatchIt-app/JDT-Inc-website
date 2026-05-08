@@ -35,11 +35,6 @@ export const metadata: Metadata = {
   creator: site.name,
   publisher: site.name,
   category: "Marketing & Advertising",
-  // Explicit canonical for the homepage. Inner pages set their own via
-  // `alternates: { canonical: '/path' }` in their per-route metadata.
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
@@ -78,6 +73,22 @@ export const metadata: Metadata = {
       { url: "/icon", type: "image/png", sizes: "32x32" },
     ],
     apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+  },
+  // Canonical for the homepage + RSS auto-discovery for feed readers
+  // and AI crawlers that follow <link rel="alternate"> hints. Inner
+  // pages set their own canonical via per-route metadata.
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/",
+      "es-US": "/es",
+      "x-default": "/",
+    },
+    types: {
+      "application/rss+xml": [
+        { url: "/feed.xml", title: `${site.name} — Journal` },
+      ],
+    },
   },
 };
 
