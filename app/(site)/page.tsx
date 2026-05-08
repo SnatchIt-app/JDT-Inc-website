@@ -119,7 +119,7 @@ export default function HomePage() {
           labels keep this in the editorial voice. */}
       <Section
         padded={false}
-        className="border-t border-b border-black/10 py-14 sm:py-16"
+        className="border-t border-b border-gray-200/70 py-14 sm:py-16"
         aria-label="Selected client outcomes"
       >
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 sm:gap-12">
@@ -128,7 +128,7 @@ export default function HomePage() {
               <p className="font-serif text-4xl sm:text-5xl tracking-tightest leading-none">
                 {m.value}
               </p>
-              <p className="text-[11px] uppercase tracking-[0.2em] text-black/55 leading-snug">
+              <p className="text-[11px] uppercase tracking-[0.2em] text-gray-600 leading-snug">
                 {m.label}
               </p>
             </div>
@@ -136,73 +136,10 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* INTRO */}
-      <Section>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-4">
-            <p className="eyebrow">What we do</p>
-          </div>
-          <div className="lg:col-span-8">
-            <h2 className="display text-display max-w-4xl">
-              We build marketing systems — not one-off campaigns.
-            </h2>
-            <p className="mt-10 text-lg text-black/70 leading-relaxed max-w-2xl">
-              Most agencies hand you tactics. We design the full system —
-              positioning, creative, funnels, and paid media — tuned in real
-              time with AI automation and grounded in senior strategy. The
-              result is compounding growth, not short-term spikes.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* ATMOSPHERIC BREATHING MOMENT — warm-paper panel.
-          A single editorial line on cream paper. No image required;
-          the move is composition + warmth. Drop a full-bleed art-
-          directed image into this section later by replacing the
-          inner block with a <figure> — the rhythm is already set. */}
-      <Section className="bg-paper-warm border-t border-black/5">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-3">
-            <p className="eyebrow text-ink/70 before:bg-accent">
-              Practice
-            </p>
-          </div>
-          <p className="lg:col-span-9 font-serif tracking-tightest text-3xl sm:text-4xl lg:text-5xl leading-[1.08] text-ink max-w-4xl">
-            We work like an editorial publication that ships paid media.
-            Senior hands, restrained creative, systems that compound — and
-            a refusal to flatten the brand for a short-term number.
-          </p>
-        </div>
-      </Section>
-
-      {/* SERVICES PREVIEW */}
-      <Section padded={false} className="pt-24 sm:pt-32 pb-24 sm:pb-32">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
-          <div>
-            <p className="eyebrow">Services</p>
-            <h2 className="display mt-6 text-display max-w-3xl">
-              Built for the full growth picture.
-            </h2>
-          </div>
-          <Link
-            href="/services"
-            className="shrink-0 inline-flex items-center gap-2 text-sm link-underline"
-          >
-            All services
-            <span aria-hidden>→</span>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-black/10">
-          {services.slice(0, 6).map((s, i) => (
-            <ServiceCard key={s.slug} service={s} index={i} />
-          ))}
-        </div>
-      </Section>
-
-      {/* FEATURED WORK */}
-      <Section className="border-t border-black/10">
+      {/* FEATURED WORK — moved here so proof leads explanation. Each card
+          deep-links to its case study; the per-study accent (snatch red,
+          xperts teal) lives inside the CaseStudyCard component. */}
+      <Section className="border-t border-gray-200/60">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
           <div>
             <p className="eyebrow">Selected work</p>
@@ -226,6 +163,69 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* PRACTICE / POSITIONING — moved below the work so it reads as a
+          point of view we've already proven, not a promise we haven't. */}
+      <Section className="bg-paper-warm border-t border-gray-200/60">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-3">
+            <p className="eyebrow text-ink/70 before:bg-accent">
+              Practice
+            </p>
+          </div>
+          <p className="lg:col-span-9 font-serif tracking-tightest text-3xl sm:text-4xl lg:text-5xl leading-[1.08] text-ink max-w-4xl">
+            We work like an editorial publication that ships paid media.
+            Senior hands, restrained creative, systems that compound — and
+            a refusal to flatten the brand for a short-term number.
+          </p>
+        </div>
+      </Section>
+
+      {/* INTRO — kept as a Services preamble so the section that follows
+          has a frame. Single short panel; preserves SEO copy. */}
+      <Section className="border-t border-gray-200/60">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div className="lg:col-span-4">
+            <p className="eyebrow">What we do</p>
+          </div>
+          <div className="lg:col-span-8">
+            <h2 className="display text-display max-w-4xl">
+              We build marketing systems — not one-off campaigns.
+            </h2>
+            <p className="mt-10 text-lg text-gray-700 leading-relaxed max-w-2xl">
+              Most agencies hand you tactics. We design the full system —
+              positioning, creative, funnels, and paid media — tuned in real
+              time with AI automation and grounded in senior strategy. The
+              result is compounding growth, not short-term spikes.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* SERVICES PREVIEW */}
+      <Section padded={false} className="pt-24 sm:pt-32 pb-24 sm:pb-32">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+          <div>
+            <p className="eyebrow">Services</p>
+            <h2 className="display mt-6 text-display max-w-3xl">
+              Built for the full growth picture.
+            </h2>
+          </div>
+          <Link
+            href="/services"
+            className="shrink-0 inline-flex items-center gap-2 text-sm link-underline"
+          >
+            All services
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-gray-200/70">
+          {services.slice(0, 6).map((s, i) => (
+            <ServiceCard key={s.slug} service={s} index={i} />
+          ))}
+        </div>
+      </Section>
+
       {/* TESTIMONIAL — single editorial pull-quote.
           --------------------------------------------------------------
           PLACEHOLDER CONTENT. The quote and attribution below are written
@@ -235,28 +235,28 @@ export default function HomePage() {
           Keeping a placeholder live in production risks misrepresentation.
           --------------------------------------------------------------
       */}
-      <Section className="border-t border-black/10">
+      <Section className="border-t border-gray-200/60">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-3">
             <p className="eyebrow">In their words</p>
           </div>
           <figure className="lg:col-span-9">
             <blockquote className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tightest leading-[1.1] text-ink">
-              <span aria-hidden className="text-black/30">
+              <span aria-hidden className="text-gray-300">
                 &ldquo;
               </span>
               They didn&apos;t sell us a campaign — they built us a growth
               system. Six months in, our cost per lead is down by a third and
               we&apos;re hiring against a pipeline that finally feels real.
-              <span aria-hidden className="text-black/30">
+              <span aria-hidden className="text-gray-300">
                 &rdquo;
               </span>
             </blockquote>
             <figcaption className="mt-10 flex flex-wrap items-baseline gap-x-4 gap-y-2">
-              <span className="text-xs uppercase tracking-[0.2em] text-black/55">
+              <span className="text-xs uppercase tracking-[0.2em] text-gray-600">
                 Founder
               </span>
-              <span className="text-sm text-black/70">
+              <span className="text-sm text-gray-700">
                 · DTC apparel brand · 2024 cohort
               </span>
             </figcaption>
@@ -328,7 +328,7 @@ export default function HomePage() {
           Each item also surfaces in the FAQPage JSON-LD declared at the top
           of this page so AI engines and Google can cite the same content
           they're rendering visually here. */}
-      <Section className="border-t border-black/10">
+      <Section className="border-t border-gray-200/60">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <p className="eyebrow">Frequently asked</p>
@@ -336,7 +336,7 @@ export default function HomePage() {
               Quick answers, before the call.
             </h2>
           </div>
-          <dl className="lg:col-span-8 divide-y divide-black/10 border-t border-black/10">
+          <dl className="lg:col-span-8 divide-y divide-gray-200 border-t border-gray-200">
             {homepageFaqs.map((q) => (
               <div
                 key={q.question}
@@ -345,7 +345,7 @@ export default function HomePage() {
                 <dt className="col-span-12 sm:col-span-5 font-serif text-2xl sm:text-3xl tracking-tightest text-ink">
                   {q.question}
                 </dt>
-                <dd className="col-span-12 sm:col-span-7 text-black/70 leading-relaxed">
+                <dd className="col-span-12 sm:col-span-7 text-gray-700 leading-relaxed">
                   {q.answer}
                 </dd>
               </div>
