@@ -268,7 +268,14 @@ export default function CaseStudyPage({ params }: Params) {
           Combines the cover (the lead visual of the engagement) with
           any additional gallery entries. De-duplicates so an image
           referenced by both `heroImage` and `gallery` only renders
-          once. Falls back gracefully when no assets are supplied. */}
+          once. Falls back gracefully when no assets are supplied.
+
+          When study.galleryFit === "contain", the first visual spans
+          the full grid width and uses a wider aspect — this gives
+          horizontal poster covers (like the Snatch It tri-poster) room
+          to render in full without cropping. Subsequent visuals tile
+          in the 3-column grid with contain mode so each poster, sticker,
+          or brand mark appears whole. */}
       {(() => {
         const visuals = Array.from(
           new Set([
@@ -277,6 +284,7 @@ export default function CaseStudyPage({ params }: Params) {
           ]),
         );
         if (visuals.length === 0) return null;
+        const fit = study.galleryFit ?? "cover";
         return (
           <Section className="border-t border-gray-200/60 bg-gray-50">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
@@ -288,17 +296,24 @@ export default function CaseStudyPage({ params }: Params) {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {visuals.map((src, i) => (
-                <EditorialImage
-                  key={src}
-                  src={src}
-                  alt={`${study.client} — visual ${i + 1}`}
-                  aspect="4/5"
-                  // First visual is the cover — make it the priority
-                  // load. The rest lazy-load.
-                  priority={i === 0}
-                />
-              ))}
+              {visuals.map((src, i) => {
+                const isFeatured = i === 0 && fit === "contain";
+                return (
+                  <EditorialImage
+                    key={src}
+                    src={src}
+                    alt={`${study.client} — visual ${i + 1}`}
+                    aspect={isFeatured ? "16/10" : "4/5"}
+                    fit={fit}
+                    className={
+                      isFeatured ? "sm:col-span-2 lg:col-span-3" : undefined
+                    }
+                    // First visual is the cover — make it the priority
+                    // load. The rest lazy-load.
+                    priority={i === 0}
+                  />
+                );
+              })}
             </div>
           </Section>
         );

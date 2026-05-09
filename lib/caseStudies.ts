@@ -42,6 +42,12 @@ export type CaseStudy = {
    */
   heroImage?: string;
   gallery?: string[];
+  /**
+   * How gallery images render inside their frames. Use "contain" when
+   * the gallery contains posters, brand marks, or any visual where
+   * cropping would destroy the composition. Defaults to "cover".
+   */
+  galleryFit?: "cover" | "contain";
   metrics: Metric[];
   /** Display names for the services rendered in the sidebar. */
   services: string[];
@@ -219,11 +225,19 @@ export const caseStudies: CaseStudy[] = [
     cover: "ink",
     accent: { rule: "border-snatch", text: "text-snatch", bg: "bg-snatch" },
     heroImage: "/work/snatch-it/cover.png",
-    // Cover (the campaign tri-poster) + cinematic visual-01 (red SNATCH IT
-    // logo on screen). The flat SN brand mark at /work/snatch-it/logo.png
-    // is intentionally NOT in the gallery — it's a brand asset, not an
-    // editorial photo, and would weaken the curated grid.
-    gallery: ["/work/snatch-it/visual-01.jpg"],
+    // Snatch It visuals span horizontal posters, vertical posters,
+    // sticker mockups, and atmospheric photography — all very different
+    // aspect ratios. The gallery uses fit="contain" so every visual
+    // shows in full without cropping out the composition or text.
+    galleryFit: "contain",
+    gallery: [
+      "/work/snatch-it/visual-02.png", // SNATCH IT. MIAMI. LIVE IN THE APP.
+      "/work/snatch-it/visual-01.jpg", // SNATCH IT cinematic TV
+      "/work/snatch-it/visual-03.jpg", // BID cinematic TV
+      "/work/snatch-it/visual-04.png", // Sticker: This is your sign.
+      "/work/snatch-it/visual-05.png", // Sticker: Why TF are you home.
+      "/work/snatch-it/logo.png", // SN brand mark
+    ],
     metrics: [
       { value: "Full-stack", label: "Marketing engagement" },
       { value: "EN / ES", label: "Bilingual rollout" },
