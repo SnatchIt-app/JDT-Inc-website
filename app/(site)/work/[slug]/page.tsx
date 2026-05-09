@@ -104,18 +104,10 @@ export default function CaseStudyPage({ params }: Params) {
         </div>
       </Section>
 
-      {/* Hero image — only renders when the case study supplies one. */}
-      {study.heroImage && (
-        <Section padded={false} className="border-t border-gray-200/60">
-          <EditorialImage
-            src={study.heroImage}
-            alt={`${study.client} — ${study.title}`}
-            aspect="16/10"
-            full
-            priority
-          />
-        </Section>
-      )}
+      {/* Hero stays text-led. The cover image appears later in the
+          Visuals / In Production gallery, not directly under the summary,
+          so the case study reads as an editorial piece rather than a
+          portfolio sheet. */}
 
       {/* Metrics band — accent rule color when set, otherwise paper hairline. */}
       <Section dark padded={false} className="py-16 sm:py-20">
@@ -272,30 +264,45 @@ export default function CaseStudyPage({ params }: Params) {
         </Section>
       )}
 
-      {/* Gallery — additional engagement visuals (creative, dashboards,
-          on-set). Only renders when the case study supplies images. */}
-      {study.gallery && study.gallery.length > 0 && (
-        <Section className="border-t border-gray-200/60 bg-gray-50">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
-            <div>
-              <p className="eyebrow">Visuals</p>
-              <h2 className="display mt-6 text-display max-w-3xl">
-                In production.
-              </h2>
+      {/* Visuals / In Production — the only place imagery appears.
+          Combines the cover (the lead visual of the engagement) with
+          any additional gallery entries. De-duplicates so an image
+          referenced by both `heroImage` and `gallery` only renders
+          once. Falls back gracefully when no assets are supplied. */}
+      {(() => {
+        const visuals = Array.from(
+          new Set([
+            ...(study.heroImage ? [study.heroImage] : []),
+            ...(study.gallery ?? []),
+          ]),
+        );
+        if (visuals.length === 0) return null;
+        return (
+          <Section className="border-t border-gray-200/60 bg-gray-50">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+              <div>
+                <p className="eyebrow">Visuals</p>
+                <h2 className="display mt-6 text-display max-w-3xl">
+                  In production.
+                </h2>
+              </div>
             </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {study.gallery.map((src, i) => (
-              <EditorialImage
-                key={src}
-                src={src}
-                alt={`${study.client} — visual ${i + 1}`}
-                aspect="4/5"
-              />
-            ))}
-          </div>
-        </Section>
-      )}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {visuals.map((src, i) => (
+                <EditorialImage
+                  key={src}
+                  src={src}
+                  alt={`${study.client} — visual ${i + 1}`}
+                  aspect="4/5"
+                  // First visual is the cover — make it the priority
+                  // load. The rest lazy-load.
+                  priority={i === 0}
+                />
+              ))}
+            </div>
+          </Section>
+        );
+      })()}
 
       {/* Next case study */}
       <Section className="border-t border-black/10">
