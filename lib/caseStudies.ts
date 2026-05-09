@@ -155,7 +155,15 @@ export const caseStudies: CaseStudy[] = [
     cover: "light",
     accent: { rule: "border-xperts", text: "text-xperts", bg: "bg-xperts" },
     heroImage: "/work/carpet-cleaning-xperts/cover.png",
-    gallery: ["/work/carpet-cleaning-xperts/visual-01.png"],
+    // Curated four-card narrative: cover (proof in action) → offer
+    // (Agenda Hoy) → problem-state (Eso no se va solo) → result-state
+    // (Eso salió de tu alfombra). Together: the bilingual Meta program
+    // condensed into a single editorial grid.
+    gallery: [
+      "/work/carpet-cleaning-xperts/visual-01.png",
+      "/work/carpet-cleaning-xperts/visual-02.png",
+      "/work/carpet-cleaning-xperts/visual-03.png",
+    ],
     metrics: [
       { value: "+28%", label: "Revenue in 60 days" },
       { value: "Bilingual", label: "Creative across EN / ES" },
@@ -211,7 +219,11 @@ export const caseStudies: CaseStudy[] = [
     cover: "ink",
     accent: { rule: "border-snatch", text: "text-snatch", bg: "bg-snatch" },
     heroImage: "/work/snatch-it/cover.png",
-    gallery: ["/work/snatch-it/logo.png"],
+    // Cover (the campaign tri-poster) + cinematic visual-01 (red SNATCH IT
+    // logo on screen). The flat SN brand mark at /work/snatch-it/logo.png
+    // is intentionally NOT in the gallery — it's a brand asset, not an
+    // editorial photo, and would weaken the curated grid.
+    gallery: ["/work/snatch-it/visual-01.jpg"],
     metrics: [
       { value: "Full-stack", label: "Marketing engagement" },
       { value: "EN / ES", label: "Bilingual rollout" },
