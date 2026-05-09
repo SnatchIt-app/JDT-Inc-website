@@ -285,11 +285,25 @@ export default function CaseStudyPage({ params }: Params) {
         );
         if (visuals.length === 0) return null;
         const fit = study.galleryFit ?? "cover";
+        const bg = study.galleryBg ?? "paper-muted";
+        // Section bg adapts: ink-letterbox galleries read better with a
+        // matching section bg so individual tiles don't float.
+        const sectionBg = bg === "ink" ? "bg-ink text-paper" : "bg-gray-50";
         return (
-          <Section className="border-t border-gray-200/60 bg-gray-50">
+          <Section
+            className={`border-t border-gray-200/60 ${sectionBg}`}
+          >
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
               <div>
-                <p className="eyebrow">Visuals</p>
+                <p
+                  className={
+                    bg === "ink"
+                      ? "eyebrow text-paper/70 before:bg-paper/40"
+                      : "eyebrow"
+                  }
+                >
+                  Visuals
+                </p>
                 <h2 className="display mt-6 text-display max-w-3xl">
                   In production.
                 </h2>
@@ -303,13 +317,14 @@ export default function CaseStudyPage({ params }: Params) {
                     key={src}
                     src={src}
                     alt={`${study.client} — visual ${i + 1}`}
-                    aspect={isFeatured ? "16/10" : "4/5"}
+                    // Featured spans 2 columns on lg with aspect 8/5 →
+                    // height matches the surrounding 4/5 tiles within
+                    // a few pixels (not taller). On smaller screens
+                    // every tile renders at the same 4/5 aspect.
+                    aspect={isFeatured ? "8/5" : "4/5"}
                     fit={fit}
-                    className={
-                      isFeatured ? "sm:col-span-2 lg:col-span-3" : undefined
-                    }
-                    // First visual is the cover — make it the priority
-                    // load. The rest lazy-load.
+                    bg={bg}
+                    className={isFeatured ? "lg:col-span-2" : undefined}
                     priority={i === 0}
                   />
                 );

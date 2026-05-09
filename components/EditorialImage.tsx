@@ -1,15 +1,13 @@
 /**
  * EditorialImage — premium image rendering with graceful fallback.
  *
- * Wraps next/image with:
- *   - editorial framing (subtle border, hairline rule treatment)
- *   - aspect-ratio control
- *   - cover vs contain fit (use contain for posters and brand marks
- *     where every part of the image must be visible — cropping a
- *     poster destroys it)
- *   - automatic skip when src is empty/undefined
+ * Wraps next/image with editorial framing, aspect-ratio control,
+ * cover/contain fit, and a configurable letterbox background. The
+ * letterbox color matters when fit="contain" — a cream letterbox
+ * behind a black-and-red poster reads as wrong; an ink letterbox
+ * reads as an intentional gallery frame.
  *
- * Server component. No client JS.
+ * Returns null when src is missing — no broken-image icons.
  */
 
 import Image from "next/image";
@@ -19,15 +17,19 @@ type Props = {
   src?: string;
   alt: string;
   /** Aspect ratio. Defaults to 4/5 — editorial vertical. */
-  aspect?: "1/1" | "4/5" | "3/4" | "16/10" | "16/9" | "3/2";
+  aspect?: "1/1" | "4/5" | "3/4" | "16/10" | "16/9" | "3/2" | "8/5";
   /**
    * How the image fills its frame.
    *   - "cover" (default) — fills, may crop
-   *   - "contain" — fits the entire image inside the frame, letterboxed
-   *     against the section background. Use for posters, brand marks,
-   *     anything where text/composition must remain whole.
+   *   - "contain" — fits whole image inside, letterboxed
    */
   fit?: "cover" | "contain";
+  /**
+   * Letterbox background color (only visible under fit="contain").
+   * Defaults to the warm cream paper-muted; set "ink" for galleries
+   * of dark posters where cream letterboxes would read as wrong.
+   */
+  bg?: "paper-muted" | "paper" | "ink" | "transparent" | "gray-50";
   /** Render full-bleed (edge-to-edge of its container). */
   full?: boolean;
   className?: string;
@@ -41,6 +43,15 @@ const ASPECT_CLASS: Record<NonNullable<Props["aspect"]>, string> = {
   "16/10": "aspect-[16/10]",
   "16/9": "aspect-video",
   "3/2": "aspect-[3/2]",
+  "8/5": "aspect-[8/5]",
+};
+
+const BG_CLASS: Record<NonNullable<Props["bg"]>, string> = {
+  "paper-muted": "bg-paper-muted",
+  "paper": "bg-paper",
+  "ink": "bg-ink",
+  "transparent": "bg-transparent",
+  "gray-50": "bg-gray-50",
 };
 
 export default function EditorialImage({
@@ -48,6 +59,7 @@ export default function EditorialImage({
   alt,
   aspect = "4/5",
   fit = "cover",
+  bg = "paper-muted",
   full = false,
   className,
   priority = false,
@@ -57,7 +69,8 @@ export default function EditorialImage({
   return (
     <figure
       className={cn(
-        "relative overflow-hidden bg-paper-muted",
+        "relative overflow-hidden",
+        BG_CLASS[bg],
         ASPECT_CLASS[aspect],
         full ? "w-full" : "",
         className,

@@ -48,6 +48,12 @@ export type CaseStudy = {
    * cropping would destroy the composition. Defaults to "cover".
    */
   galleryFit?: "cover" | "contain";
+  /**
+   * Letterbox background under fit="contain". Defaults to paper-muted
+   * (warm cream). Set to "ink" for dark-poster galleries (Snatch It)
+   * so the letterbox reads as gallery framing, not as a missing crop.
+   */
+  galleryBg?: "paper-muted" | "paper" | "ink" | "gray-50" | "transparent";
   metrics: Metric[];
   /** Display names for the services rendered in the sidebar. */
   services: string[];
@@ -229,7 +235,10 @@ export const caseStudies: CaseStudy[] = [
     // sticker mockups, and atmospheric photography — all very different
     // aspect ratios. The gallery uses fit="contain" so every visual
     // shows in full without cropping out the composition or text.
+    // Ink letterbox reads as a gallery wall behind black/red posters;
+    // a cream letterbox would fight the brand.
     galleryFit: "contain",
+    galleryBg: "ink",
     gallery: [
       "/work/snatch-it/visual-02.png", // SNATCH IT. MIAMI. LIVE IN THE APP.
       "/work/snatch-it/visual-01.jpg", // SNATCH IT cinematic TV
