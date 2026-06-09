@@ -85,7 +85,7 @@ export default function NeighborhoodPage({ params }: Params) {
           </p>
 
           <h1 className="display text-hero max-w-6xl">
-            {n.name} marketing, run by senior operators.
+            Marketing for {n.name}, without the junior handoff.
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
@@ -276,8 +276,8 @@ export default function NeighborhoodPage({ params }: Params) {
 
       <CTA
         eyebrow="Engage"
-        title={`Bring senior operators to your ${n.name} program.`}
-        body="Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your goals, your numbers, and what the first 90 days should look like."
+        title={`Let's talk about your ${n.name} program.`}
+        body="Most engagements start with a 30-minute call. We'll walk through your goals, your numbers, and what the first 90 days should look like."
         primary={{ label: "Book a strategy call", href: "/contact" }}
         secondary={{ label: "See the work", href: "/work" }}
       />

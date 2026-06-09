@@ -47,10 +47,9 @@ export default function LocationsIndex() {
           Where the work happens.
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
-          JDT Inc. is headquartered in Miami, Florida. We work across the
-          city&apos;s primary commercial neighborhoods — and partner with
-          ambitious brands across the United States from our base in the
-          Magic City.
+          JDT Inc. is based in Miami, Florida. We work across the
+          city&apos;s main commercial neighborhoods and with brands across
+          the United States.
         </p>
       </Section>
 
@@ -127,8 +126,8 @@ export default function LocationsIndex() {
 
       <CTA
         eyebrow="Engage"
-        title="Bring senior operators to your local program."
-        body="Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your goals, your numbers, and where the next 90 days should focus."
+        title="Let's talk about your local program."
+        body="Most engagements start with a 30-minute call. We'll walk through your goals, your numbers, and where the next 90 days should focus."
         primary={{ label: "Book a strategy call", href: "/contact" }}
         secondary={{ label: "See the work", href: "/work" }}
       />

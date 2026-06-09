@@ -12,7 +12,7 @@ import { localeUrl } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Servicios",
   description:
-    "Meta Ads, automatización con IA, generación de leads y optimización de embudos — los servicios prioritarios de JDT Inc. para marcas ambiciosas en Miami.",
+    "Meta Ads, automatización con IA, generación de leads y optimización de embudos. Los servicios de JDT Inc. en Miami.",
   alternates: {
     canonical: "/es/services",
     languages: {
@@ -42,13 +42,13 @@ export default function ServicesPageEs() {
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <p className="eyebrow">Servicios</p>
         <h1 className="display mt-8 text-hero max-w-5xl">
-          Un partner de crecimiento full-stack — no un proveedor.
+          Cuatro servicios. Un solo equipo.
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
           Nos integramos a tu negocio como extensión de tu equipo. Cada
-          servicio funciona por sí solo, pero están diseñados para operar
-          como un sistema — para que la marca, la creatividad y los números
-          se muevan en la misma dirección.
+          servicio funciona por sí solo, pero están diseñados para trabajar
+          juntos, para que la marca, la creatividad y los números se muevan
+          en la misma dirección.
         </p>
       </Section>
 
@@ -103,7 +103,7 @@ export default function ServicesPageEs() {
       <CTA
         eyebrow="Conversemos"
         title="¿No sabes por dónde empezar?"
-        body="La mayoría de los engagements arrancan con una llamada de estrategia corta — mapeamos lo que necesitas, lo que no, y cómo deberían verse los primeros 90 días."
+        body="Agenda una llamada corta. Mapeamos lo que necesitas, lo que no, y cómo deberían verse los primeros 90 días."
         primary={{ label: siteEs.ui.bookCall, href: "/contact" }}
         secondary={{ label: siteEs.ui.seeWork, href: "/work" }}
       />

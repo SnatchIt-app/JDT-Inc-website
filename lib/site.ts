@@ -2,9 +2,9 @@ export const site = {
   name: "JDT Inc.",
   legalName: "JDT Inc.",
   shortName: "JDT",
-  tagline: "AI-powered marketing & growth systems agency in Miami.",
+  tagline: "Marketing agency in Miami. Paid ads, funnels, and automation.",
   description:
-    "JDT Inc. is a Miami-based AI-powered marketing and growth systems agency. We pair senior strategy and editorial creative with Meta Ads, Google Ads, AI automation, lead generation, CRM systems, and funnel optimization — building growth systems for ambitious brands.",
+    "JDT Inc. is a marketing agency in Miami. We run Meta and Google Ads, produce the creative, build landing pages and funnels, set up CRM and email programs, and build automations that cut manual work. Most clients are founder-led businesses that want more leads and numbers they can trust.",
   // Canonical production domain. Apex jdt-inc.com and the legacy jdtinc.com
   // should 301 to this host at the DNS / hosting layer.
   url: "https://www.jdt-inc.com",
@@ -85,7 +85,7 @@ export const site = {
      * confident, specific, no buzzword pile, hyphens for parenthetical
      * thoughts. Keep it ~80–140 words.
      */
-    bio: "Jose Tascon is the founder of JDT Inc., a Miami-based AI-powered marketing agency. He built the studio after a decade running performance, creative, and growth programs for founder-led brands — and a deepening conviction that the next generation of agencies would be defined by senior operators, AI-native operating systems, and editorial standards held without compromise.\n\nHe lives and works in Miami, where JDT operates as the kind of agency the city's most ambitious brands actually deserve.",
+    bio: "Jose Tascon is the founder of JDT Inc., a marketing agency in Miami. He spent a decade running paid media, creative, and growth programs for founder-led brands before opening his own studio. He still works on every account himself: the strategy, the ad platforms, and the systems behind them.\n\nHe lives and works in Miami.",
     socials: [
       { label: "LinkedIn", href: "https://linkedin.com" },
       { label: "X", href: "https://x.com" },

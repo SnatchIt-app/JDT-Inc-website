@@ -23,7 +23,7 @@ import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Journal",
   description:
-    "Field notes from JDT Inc. — long-form writing on AI marketing, performance media, funnel optimization, and the systems behind compounding growth.",
+    "Field notes from JDT Inc.: long-form writing on AI in marketing, paid media, funnel optimization, and how we actually run campaigns.",
   alternates: {
     canonical: "/journal",
     languages: {
@@ -54,12 +54,12 @@ export default function JournalIndex() {
       <Section padded={false} className="pt-40 sm:pt-48 pb-20 sm:pb-28">
         <p className="eyebrow">Journal · Field notes</p>
         <h1 className="display mt-8 text-hero max-w-5xl">
-          Long-form writing on the systems behind growth.
+          Notes from the work.
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
-          Working notes from senior operators — AI marketing, performance
-          media, funnel work, creative systems. Slow journalism for an
-          industry that talks too fast.
+          Working notes from the people running the accounts: AI in
+          marketing, paid media, funnel work, creative. Slow journalism for
+          an industry that talks too fast.
         </p>
       </Section>
 
@@ -95,7 +95,7 @@ export default function JournalIndex() {
           <div>
             <p className="eyebrow">By topic</p>
             <h2 className="display mt-6 text-display max-w-3xl">
-              Ten clusters. One operating worldview.
+              Ten topics, one point of view.
             </h2>
           </div>
         </div>
@@ -141,8 +141,8 @@ export default function JournalIndex() {
 
       <CTA
         eyebrow="Engage"
-        title="Read what we've shipped, then talk shape."
-        body="Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through what you're seeing in your numbers and what the first 90 days could look like."
+        title="Read the notes, then let's talk."
+        body="Book a 30-minute call. We'll walk through what you're seeing in your numbers and what the first 90 days could look like."
         primary={{ label: "Book a strategy call", href: "/contact" }}
         secondary={{ label: "See the work", href: "/work" }}
       />

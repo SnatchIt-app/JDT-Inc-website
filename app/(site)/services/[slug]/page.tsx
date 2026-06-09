@@ -471,7 +471,7 @@ export default function ServicePage({ params }: Params) {
       <CTA
         eyebrow="Engage"
         title={`Ready to put ${svc.title} to work?`}
-        body="Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your goals, your numbers, and what the first 90 days should look like."
+        body="Most engagements start with a 30-minute call. We'll walk through your goals, your numbers, and what the first 90 days should look like."
         primary={{ label: "Book a strategy call", href: "/contact" }}
         secondary={{ label: "See the work", href: "/work" }}
       />

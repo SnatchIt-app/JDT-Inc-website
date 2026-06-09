@@ -25,11 +25,11 @@ export const servicesEs: Service[] = [
     slug: "meta-ads",
     title: "Meta Ads",
     short:
-      "Campañas en Facebook e Instagram diseñadas en torno al modelado de audiencia, testing creativo y ROAS — no al alcance vanidoso.",
+      "Campañas en Facebook e Instagram construidas sobre research real de clientes, testing creativo constante y ROAS. No alcance vanidoso.",
     outcome:
-      "Un programa de Meta donde cada dólar está medido y la cohorte mejora mes a mes.",
+      "Una cuenta de Meta donde cada dólar está medido y los resultados mejoran mes a mes.",
     details: [
-      "Modelado de audiencia y estrategia lookalike",
+      "Research de audiencia y estrategia lookalike",
       "Matrices de testing creativo",
       "Atribución y medición post-iOS",
       "Escalado de presupuesto y reporting por cohorte",
@@ -37,7 +37,7 @@ export const servicesEs: Service[] = [
     seo: {
       metaTitle: "Agencia de Meta Ads en Miami — JDT Inc.",
       metaDescription:
-        "Meta Ads diseñadas para crecimiento medible. JDT Inc. construye programas de Facebook e Instagram con modelado de audiencia, testing creativo y ROAS comprobado.",
+        "Meta Ads para crecimiento medible. JDT Inc. maneja campañas de Facebook e Instagram con research de clientes, testing creativo y ROAS.",
       primaryKeyword: "agencia de meta ads miami",
       secondaryKeywords: [
         "meta ads miami",
@@ -50,13 +50,13 @@ export const servicesEs: Service[] = [
     },
     hero: {
       eyebrow: "Servicio · Meta Ads",
-      h1: "Meta Ads, construidas para componer crecimiento.",
+      h1: "Meta Ads que se pagan solas.",
       subheadline:
-        "JDT Inc. es una agencia de Meta Ads con sede en Miami. Operamos programas de Facebook e Instagram como sistemas diseñados — modelado de audiencia, variantes creativas, testing estructurado y medición post-iOS — todos alineados a la métrica que paga la operación.",
+        "JDT Inc. es una agencia de Meta Ads en Miami. Manejamos campañas de Facebook e Instagram con research real de clientes, una cadencia constante de testing creativo y medición que sobrevivió a iOS. Todo se mide contra la métrica que paga la operación.",
     },
     outcomes: [
       { value: "−25–40%", label: "Reducción objetivo de costo por lead" },
-      { value: "2–4×", label: "ROAS para el que diseñamos" },
+      { value: "2–4×", label: "ROAS al que apuntamos" },
       { value: "30+", label: "Variantes creativas testeadas por trimestre" },
       { value: "Semanal", label: "Reporting por cohorte" },
     ],
@@ -83,12 +83,12 @@ export const servicesEs: Service[] = [
     },
     methodology: {
       intro:
-        "Cada engagement de Meta corre el mismo loop de cuatro etapas. Comprimimos el trabajo que las agencias tradicionales estiran durante meses — y mantenemos el loop en marcha mientras trabajamos juntos.",
+        "Cada engagement de Meta corre el mismo loop de cuatro etapas. Comprimimos el trabajo que las agencias tradicionales estiran durante meses, y mantenemos el loop en marcha mientras trabajamos juntos.",
       steps: [
         {
           step: "01",
-          title: "Modelado de audiencia",
-          body: "Mapeamos al comprador con datos de primera línea — historial de compra, transcripciones de calls de soporte, tickets, reseñas — y agrupamos patrones de comportamiento en territorios de audiencia con ángulos creativos concretos.",
+          title: "Research de audiencia",
+          body: "Mapeamos al comprador con tus datos de primera mano: historial de compra, transcripciones de calls, tickets de soporte, reseñas. De ahí sale una lista corta de audiencias, cada una con ángulos creativos concretos.",
         },
         {
           step: "02",
@@ -98,12 +98,12 @@ export const servicesEs: Service[] = [
         {
           step: "03",
           title: "Testing estructurado",
-          body: "Audiencias y creatividades se testean en condiciones controladas — no se lanzan variantes a la pared. Las combinaciones ganadoras se gradúan, las perdedoras se retiran, y la matriz evoluciona cada dos semanas.",
+          body: "Audiencias y creatividades se testean en condiciones controladas, no se lanzan variantes a la pared. Las combinaciones ganadoras se gradúan, las perdedoras se retiran, y la matriz evoluciona cada dos semanas.",
         },
         {
           step: "04",
           title: "Optimización por cohorte",
-          body: "El gasto escala contra contribución verificada, no solo contra atribución reportada por la plataforma. Reportamos en cohortes, ventanas de payback y los indicadores principales que predicen el siguiente trimestre — no el último.",
+          body: "El gasto escala contra contribución verificada, no solo contra atribución reportada por la plataforma. Reportamos en cohortes, ventanas de payback y los indicadores que predicen el siguiente trimestre, no el último.",
         },
       ],
     },
@@ -113,11 +113,11 @@ export const servicesEs: Service[] = [
       items: [
         {
           title: "Arquitectura de cuenta",
-          body: "Estructura de campañas, jerarquía de audiencias, lógica de exclusiones y convenciones de nombres diseñadas para escalar limpiamente — no caos heredado.",
+          body: "Estructura de campañas, jerarquía de audiencias, lógica de exclusiones y convenciones de nombres diseñadas para escalar limpiamente. Sin caos heredado.",
         },
         {
           title: "Sistema de producción creativa",
-          body: "Dirección editorial, dirección de arte y output continuo — estáticos, motion, UGC. Construido para correr, no para entregar archivos una sola vez.",
+          body: "Dirección editorial, dirección de arte y output continuo: estáticos, motion, UGC. Construido para correr, no para entregar archivos una sola vez.",
         },
         {
           title: "Stack de medición",
@@ -125,29 +125,29 @@ export const servicesEs: Service[] = [
         },
         {
           title: "Roadmap de testing",
-          body: "Un documento vivo que mapea los próximos 30, 60 y 90 días de tests de audiencia, creatividad y oferta — para que el trabajo componga.",
+          body: "Un documento vivo que mapea los próximos 30, 60 y 90 días de tests de audiencia, creatividad y oferta, para que el testing nunca se frene.",
         },
         {
           title: "Reporting por cohorte",
-          body: "Lecturas de performance semanales atadas a revenue, payback y contribución — no a impresiones y CPMs.",
+          body: "Lecturas de performance semanales atadas a revenue, payback y contribución. No a impresiones y CPMs.",
         },
       ],
     },
     aiDifferentiation: {
       intro:
-        "La IA en Meta Ads se promete demasiado en pitch decks y se usa poco en la práctica. Aquí está exactamente dónde la aplicamos — y dónde deliberadamente no.",
+        "La IA en Meta Ads se promete demasiado en pitch decks y se usa poco en la práctica. Aquí está exactamente dónde la aplicamos, y dónde deliberadamente no.",
       pillars: [
         {
-          title: "Modelado de audiencia con clustering vía LLM",
-          body: "Transcripciones de soporte, grabaciones de calls de ventas y datasets de reseñas pasan por un pipeline estructurado con modelos de lenguaje que extrae territorios de audiencia — conceptos y ángulos que un equipo manual de analistas tardaría semanas en encontrar.",
+          title: "Research de clientes a escala",
+          body: "Transcripciones de soporte, grabaciones de calls de ventas y reseñas pasan por un pipeline con modelos de lenguaje que las agrupa en audiencias y ángulos. Trabajo que un equipo manual de analistas tardaría semanas en hacer a mano.",
         },
         {
           title: "Matrices de variantes creativas",
-          body: "Hooks, headlines y copy se generan bajo restricciones de voz de marca, después un editor humano los pule. El output no se publica solo — es un pool de testing 10× más grande, con cada variante revisada por un creativo senior antes de ver un dólar.",
+          body: "Hooks, headlines y copy se generan bajo restricciones de voz de marca, y después un editor humano los pule. Nada se publica solo. El resultado es un pool de testing 10× más grande, con cada variante revisada antes de ver un dólar.",
         },
         {
           title: "Detección de anomalías en gasto",
-          body: "El performance diario se monitorea con un modelo que marca desviaciones estadísticamente significativas — picos repentinos de CPM, fatiga de audiencia, brechas de atribución — antes de que un humano las note en el dashboard.",
+          body: "El performance diario se monitorea con un modelo que marca desviaciones significativas, como picos repentinos de CPM, fatiga de audiencia o brechas de atribución, antes de que un humano las note en el dashboard.",
         },
       ],
     },
@@ -156,12 +156,12 @@ export const servicesEs: Service[] = [
       {
         question: "¿Cuál es el presupuesto mínimo mensual de Meta Ads con el que trabajan?",
         answer:
-          "Típicamente arrancamos en $10K/mes en gasto de medios, más el retainer de gestión. Por debajo de eso, el testing estructurado se rompe — no hay volumen suficiente para leer variantes estadísticamente, y el trabajo deja de componer.",
+          "Típicamente arrancamos en $10K/mes en gasto de medios, más el retainer de gestión. Por debajo de eso, el testing estructurado se rompe. No hay volumen suficiente para leer variantes estadísticamente.",
       },
       {
         question: "¿Cómo se diferencia JDT de una agencia tradicional de Meta Ads?",
         answer:
-          "Tres diferencias. Operadores senior corren cada cuenta — sin handoffs a equipos junior. La creatividad se produce in-house, así que el volumen de testing no depende de partners externos. Y nuestro reporting ata el gasto a contribución verificada y ventanas de payback — no al ROAS reportado por la plataforma.",
+          "Tres diferencias. Las personas que manejan tu cuenta llevan años haciéndolo, sin handoff a equipos junior. La creatividad se produce in-house, así que el volumen de testing no depende de partners externos. Y nuestro reporting ata el gasto a contribución verificada y ventanas de payback, no al ROAS reportado por la plataforma.",
       },
       {
         question: "¿En cuánto tiempo se ven resultados?",
@@ -171,12 +171,12 @@ export const servicesEs: Service[] = [
       {
         question: "¿Manejan creatividad in-house?",
         answer:
-          "Sí — dirección editorial, dirección de arte, estáticos, motion y sourcing de UGC son todos in-house. Ese es el apalancamiento. Las agencias que tercerizan creatividad no pueden correr una matriz real de testing.",
+          "Sí. Dirección editorial, dirección de arte, estáticos, motion y sourcing de UGC son todos in-house. Las agencias que tercerizan creatividad no pueden correr una matriz real de testing.",
       },
       {
         question: "¿Trabajan con audiencias en español o bilingües?",
         answer:
-          "Sí — y en Miami es exactamente donde más importa. Diseñamos programas en inglés, español y bilingüe como audiencias de primera clase, con creatividad nativa, no decks traducidos.",
+          "Sí, y en Miami es exactamente donde más importa. Diseñamos programas en inglés, español y bilingüe como audiencias de primera clase, con creatividad nativa, no decks traducidos.",
       },
     ],
     related: ["ai-automation", "lead-generation", "funnel-optimization"],
@@ -189,9 +189,9 @@ export const servicesEs: Service[] = [
     slug: "ai-automation",
     title: "Automatización con IA",
     short:
-      "Sistemas operativos de IA que comprimen semanas de trabajo de analista en horas — a través de marketing, ventas y reporting.",
+      "Automatizaciones que comprimen semanas de trabajo manual en horas, a través de marketing, ventas y reporting.",
     outcome:
-      "Un stack de workflows que corre en segundo plano, surface señales más rápido que los humanos, y libera a la gente senior del trabajo manual.",
+      "Automatizaciones que corren en segundo plano y liberan a tu equipo del trabajo repetitivo.",
     details: [
       "Workflows de enriquecimiento y scoring de leads",
       "Pipelines de generación de contenido y creatividad",
@@ -201,7 +201,7 @@ export const servicesEs: Service[] = [
     seo: {
       metaTitle: "Automatización con IA para Marketing — JDT Inc.",
       metaDescription:
-        "Automatización con IA que comprime semanas de trabajo manual en horas — modelado de audiencia, enriquecimiento de leads, workflows de contenido y reporting que corren solos.",
+        "Automatización con IA que comprime semanas de trabajo manual en horas: research de clientes, enriquecimiento de leads, workflows de contenido y reporting que corren solos.",
       primaryKeyword: "automatización con ia miami",
       secondaryKeywords: [
         "agencia de ia miami",
@@ -214,9 +214,9 @@ export const servicesEs: Service[] = [
     },
     hero: {
       eyebrow: "Servicio · Automatización con IA",
-      h1: "Automatización con IA, donde realmente compone.",
+      h1: "Automatización con IA que de verdad se entrega.",
       subheadline:
-        "La mayoría de las agencias venden IA como buzzword. Nosotros diseñamos y operamos los sistemas — enriquecimiento de leads, modelado de audiencia, workflows de contenido, generación con voz de marca y agentes de reporting — que comprimen semanas de trabajo manual en horas, con humanos senior en el loop donde importa.",
+        "La mayoría de las agencias venden IA como buzzword. Nosotros construimos y operamos los sistemas reales: enriquecimiento de leads, research de clientes, workflows de contenido y reportes que se escriben solos. Las personas se quedan en el loop donde importa el juicio.",
     },
     outcomes: [
       { value: "10×+", label: "Velocidad en research de audiencia" },
@@ -247,7 +247,7 @@ export const servicesEs: Service[] = [
     },
     methodology: {
       intro:
-        "Cada engagement de automatización con IA corre el mismo loop de cuatro etapas. No entregamos demos — entregamos sistemas en producción con documentación, monitoreo y un runbook.",
+        "Cada engagement de automatización corre las mismas cuatro etapas. No entregamos demos. Entregamos sistemas funcionando, con documentación, monitoreo y un runbook.",
       steps: [
         {
           step: "01",
@@ -257,17 +257,17 @@ export const servicesEs: Service[] = [
         {
           step: "02",
           title: "Diseño del sistema",
-          body: "Cada workflow se diseña como un grafo — inputs, transformaciones, validación, gates de revisión humana, output. Elegimos herramientas (Clay, n8n, Zapier, Make, código custom, las APIs de OpenAI / Anthropic) según el trabajo, no la moda.",
+          body: "Cada workflow se diseña paso por paso: inputs, transformaciones, validación, gates de revisión humana, output. Elegimos herramientas (Clay, n8n, Zapier, Make, código custom, las APIs de OpenAI / Anthropic) según el trabajo, no la moda.",
         },
         {
           step: "03",
           title: "Build de producción",
-          body: "Los sistemas se construyen con monitoreo, manejo de errores y ownership claro. Humanos senior revisan donde el juicio importa — aprobación de copy, calificación de leads, respuesta a anomalías — para que la calidad se sostenga al escalar.",
+          body: "Los sistemas se construyen con monitoreo, manejo de errores y ownership claro. Las personas revisan donde el juicio importa: aprobación de copy, calificación de leads, respuesta a anomalías. La calidad se sostiene porque alguien es dueño de ella.",
         },
         {
           step: "04",
           title: "Handoff operativo",
-          body: "Documentamos el runbook, entrenamos al equipo in-house, y nos quedamos en retainer el primer trimestre para tunear. El sistema es tuyo cuando terminamos — no una caja negra que se rompe el día que nos vamos.",
+          body: "Documentamos el runbook, entrenamos a tu equipo, y nos quedamos en retainer el primer trimestre para afinar. El sistema es tuyo cuando terminamos, no una caja negra que se rompe el día que nos vamos.",
         },
       ],
     },
@@ -277,23 +277,23 @@ export const servicesEs: Service[] = [
       items: [
         {
           title: "Enriquecimiento y scoring de leads",
-          body: "Leads inbound y outbound enriquecidos con datos firmográficos, de intención y persona — después scored contra tu ICP usando un modelo entrenado en tu historial de closed-won.",
+          body: "Leads inbound y outbound enriquecidos con datos firmográficos, de intención y persona, y después calificados contra tu cliente ideal con un modelo entrenado en tu historial de ventas cerradas.",
         },
         {
           title: "Pipelines de contenido y creatividad",
-          body: "Pipelines de generación con voz de marca para ad copy, email, social y scripts de short-form. Un creativo senior revisa cada output antes de que se publique.",
+          body: "Pipelines de generación con voz de marca para ad copy, email, social y scripts de short-form. Un creativo revisa cada output antes de que se publique.",
         },
         {
           title: "Agentes de reporting",
-          body: "Digests de performance semanales compilados automáticamente — pulling de Meta, Google, GA4, tu CRM — y escritos en la voz de tu equipo, no en inglés genérico de template.",
+          body: "Digests de performance semanales compilados automáticamente desde Meta, Google, GA4 y tu CRM, escritos en la voz de tu equipo, no en inglés genérico de template.",
         },
         {
-          title: "Modelado de audiencia",
-          body: "Transcripciones de calls con clientes, tickets de soporte y data de reseñas agrupadas en territorios de audiencia que informan creatividad, copy y posicionamiento de producto.",
+          title: "Research de clientes",
+          body: "Transcripciones de calls con clientes, tickets de soporte y reseñas agrupadas en audiencias que informan creatividad, copy y posicionamiento de producto.",
         },
         {
           title: "Runbook operativo",
-          body: "Documentación de cada workflow, owner, alerta de monitoreo y path de escalación — así el equipo puede correr el sistema sin nosotros.",
+          body: "Documentación de cada workflow, owner, alerta de monitoreo y ruta de escalación, para que tu equipo pueda correr el sistema sin nosotros.",
         },
       ],
     },
@@ -303,15 +303,15 @@ export const servicesEs: Service[] = [
       pillars: [
         {
           title: "Prompting estructurado, no chat",
-          body: "Los sistemas de producción usan prompts estructurados con esquemas explícitos, validación y lógica de retry — no un compañero copiando outputs de ChatGPT. La diferencia es confiabilidad y trazabilidad.",
+          body: "Los sistemas de producción usan prompts estructurados con esquemas explícitos, validación y lógica de retry, no un compañero copiando outputs de ChatGPT. La diferencia es confiabilidad y trazabilidad.",
         },
         {
           title: "Humano en el loop donde importa",
-          body: "Cada sistema tiene un gate definido donde un humano senior revisa. El copy pasa por editores. Los leads van por un calificador. Los reportes se aprueban antes de salir. Velocidad sin juicio es solo errores más rápidos.",
+          body: "Cada sistema tiene un gate definido donde una persona revisa. El copy pasa por editores. Los leads van por un calificador. Los reportes se aprueban antes de salir. Velocidad sin juicio es solo errores más rápidos.",
         },
         {
           title: "Diseño agnóstico de herramienta",
-          body: "Construimos sobre Clay, n8n, Make, Zapier, código custom y las APIs de los modelos principales según el workload. Los sistemas no quedan atados a un solo vendor — así cuando los modelos o los precios cambian, el trabajo no se rompe.",
+          body: "Construimos sobre Clay, n8n, Make, Zapier, código custom y las APIs de los modelos principales según el trabajo. Nada queda atado a un solo vendor, así que cuando los modelos o los precios cambian, el trabajo no se rompe.",
         },
       ],
     },
@@ -320,17 +320,17 @@ export const servicesEs: Service[] = [
       {
         question: "¿Esto es estrategia de IA o implementación?",
         answer:
-          "Ambos, pero pesa fuerte hacia implementación. No entregamos un deck de estrategia sin ownership de los sistemas que salen de él. El deliverable es software funcionando — workflows en producción, documentados y monitoreados — no un roadmap.",
+          "Ambos, pero pesa fuerte hacia implementación. No entregamos un deck de estrategia sin ownership de los sistemas que salen de él. El deliverable es software funcionando, documentado y monitoreado. No un roadmap.",
       },
       {
         question: "¿En qué herramientas construyen?",
         answer:
-          "La elección de herramienta la determina el workload. Enriquecimiento de leads usualmente corre en Clay. Orquestación de workflows en n8n, Zapier o Make. Pipelines de generación en las APIs de OpenAI y Anthropic según el caso. Evitamos lock-in.",
+          "La elección de herramienta la determina el trabajo. Enriquecimiento de leads usualmente corre en Clay. Orquestación de workflows en n8n, Zapier o Make. Pipelines de generación en las APIs de OpenAI y Anthropic según el caso. Evitamos lock-in.",
       },
       {
         question: "¿Reemplazan a nuestro equipo de marketing?",
         answer:
-          "No — lo hacen más difícil de reemplazar. La meta es apalancamiento, no reducir headcount. Los humanos senior se liberan del trabajo manual para hacer las partes de juicio que importan.",
+          "No. Lo hacen más difícil de reemplazar. La meta es apalancamiento, no reducir headcount. Tu mejor gente se libera del trabajo manual para hacer las partes que requieren juicio.",
       },
       {
         question: "¿Cuánto toma un build?",
@@ -353,9 +353,9 @@ export const servicesEs: Service[] = [
     slug: "lead-generation",
     title: "Generación de leads",
     short:
-      "Sistemas de generación de leads que producen inbound calificado y listo para ventas — paid acquisition, landing pages, scoring y handoff a CRM diseñados como una sola máquina.",
+      "Inbound calificado y listo para ventas. Paid acquisition, landing pages, scoring y handoff a CRM diseñados como una sola máquina.",
     outcome:
-      "Un pipeline predecible de compradores que tu equipo de ventas realmente puede cerrar — no un Zendesk lleno de curiosos.",
+      "Un pipeline predecible de compradores que tu equipo de ventas realmente puede cerrar. No una bandeja llena de curiosos.",
     details: [
       "Paid acquisition para ofertas de lead-gen",
       "Arquitectura de landing pages y formularios",
@@ -365,7 +365,7 @@ export const servicesEs: Service[] = [
     seo: {
       metaTitle: "Agencia de Generación de Leads en Miami — JDT Inc.",
       metaDescription:
-        "Sistemas de generación de leads que producen inbound calificado y listo para ventas — paid acquisition, landing pages, scoring y CRM diseñados como una sola máquina.",
+        "Inbound calificado y listo para ventas. Paid acquisition, landing pages, scoring y CRM diseñados como una sola máquina. JDT Inc., Miami.",
       primaryKeyword: "generación de leads miami",
       secondaryKeywords: [
         "agencia de leads miami",
@@ -380,7 +380,7 @@ export const servicesEs: Service[] = [
       eyebrow: "Servicio · Generación de leads",
       h1: "Generación de leads, construida como un solo sistema.",
       subheadline:
-        "La mayoría de los programas de lead-gen tienen fugas entre canales y el CRM. JDT Inc. diseña todo como una sola máquina — paid acquisition, landing pages, lógica de calificación, enriquecimiento y handoff a ventas — para que los leads lleguen al escritorio del rep precalificados y con contexto.",
+        "La mayoría de los programas de lead-gen tienen fugas entre canales y el CRM. Nosotros diseñamos todo como una sola máquina: paid acquisition, landing pages, lógica de calificación, enriquecimiento y handoff a ventas. Los leads llegan al escritorio del rep precalificados y con contexto.",
     },
     outcomes: [
       { value: "−30–50%", label: "Costo objetivo por lead calificado" },
@@ -416,22 +416,22 @@ export const servicesEs: Service[] = [
         {
           step: "01",
           title: "ICP y oferta",
-          body: "Mapeamos al comprador ideal usando data de closed-won, después diseñamos o afilamos la oferta de lead — la cosa que realmente vale dejar un email. La oferta es la mitad del trabajo; los canales son la parte fácil.",
+          body: "Mapeamos al comprador ideal usando data de ventas cerradas, y después diseñamos o afilamos la oferta: lo que realmente vale dejar un email. La oferta es la mitad del trabajo; los canales son la parte fácil.",
         },
         {
           step: "02",
           title: "Stack de adquisición",
-          body: "Canales paid — Meta, Google, LinkedIn cuando aplica — emparejados con landing pages diseñadas para la oferta, no homepages reciclados. El tracking se monta antes de que un dólar de gasto vaya en vivo.",
+          body: "Canales paid (Meta, Google, LinkedIn cuando aplica) emparejados con landing pages diseñadas para la oferta, no homepages reciclados. El tracking se monta antes de que un dólar de gasto vaya en vivo.",
         },
         {
           step: "03",
           title: "Calificación y enriquecimiento",
-          body: "Cada lead inbound se enriquece al enviar el form — firmográfico, persona, intención. Un modelo de scoring entrenado en tu historial de closed-won rutea leads calientes directo a reps y descalifica el ruido obvio.",
+          body: "Cada lead inbound se enriquece al enviar el form con datos firmográficos, de persona y de intención. Un modelo de scoring entrenado en tu historial de ventas cerradas manda los leads calientes directo a reps y descalifica el ruido obvio.",
         },
         {
           step: "04",
           title: "Handoff a ventas",
-          body: "Los leads calientes aterrizan en el CRM con contexto completo — fuente, score, enriquecimiento, interacciones previas — y los reps reciben notificación en menos de cinco minutos. Sequences de nurture toman a todos los demás sin tocar humano.",
+          body: "Los leads calientes aterrizan en el CRM con contexto completo: fuente, score, enriquecimiento, interacciones previas. Los reps reciben notificación en menos de cinco minutos. Las secuencias de nurture toman a todos los demás automáticamente.",
         },
       ],
     },
@@ -440,11 +440,11 @@ export const servicesEs: Service[] = [
       items: [
         {
           title: "Documento de oferta y ICP",
-          body: "El comprador codificado y la oferta codificada — qué decimos, a quién, a cambio de qué.",
+          body: "El comprador y la oferta, por escrito: qué decimos, a quién, a cambio de qué.",
         },
         {
           title: "Campañas de adquisición",
-          body: "Paid acquisition en Meta, Google y LinkedIn donde la matemática lo soporta. Operadores senior corren las campañas; la creatividad se produce in-house.",
+          body: "Paid acquisition en Meta, Google y LinkedIn donde la matemática lo soporta. Las campañas las manejan las mismas personas que las diseñaron; la creatividad se produce in-house.",
         },
         {
           title: "Landing pages de conversión",
@@ -452,7 +452,7 @@ export const servicesEs: Service[] = [
         },
         {
           title: "Pipeline de enriquecimiento",
-          body: "Enriquecimiento en tiempo real en cada inbound — firmográfico, persona, intención — alimentando el modelo de scoring.",
+          body: "Enriquecimiento en tiempo real en cada lead (firmográfico, persona, intención), alimentando el modelo de scoring.",
         },
         {
           title: "Scoring y routing",
@@ -460,24 +460,24 @@ export const servicesEs: Service[] = [
         },
         {
           title: "Nurture y re-engagement",
-          body: "Sequences de email que mueven leads tibios hacia una conversación real — y reactivan los stale sin spamear la lista.",
+          body: "Secuencias de email que mueven leads tibios hacia una conversación real, y reactivan los fríos sin spamear la lista.",
         },
       ],
     },
     aiDifferentiation: {
-      intro: "La IA aparece en todo el sistema de lead-gen — silenciosamente. Donde gana su lugar:",
+      intro: "La IA aparece en todo el sistema de lead-gen, silenciosamente. Donde hace trabajo real:",
       pillars: [
         {
           title: "Scoring de ICP entrenado en tu data",
-          body: "Construimos un modelo de scoring sobre tu historial de closed-won y closed-lost — no un template genérico. Cada lead llega con un score que significa algo específico para tu funnel.",
+          body: "Construimos un modelo de scoring sobre tu historial de ventas cerradas y perdidas, no un template genérico. Cada lead llega con un score que significa algo específico para tu funnel.",
         },
         {
           title: "Enriquecimiento e intención en tiempo real",
-          body: "Los leads inbound se enriquecen al enviar el form con señales firmográficas y de intención — Clay, Apollo, ZoomInfo, feeds custom — para que el rep tenga contexto antes de la primera llamada.",
+          body: "Los leads inbound se enriquecen al enviar el form con señales firmográficas y de intención desde Clay, Apollo, ZoomInfo o feeds custom, para que el rep tenga contexto antes de la primera llamada.",
         },
         {
           title: "Drafts de respuesta asistidos por IA",
-          body: "Las respuestas de primer toque se redactan en tu voz de marca con contexto completo del lead — score, fuente, enriquecimiento. El rep edita y envía. El speed-to-lead baja sin que la calidad baje.",
+          body: "Las respuestas de primer toque se redactan en tu voz de marca con contexto completo del lead: score, fuente, enriquecimiento. El rep edita y envía. El tiempo de respuesta baja sin que la calidad baje.",
         },
       ],
     },
@@ -491,7 +491,7 @@ export const servicesEs: Service[] = [
       {
         question: "¿Cómo se define un 'lead calificado'?",
         answer:
-          "Por la data de closed-won de tu equipo de ventas, no por un template genérico. Codificamos cómo se ve un comprador real para tu negocio — firmográfico, persona, señales de comportamiento — y el modelo de scoring mantiene al resto del sistema alineado.",
+          "Por la data de ventas cerradas de tu equipo, no por un template genérico. Escribimos cómo se ve un comprador real para tu negocio (firmográfico, persona, comportamiento) y el modelo de scoring mantiene al resto del sistema alineado.",
       },
       {
         question: "¿Se integran con nuestro CRM?",
@@ -519,7 +519,7 @@ export const servicesEs: Service[] = [
     slug: "funnel-optimization",
     title: "Optimización de embudos",
     short:
-      "Optimización de embudos que convierte tráfico en pipeline — landing pages, conversion testing y instrumentación full-funnel diseñada para lift medible.",
+      "Convierte más de tu tráfico en clientes. Landing pages, conversion testing y tracking en todo el embudo.",
     outcome:
       "Un embudo donde cada paso está instrumentado, cada cambio se testea, y cada trimestre la matemática de conversión mejora.",
     details: [
@@ -531,7 +531,7 @@ export const servicesEs: Service[] = [
     seo: {
       metaTitle: "Optimización de Embudos y CRO en Miami — JDT Inc.",
       metaDescription:
-        "Optimización de embudos que convierte tráfico en pipeline — landing pages, conversion testing e instrumentación full-funnel diseñada para lift medible.",
+        "Convierte más de tu tráfico en clientes. Landing pages, conversion testing y tracking en todo el embudo. JDT Inc., Miami.",
       primaryKeyword: "optimización de embudos miami",
       secondaryKeywords: [
         "optimización de conversión miami",
@@ -546,7 +546,7 @@ export const servicesEs: Service[] = [
       eyebrow: "Servicio · Optimización de embudos",
       h1: "Optimización de embudos, de punta a punta.",
       subheadline:
-        "La adquisición es la mitad ruidosa del crecimiento. El embudo es la mitad silenciosa — y la que compone. JDT Inc. audita, instrumenta y reconstruye embudos para lift medible, desde la primera impresión paid hasta el revenue cerrado.",
+        "La adquisición es la mitad ruidosa del crecimiento. El embudo es la mitad silenciosa, y la que la mayoría ignora. Auditamos, instrumentamos y reconstruimos embudos para mejoras medibles, desde la primera impresión paid hasta el revenue cerrado.",
     },
     outcomes: [
       { value: "+20–60%", label: "Lift objetivo en pasos clave de conversión" },
@@ -556,7 +556,7 @@ export const servicesEs: Service[] = [
     ],
     whoFor: {
       intro:
-        "La optimización de embudos compone donde hay tráfico suficiente para testear contra él y disposición para cambiar lo que no funciona. El perfil que encaja:",
+        "La optimización de embudos paga donde hay tráfico suficiente para testear y disposición para cambiar lo que no funciona. El perfil que encaja:",
       clients: [
         "Marcas con paid acquisition ya corriendo y matemática de conversión poco clara",
         "Operadores sentados sobre tráfico que no convierten del todo",
@@ -581,12 +581,12 @@ export const servicesEs: Service[] = [
         {
           step: "01",
           title: "Auditoría e instrumentación",
-          body: "Mapeamos el embudo completo — desde la impresión paid hasta el revenue cerrado — e instrumentamos cada paso. La mayoría de los engagements arrancan exponiendo 30–60% de la data que el setup existente debió haber capturado.",
+          body: "Mapeamos el embudo completo, desde la impresión paid hasta el revenue cerrado, e instrumentamos cada paso. La mayoría de los engagements arrancan exponiendo 30–60% de la data que el setup existente debió haber capturado.",
         },
         {
           step: "02",
           title: "Stack de hipótesis",
-          body: "Los hallazgos se vuelven un stack priorizado de hipótesis — rankeadas por impacto, evidencia y esfuerzo. Testeamos primero las suposiciones con más apalancamiento; las opiniones sobre el color de un botón van al final.",
+          body: "Los hallazgos se vuelven un stack priorizado de hipótesis, rankeadas por impacto, evidencia y esfuerzo. Testeamos primero las suposiciones más grandes; las opiniones sobre el color de un botón van al final.",
         },
         {
           step: "03",
@@ -596,7 +596,7 @@ export const servicesEs: Service[] = [
         {
           step: "04",
           title: "Cadencia de composición",
-          body: "Ciclos de testing quincenales, lecturas mensuales del funnel, auditorías trimestrales de arquitectura. El punto no es ganar un test — es asegurarse de que el funnel mejore cada trimestre sin nosotros en la sala.",
+          body: "Ciclos de testing quincenales, lecturas mensuales del funnel, auditorías trimestrales de arquitectura. El punto no es ganar un test. Es asegurarse de que el funnel mejore cada trimestre sin nosotros en la sala.",
         },
       ],
     },
@@ -609,11 +609,11 @@ export const servicesEs: Service[] = [
         },
         {
           title: "Capa de instrumentación",
-          body: "GA4, tracking server-side, Conversion API, eventos custom — la medición que ya debería haber existido.",
+          body: "GA4, tracking server-side, Conversion API, eventos custom. La medición que ya debería haber existido.",
         },
         {
           title: "Sistema de landing pages",
-          body: "Templates, componentes, patrones de copy y hooks de instrumentación diseñados para testing — no páginas one-off.",
+          body: "Templates, componentes, patrones de copy y hooks de instrumentación diseñados para testing, no páginas sueltas.",
         },
         {
           title: "Programa de testing",
@@ -621,20 +621,20 @@ export const servicesEs: Service[] = [
         },
         {
           title: "Reporting del embudo",
-          body: "Lecturas de conversión paso a paso, análisis de drop-off y comportamiento por cohorte — visibles sin export manual.",
+          body: "Lecturas de conversión paso a paso, análisis de drop-off y comportamiento por cohorte, visibles sin export manual.",
         },
       ],
     },
     aiDifferentiation: {
-      intro: "La IA ayuda al trabajo de embudo en tres lugares — y se mantiene fuera del resto.",
+      intro: "La IA ayuda al trabajo de embudo en tres lugares, y se mantiene fuera del resto.",
       pillars: [
         {
           title: "Generación de variantes con voz de marca",
-          body: "Variantes de headlines y body copy generadas en la voz de marca documentada — ampliando el pool de testing sin bajar el listón editorial. Cada variante se edita por humano antes de publicarse.",
+          body: "Variantes de headlines y body copy generadas en la voz de marca documentada, ampliando el pool de testing sin bajar el estándar. Cada variante se edita por humano antes de publicarse.",
         },
         {
           title: "Análisis de sesiones por comportamiento",
-          body: "Grabaciones de sesiones y heatmaps procesados por modelos multimodales para identificar patrones — rage clicks, loops de navegación, formas de abandono — a una velocidad que un analista humano no puede igualar.",
+          body: "Grabaciones de sesiones y heatmaps procesados por modelos multimodales para identificar patrones como rage clicks, loops de navegación o formas de abandono, a una velocidad que un analista humano no puede igualar.",
         },
         {
           title: "Detección de anomalías en el embudo",
@@ -647,17 +647,17 @@ export const servicesEs: Service[] = [
       {
         question: "¿Esto es CRO o trabajo full-funnel?",
         answer:
-          "Ambos. Arrancamos a nivel de funnel — instrumentación, auditoría, fugas — y el programa de testing corre continuamente debajo. CRO sin contexto de funnel es jugar whack-a-mole.",
+          "Ambos. Arrancamos a nivel de funnel (instrumentación, auditoría, fugas) y el programa de testing corre continuamente debajo. CRO sin contexto de funnel es jugar whack-a-mole.",
       },
       {
         question: "¿Cuánto tráfico necesitamos para que el testing funcione?",
         answer:
-          "No hay un número limpio — depende de la conversion rate y la escala del test. Como piso aproximado, 20K visitantes mensuales y 200+ conversiones empiezan a soportar tests significativos en pasos clave. Por debajo, nos enfocamos primero en estructura del funnel y testing estadístico después.",
+          "No hay un número limpio. Depende de la conversion rate y la escala del test. Como piso aproximado, 20K visitantes mensuales y 200+ conversiones empiezan a soportar tests significativos en pasos clave. Por debajo, nos enfocamos primero en estructura del funnel y testing estadístico después.",
       },
       {
         question: "¿Construyen las landing pages?",
         answer:
-          "Sí — la mayoría de los engagements incluyen un sistema de landing pages, construido en el lenguaje de la marca con instrumentación incorporada. También podemos trabajar dentro de Webflow, Framer o tu CMS existente si ya lo tienes.",
+          "Sí. La mayoría de los engagements incluyen un sistema de landing pages, construido en el lenguaje de la marca con tracking incorporado. También podemos trabajar dentro de Webflow, Framer o tu CMS existente.",
       },
       {
         question: "¿Qué típicamente está roto cuando llegan?",
@@ -667,7 +667,7 @@ export const servicesEs: Service[] = [
       {
         question: "¿Cómo se coordina el trabajo de funnel con las cuentas de ads?",
         answer:
-          "De forma estrecha. Creatividad de ads, copy de landing y estructura de funnel se diseñan como una sola pieza — no como tres. Ese es el punto entero del sistema.",
+          "De forma estrecha. Creatividad de ads, copy de landing y estructura de funnel se diseñan como una sola pieza, no como tres. Ese es el punto.",
       },
     ],
     related: ["meta-ads", "lead-generation", "ai-automation"],

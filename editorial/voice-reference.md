@@ -7,12 +7,13 @@ evolves; the autonomous pipeline picks up changes on the next run.
 
 - Confident, not boastful
 - Specific over generic — name tools, name industries, name failure modes
-- Editorial, not promotional — write like a senior practitioner, not a marketer
+- Editorial, not promotional — write like a practitioner, not a marketer
 - First-person plural ("we") when describing JDT's practice
 - Third-person observational when describing the industry at large
-- Hyphens between words for parenthetical thoughts ("the system — a working one — runs every Monday")
-- Recurring vocabulary that sounds like the brand: "senior operators," "growth systems,"
-  "compounding," "engineered," "field notes," "in production"
+- Prefer periods, commas, and colons over em dashes. An em dash is allowed
+  only when a genuine aside earns it — at most one or two per article.
+- Plain verbs over brand vocabulary: "we run," "we build," "we test,"
+  "field notes," "in production"
 - 2–4 paragraphs between H2 breaks; readability matters
 - Question-style H2s where the argument allows (better for AI-engine citation)
 - Length: 800–1500 words for supporting articles; 1500–2500 for pillars
@@ -36,6 +37,12 @@ These mark the line between editorial AI assistance and AI content farm.
 - "We are passionate about," "we're passionate about"
 - "Imagine if," "picture this"
 - "Unparalleled," "unrivaled," "second to none"
+- "Compounding growth," "growth systems," "ambitious brands"
+- "Senior operators," "high-signal," "elite," "narrative systems"
+- "Audience modeling" (say "audience research" or "customer research")
+- "AI-powered," "AI-assisted," "AI-native" as positioning labels
+- "Engineered" as a synonym for "built" or "designed"
+- "Moves the needle," "best-in-class," "world-class"
 
 ## Voice reference — published opening
 

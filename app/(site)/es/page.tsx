@@ -26,22 +26,22 @@ const homepageFaqs = [
   {
     question: "¿Qué hace JDT Inc.?",
     answer:
-      "JDT Inc. es una agencia de marketing en Miami potenciada por inteligencia artificial. Diseñamos sistemas de crecimiento que combinan estrategia senior, dirección creativa editorial, performance media (Meta Ads, Google Ads), automatización con IA, generación de leads, sistemas CRM y optimización de embudos — todos diseñados para componer resultados mes tras mes.",
+      "Somos una agencia de marketing en Miami. Manejamos campañas de Meta y Google Ads, producimos la creatividad, construimos landing pages y embudos, montamos CRM y programas de email, y automatizamos el trabajo manual. Todo se mide contra leads y revenue.",
   },
   {
     question: "¿Con quién trabajan?",
     answer:
-      "Trabajamos con marcas DTC ambiciosas, firmas de servicios profesionales y negocios de lujo y lifestyle — típicamente empresas lideradas por founders invirtiendo $50K–$500K+ al año en crecimiento, listas para operar contra un sistema real, no contra campañas one-off.",
+      "Marcas DTC, firmas de servicios profesionales y negocios de lujo y lifestyle. La mayoría son empresas lideradas por founders que invierten $50K–$500K al año en marketing y están cansadas de campañas sueltas que no llegan a nada.",
   },
   {
     question: "¿En qué se diferencia JDT de una agencia tradicional?",
     answer:
-      "Cada engagement lo corren operadores senior, no una capa de account managers junior. Usamos IA para modelar audiencias, acelerar testing creativo y exponer señales semanas antes que un equipo manual de analistas — y reportamos sobre las métricas que mueven el negocio, no sobre dashboards vanidosos.",
+      "Trabajas con las personas que realmente manejan tu cuenta, sin handoff a juniors. Usamos IA para trabajos concretos, como convertir reseñas de clientes en research o detectar gastos anómalos, y una persona revisa todo antes de publicarse. Reportamos costo por lead y revenue, no impresiones.",
   },
   {
     question: "¿Dónde está JDT Inc.?",
     answer:
-      "Nuestra sede está en Miami, Florida. Trabajamos con marcas en todo Estados Unidos — totalmente remotos cuando tiene sentido, presenciales cuando importa.",
+      "En Miami, Florida. Trabajamos con marcas en todo Estados Unidos, remotos para la mayoría del trabajo y presenciales cuando importa.",
   },
 ];
 
@@ -79,20 +79,21 @@ export default function HomePageEs() {
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <div className="flex flex-col gap-10">
           <p className="eyebrow">
-            Miami · Agencia de crecimiento con IA · Est. JDT Inc.
+            Miami · Agencia de Marketing · JDT Inc.
           </p>
 
           <h1 className="display text-hero max-w-6xl">
-            Estrategia, creatividad e IA — al servicio del crecimiento.
+            Manejamos tus ads, construimos tus embudos y automatizamos lo
+            demás.
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
             <p className="lg:col-span-7 text-lg sm:text-xl text-black/70 leading-relaxed max-w-2xl">
-              JDT Inc. es una agencia de marketing en Miami potenciada por
-              inteligencia artificial. Diseñamos sistemas de crecimiento para
-              marcas ambiciosas — estrategia senior, dirección creativa
-              editorial, Meta Ads, Google Ads, automatización con IA,
-              generación de leads y sistemas CRM que componen mes tras mes.
+              JDT Inc. es una agencia de marketing en Miami. Manejamos Meta y
+              Google Ads, diseñamos la creatividad nosotros mismos,
+              construimos las landing pages y montamos el CRM y la
+              automatización detrás. Nuestros clientes quieren más leads y
+              números confiables, no más reuniones.
             </p>
 
             <div className="lg:col-span-5 flex flex-col sm:flex-row gap-3 lg:justify-end">
@@ -133,14 +134,13 @@ export default function HomePageEs() {
           </div>
           <div className="lg:col-span-8">
             <h2 className="display text-display max-w-4xl">
-              Construimos sistemas de marketing — no campañas sueltas.
+              Construimos marketing que sigue funcionando cuando la campaña
+              termina.
             </h2>
             <p className="mt-10 text-lg text-black/70 leading-relaxed max-w-2xl">
-              La mayoría de las agencias entregan tácticas. Nosotros diseñamos
-              el sistema completo — posicionamiento, creatividad, embudos y
-              paid media — afinado en tiempo real con automatización de IA y
-              fundamentado en estrategia senior. El resultado es crecimiento
-              que compone, no picos de corto plazo.
+              La mayoría de las agencias entregan tácticas. Nosotros montamos
+              todo: posicionamiento, creatividad, landing pages, paid media y
+              el tracking que los conecta. Y lo mejoramos mes tras mes.
             </p>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function HomePageEs() {
       <CTA
         eyebrow="Conversemos"
         title="Mapeemos tus primeros 90 días."
-        body="La mayoría de los engagements arrancan con una llamada de estrategia de 30 minutos — sin pitch deck. Hablamos de tus objetivos, tus números y cómo deberían verse los próximos 90 días."
+        body="Todo arranca con una llamada de 30 minutos, sin pitch deck. Hablamos de tus objetivos, tus números y cómo deberían verse los próximos 90 días."
         primary={{ label: siteEs.ui.bookCall, href: "/contact" }}
         secondary={{ label: siteEs.ui.seeWork, href: "/work" }}
       />

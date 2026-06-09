@@ -10,7 +10,7 @@ import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Let's build a growth system for your business. Book a strategy call with JDT Inc. or send us the details of your project.",
+    "Book a 30-minute call with JDT Inc. or send us the details of your project. We reply within one business day.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: `Contact — ${site.name}`,
@@ -32,12 +32,11 @@ export default function ContactPage() {
       <Section padded={false} className="pt-40 sm:pt-48 pb-20 sm:pb-24">
         <p className="eyebrow">Contact · {site.location}</p>
         <h1 className="display mt-8 text-hero max-w-5xl">
-          Let&apos;s build a growth system for your business.
+          Tell us what you&apos;re trying to grow.
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
-          Tell us what you need and we&apos;ll map the next move — a focused
-          plan for positioning, demand, and the systems that turn both into
-          revenue.
+          Send the basics and we&apos;ll come back with a clear read: what
+          we&apos;d run, what it costs, and what the first 90 days look like.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row gap-3">
@@ -105,9 +104,9 @@ export default function ContactPage() {
               Pick a time that works.
             </h2>
             <p className="mt-8 max-w-xl text-paper/70 text-lg leading-relaxed">
-              30 minutes, no pitch deck. We&apos;ll walk through your goals,
-              where you are today, and whether JDT Inc. is the right fit for
-              what&apos;s next.
+              30 minutes. We&apos;ll walk through your goals, where you are
+              today, and whether we&apos;re the right fit for what&apos;s
+              next.
             </p>
           </div>
           <div className="lg:col-span-4 flex sm:justify-end">
@@ -150,9 +149,8 @@ export default function ContactPage() {
                 Send us the details.
               </h2>
               <p className="mt-6 text-black/65 leading-relaxed max-w-md">
-                Share the shape of the project — timing, goals, what&apos;s
-                working, what isn&apos;t. We reply to every inquiry within a
-                business day.
+                Timing, goals, what&apos;s working, what isn&apos;t. We reply
+                to every inquiry within a business day.
               </p>
             </div>
 

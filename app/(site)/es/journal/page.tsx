@@ -12,7 +12,7 @@ import { localeUrl } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Journal",
   description:
-    "Notas de campo desde JDT Inc. — escritura larga sobre IA en marketing, performance media, optimización de embudos y los sistemas que sostienen el crecimiento.",
+    "Notas de campo desde JDT Inc.: escritura larga sobre IA en marketing, paid media, optimización de embudos y cómo manejamos las campañas.",
   alternates: {
     canonical: "/es/journal",
     languages: {
@@ -42,11 +42,11 @@ export default function JournalEsIndex() {
       <Section padded={false} className="pt-40 sm:pt-48 pb-20 sm:pb-28">
         <p className="eyebrow">Journal · Notas de campo</p>
         <h1 className="display mt-8 text-hero max-w-5xl">
-          Escritura larga sobre los sistemas detrás del crecimiento.
+          Notas desde el trabajo.
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
-          Notas de operadores senior — IA en marketing, performance media,
-          optimización de embudos, sistemas creativos. Periodismo lento para
+          Notas de la gente que maneja las cuentas: IA en marketing, paid
+          media, optimización de embudos, creatividad. Periodismo lento para
           una industria que habla demasiado rápido.
         </p>
       </Section>
@@ -56,7 +56,7 @@ export default function JournalEsIndex() {
           <div>
             <p className="eyebrow">Por tema</p>
             <h2 className="display mt-6 text-display max-w-3xl">
-              Diez clusters. Una sola visión operativa.
+              Diez temas, un solo punto de vista.
             </h2>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function JournalEsIndex() {
           <div className="lg:col-span-5">
             <p className="text-lg text-black/70 leading-relaxed">
               El Journal en español arranca con la cadencia editorial que
-              tiene la versión en inglés — escritura nativa, no traducciones.
+              tiene la versión en inglés: escritura nativa, no traducciones.
               Mientras tanto, la edición en inglés tiene el primer pillar
               publicado.
             </p>
@@ -115,7 +115,7 @@ export default function JournalEsIndex() {
       <CTA
         eyebrow="Conversemos"
         title="Trae este tipo de pensamiento a tu negocio."
-        body="La mayoría de los engagements arrancan con una llamada de estrategia de 30 minutos — sin pitch deck. Hablamos de tus números y dónde deberían enfocarse los próximos 90 días."
+        body="Agenda una llamada de 30 minutos. Hablamos de tus números y dónde deberían enfocarse los próximos 90 días."
         primary={{ label: siteEs.ui.bookCall, href: "/contact" }}
         secondary={{ label: siteEs.ui.seeWork, href: "/work" }}
       />

@@ -10,7 +10,7 @@ import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Meta Ads, Google Ads, AI automation, content production, creative direction, lead generation, CRM systems, and funnel optimization — the full stack JDT Inc. brings to ambitious brands.",
+    "Meta Ads, Google Ads, AI automation, content production, creative direction, lead generation, CRM systems, and funnel optimization. Everything JDT Inc. runs for its clients.",
   alternates: {
     canonical: "/services",
     languages: {
@@ -38,11 +38,11 @@ export default function ServicesPage() {
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <p className="eyebrow">Services</p>
         <h1 className="display mt-8 text-hero max-w-5xl">
-          A full-stack growth partner — not a vendor.
+          Eight services. One team.
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
-          We plug into your business as an extension of your team. Each service
-          stands on its own, but they&apos;re designed to work as one system —
+          We plug into your business as an extension of your team. Each
+          service stands on its own, but they&apos;re built to work together,
           so the brand, the creative, and the numbers move in the same
           direction.
         </p>
@@ -106,7 +106,7 @@ export default function ServicesPage() {
       <CTA
         eyebrow="Engage"
         title="Not sure where to start?"
-        body="Most engagements start with a short strategy call — we'll map what you need, what you don't, and what the first 90 days should look like."
+        body="Book a short call. We'll map what you need, what you don't, and what the first 90 days should look like."
         primary={{ label: "Book a call", href: "/contact" }}
         secondary={{ label: "See the work", href: "/work" }}
       />

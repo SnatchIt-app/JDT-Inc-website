@@ -12,7 +12,7 @@ type CTAProps = {
 export default function CTA({
   eyebrow = "Next step",
   title = "Ready to make the next 12 months count?",
-  body = "Tell us where you want to go. We'll put together a plan built around what actually moves the needle for your business.",
+  body = "Tell us where you want to go. We'll come back with a plan built around the few things that will actually grow your business.",
   primary = { label: "Book a call", href: "/contact" },
   secondary = { label: "See our work", href: "/work" },
 }: CTAProps) {

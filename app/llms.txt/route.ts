@@ -33,7 +33,7 @@ export function GET() {
   lines.push(`> ${site.description}`);
   lines.push("");
   lines.push(
-    `JDT Inc. is headquartered in ${site.location}. The company partners with ambitious brands across the United States — pairing senior strategy and editorial creative with AI-powered marketing systems. Below is a structured index of the site's primary surfaces; canonical URLs are listed for each.`,
+    `JDT Inc. is based in ${site.location} and works with businesses across the United States. The agency runs paid media (Meta Ads, Google Ads), produces creative, and builds lead generation, CRM, and automation systems. Below is a structured index of the site's primary surfaces; canonical URLs are listed for each.`,
   );
   lines.push("");
 
@@ -44,7 +44,7 @@ export function GET() {
   lines.push(`- [About](${site.url}/about): Company background, philosophy, and team.`);
   lines.push(`- [Work](${site.url}/work): Selected case studies with measurable outcomes.`);
   lines.push(`- [Services](${site.url}/services): Full service stack with deep landing pages per service.`);
-  lines.push(`- [Journal](${site.url}/journal): Long-form editorial writing on AI marketing, performance media, and growth systems.`);
+  lines.push(`- [Journal](${site.url}/journal): Long-form editorial writing on AI in marketing, paid media, and funnel work.`);
   lines.push(`- [Contact](${site.url}/contact): Strategy call booking and contact form.`);
   lines.push("");
 
@@ -70,7 +70,7 @@ export function GET() {
   );
   lines.push("");
   lines.push(
-    `- [${miami.name}, ${miami.stateAbbr}](${site.url}/locations/${miami.slug}): The canonical Miami AI marketing agency landing page.`,
+    `- [${miami.name}, ${miami.stateAbbr}](${site.url}/locations/${miami.slug}): The canonical Miami marketing agency landing page.`,
   );
   for (const n of miami.neighborhoods) {
     lines.push(

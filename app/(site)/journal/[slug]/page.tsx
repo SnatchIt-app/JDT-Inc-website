@@ -272,7 +272,7 @@ export default function ArticlePage({ params }: Params) {
         title={a.cta?.title ?? "Want this kind of thinking inside your business?"}
         body={
           a.cta?.body ??
-          "Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your numbers and where the next 90 days should focus."
+          "Book a 30-minute call. We'll walk through your numbers and where the next 90 days should focus."
         }
         primary={
           a.cta?.primary ?? {

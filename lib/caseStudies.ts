@@ -91,7 +91,7 @@ export const caseStudies: CaseStudy[] = [
     title:
       "A precision launch that turned a new collection into a sell-out moment.",
     summary:
-      "We paired JDT Inc.'s AI-driven audience modeling with a full inbound funnel to launch 22NatiON's new collection across channels — targeting a fitness-focused female buyer with a narrative built to convert.",
+      "We launched 22NatiON's new collection with Meta Ads, in-house creative, and a full inbound funnel, built around a fitness-focused female buyer.",
     cover: "ink",
     // 22nation stays in the editorial ink/cream palette — no accent.
     heroImage: "/work/22nation/cover.png",
@@ -122,11 +122,11 @@ export const caseStudies: CaseStudy[] = [
     outcomes: [
       {
         value: "Conversion rate up 26%",
-        body: "Storefront conversion lifted as creative cohorts moved from broad-reach experiments into the audience territories the data actually rewarded. The lift held cohort over cohort.",
+        body: "Storefront conversion lifted as creative moved from broad-reach experiments into the audiences the data actually rewarded. The lift has held month over month.",
       },
       {
-        value: "Audience that compounds",
-        body: "Steady audience growth across paid and organic, driven by editorial-grade drops that hold the brand bar — the kind of compounding that paid acquisition alone can't produce.",
+        value: "Steady audience growth",
+        body: "Growth across paid and organic, driven by collection drops that keep the brand's look intact. Paid acquisition alone doesn't build that.",
       },
       {
         value: "Revenue contribution",
@@ -135,7 +135,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     testimonial: {
       quote:
-        "JDT didn't run a campaign — they built the system the brand runs on. The work compounds month over month, and the creative bar keeps rising.",
+        "JDT didn't just run a campaign. They built the system the brand runs on, and the creative keeps getting better.",
       attribution: "Founder",
       role: "22NatiON",
       isReal: false,
@@ -143,15 +143,15 @@ export const caseStudies: CaseStudy[] = [
     sections: [
       {
         heading: "The brief",
-        body: "22NatiON wanted to grow a women's activewear brand without flattening it — paid acquisition that could scale revenue while protecting the editorial bar that defines the line.",
+        body: "22NatiON wanted to grow a women's activewear brand without cheapening it: paid acquisition that could scale revenue while protecting the look that defines the line.",
       },
       {
         heading: "How we run it",
-        body: "Senior creative direction sets the editorial standard each drop has to clear. Meta Ads operate in cohorts — audience territories tested against the brand's own first-party data, not platform defaults — with creative variants produced in-house and refreshed on a steady cadence. The funnel is instrumented end to end, so each drop reads cleanly against revenue and audience signal alike.",
+        body: "Creative direction sets the standard each drop has to clear. Meta Ads run in cohorts, with audiences tested against the brand's own first-party data rather than platform defaults, and creative produced in-house and refreshed on a steady cadence. The funnel is tracked end to end, so each drop reads cleanly against revenue.",
       },
       {
         heading: "What's working",
-        body: "Conversion rate has lifted 26% as the system has compounded — creative gets sharper each cohort, audience models improve as data accrues, and the brand-bar holds while paid scales. The engagement is ongoing because the next 90 days always look like a more refined version of the last.",
+        body: "Conversion rate is up 26%. Creative gets sharper with each round, the audience data improves as it accumulates, and the brand holds its look while paid scales. The engagement is ongoing because each quarter has outperformed the last.",
       },
     ],
   },
@@ -163,7 +163,7 @@ export const caseStudies: CaseStudy[] = [
     title:
       "Cutting cost per lead by a third while growing revenue across new territories.",
     summary:
-      "For Carpet Cleaning Xperts, we ran a precision acquisition campaign built around new homeowners and local commercial offices — with AI-driven targeting handling the heavy lifting.",
+      "For Carpet Cleaning Xperts, we ran a focused Meta Ads campaign built around new homeowners and local commercial offices, with bilingual creative and tight local targeting.",
     cover: "light",
     accent: { rule: "border-xperts", text: "text-xperts", bg: "bg-xperts" },
     heroImage: "/work/carpet-cleaning-xperts/cover.png",
@@ -188,7 +188,7 @@ export const caseStudies: CaseStudy[] = [
     outcomes: [
       {
         value: "Revenue up 28% in 60 days",
-        body: "A focused Meta Ads program — service-area targeted, creative tuned to a Hispanic-leaning South Florida audience — lifted topline revenue 28% inside the first two months.",
+        body: "A focused Meta Ads program, targeted to active service areas with creative tuned to a Hispanic-leaning South Florida audience, lifted revenue 28% inside the first two months.",
       },
       {
         value: "Bilingual creative system",
@@ -197,7 +197,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     testimonial: {
       quote:
-        "We tried running ads on our own and nothing moved. JDT took it over and inside two months we were booked out — and the calls coming in were the right ones.",
+        "We tried running ads on our own and nothing moved. JDT took it over and inside two months we were booked out, and the calls coming in were the right ones.",
       attribution: "Operations lead",
       role: "Carpet Cleaning Xperts",
       isReal: false,
@@ -205,15 +205,15 @@ export const caseStudies: CaseStudy[] = [
     sections: [
       {
         heading: "The brief",
-        body: "Carpet Cleaning Xperts wanted to grow without burning budget. The previous attempts at paid had been ad-hoc — mixed offers, mixed creative, mixed targeting. They needed someone to take it over and run it like a system, even at small scale.",
+        body: "Carpet Cleaning Xperts wanted to grow without burning budget. Previous attempts at paid had been ad-hoc: mixed offers, mixed creative, mixed targeting. They needed someone to take it over and run it properly, even at small scale.",
       },
       {
         heading: "How we ran it",
-        body: "A focused Meta Ads program, geo-targeted to active service zones, with creative produced in English and Spanish for the local Hispanic audience. Offer framing was kept simple — a clear price floor, an immediate booking path, a phone number — and creative was rotated on a steady cadence so the audience didn't fatigue. No funnel theatrics, no over-engineering: a clean campaign run by senior hands.",
+        body: "A focused Meta Ads program, geo-targeted to active service zones, with creative produced in English and Spanish for the local Hispanic audience. The offer was kept simple: a clear price, an immediate booking path, a phone number. Creative rotated on a steady cadence so the audience didn't fatigue. No funnel theatrics, just a clean campaign run by experienced hands.",
       },
       {
         heading: "Outcome",
-        body: "Revenue lifted 28% inside the first two months. The lift came from two places at once — better-qualified inbound from sharper local targeting, and stronger conversion from creative that spoke to the audience in their own language. The program continues at the cadence the business can absorb.",
+        body: "Revenue lifted 28% inside the first two months. The lift came from two places at once: better-qualified inbound from sharper local targeting, and stronger conversion from creative that spoke to the audience in their own language. The program continues at the pace the business can absorb.",
       },
     ],
   },
@@ -227,7 +227,7 @@ export const caseStudies: CaseStudy[] = [
     title:
       "Building the marketing ecosystem behind a nightlife marketplace.",
     summary:
-      "JDT Inc. operates the full marketing ecosystem for Snatch It — branding, art direction, the website, Meta Ads, content, and the systems that tie them together. Built for a nightlife marketplace where the audience is fast-moving, image-led, and demands a real point of view.",
+      "JDT Inc. handles all of Snatch It's marketing: branding, art direction, the website, Meta Ads, content, and the systems that tie them together. Built for a nightlife marketplace where the audience is fast-moving, image-led, and demands a real point of view.",
     cover: "ink",
     accent: { rule: "border-snatch", text: "text-snatch", bg: "bg-snatch" },
     heroImage: "/work/snatch-it/cover.png",
@@ -275,20 +275,20 @@ export const caseStudies: CaseStudy[] = [
     outcomes: [
       {
         value: "A bold visual identity",
-        body: "Editorial-grade direction in a deliberately maximalist register — high-contrast type, declarative one-liners, restraint where it counts. Range across the studio's work means we can build either luxury restraint or cultural confrontation, and brief either with the same operator-level rigor.",
+        body: "Loud where it should be, restrained where it counts: high-contrast type and declarative one-liners that hold up at the speed nightlife audiences scroll.",
       },
       {
         value: "Performance built into launch",
-        body: "Meta Ads, content production, and the funnel were designed alongside the brand — not bolted on after. Launch creative is testing-ready from day one; the funnel is instrumented before the first dollar of spend.",
+        body: "Meta Ads, content production, and the funnel were designed alongside the brand, not bolted on after. Launch creative is testing-ready from day one, and tracking is in place before the first dollar of spend.",
       },
       {
         value: "A system, not a campaign",
-        body: "What we ship is the operating engine — calendar, creative pipeline, paid program, measurement. Snatch It's team can publish, learn, and scale against the system without rebuilding it every quarter.",
+        body: "What we ship is the machine itself: calendar, creative pipeline, paid program, measurement. Snatch It's team can publish, learn, and scale without rebuilding it every quarter.",
       },
     ],
     testimonial: {
       quote:
-        "JDT built the entire engine — the brand, the site, the campaigns, the system. They operate at our pace, not an agency's pace. That's the only reason this works.",
+        "JDT built everything: the brand, the site, the campaigns, the system behind them. They move at our pace, not an agency's pace. That's the only reason this works.",
       attribution: "Founder",
       role: "Snatch It",
       isReal: false,
@@ -296,23 +296,23 @@ export const caseStudies: CaseStudy[] = [
     sections: [
       {
         heading: "The brief",
-        body: "Snatch It is a nightlife marketplace app — entry, access, and bidding in venues where guest lists used to do the gating. The brand had to land with a real point of view in a category that punishes anything generic. JDT was hired to build the entire marketing ecosystem from the ground up.",
+        body: "Snatch It is a nightlife marketplace app: entry, access, and bidding in venues where guest lists used to do the gating. The brand had to land with a real point of view in a category that punishes anything generic. JDT was hired to build all of the marketing from the ground up.",
       },
       {
         heading: "Brand & art direction",
-        body: "We led the brand direction in a maximalist register — high-contrast type, declarative one-line campaigns, a visual system that holds at the speed nightlife audiences scroll. The voice is short, confident, deliberate. The system is documented so the in-house team can extend it without supervision.",
+        body: "We built the brand loud on purpose: high-contrast type, declarative one-line campaigns, a visual system that holds at the speed nightlife audiences scroll. The voice is short, confident, deliberate. Everything is documented so the in-house team can extend it without supervision.",
       },
       {
         heading: "Website & funnel",
-        body: "The marketing site is built on a modern stack with conversion instrumentation in place from day one — every event tracked, every step measured, the path from impression to install pre-mapped. No retrofitting at the next stage.",
+        body: "The marketing site is built on a modern stack with conversion tracking in place from day one. Every event tracked, every step measured, the path from impression to install pre-mapped. No retrofitting later.",
       },
       {
         heading: "Meta Ads & content",
-        body: "Performance media and content production run through the same editorial direction the brand was built on — so creative, paid, and organic stay in lockstep. The result is a marketing operation that compounds rather than swings between agencies and disciplines.",
+        body: "Paid media and content production run through the same creative direction the brand was built on, so creative, paid, and organic stay in lockstep instead of swinging between agencies and disciplines.",
       },
       {
         heading: "What's next",
-        body: "The engagement is ongoing. The next quarters add SEO depth, lifecycle automation, and a content cadence built for the cultural surfaces the audience actually lives on. Snatch It launches with a marketing engine — not a marketing campaign.",
+        body: "The engagement is ongoing. The next quarters add SEO depth, lifecycle automation, and a content cadence built for the platforms the audience actually lives on. Snatch It launches with a working marketing machine, not a one-time campaign.",
       },
     ],
   },

@@ -97,7 +97,7 @@ export function localBusinessSchema() {
     url: site.url,
     email: site.email,
     description:
-      "AI-powered marketing and growth systems agency in Miami — Meta Ads, Google Ads, AI automation, lead generation, CRM systems, content production, and funnel optimization.",
+      "Marketing agency in Miami. Meta Ads, Google Ads, AI automation, lead generation, CRM systems, content production, and funnel optimization.",
     priceRange: "$$$",
     address: {
       "@type": "PostalAddress",

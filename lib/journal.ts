@@ -59,33 +59,33 @@ export const topics: Topic[] = [
     slug: "ai-marketing",
     name: "AI Marketing",
     description:
-      "How AI changes — and doesn't change — how modern marketing operations actually run.",
+      "What AI changes, and doesn't change, about how marketing operations actually run.",
     primaryKeyword: "ai marketing",
     pillarSlug: "ai-marketing-operation",
     seo: {
       metaTitle: "AI Marketing — Field Notes from JDT Inc.",
       metaDescription:
-        "Field notes on AI marketing — what AI actually changes, what it doesn't, and how senior operators put it to work in production.",
+        "Field notes on AI marketing: what AI actually changes, what it doesn't, and how working teams put it to use in production.",
     },
   },
   {
     slug: "performance-marketing",
     name: "Performance Marketing",
     description:
-      "Performance media as a system — measurement, creative, attribution, and the math that holds it together.",
+      "Measurement, creative, attribution, and the math that holds paid media together.",
     primaryKeyword: "performance marketing",
     pillarSlug: "performance-marketing-system",
     seo: {
       metaTitle: "Performance Marketing — JDT Inc. Journal",
       metaDescription:
-        "Performance marketing as a system, not as a spend line. Attribution, cohorts, and the operating math that compounds.",
+        "Performance marketing as a system, not a spend line. Attribution, cohorts, and the operating math behind it.",
     },
   },
   {
     slug: "meta-ads",
     name: "Meta Ads",
     description:
-      "Field-tested writing on running Meta — Facebook and Instagram — programs that compound.",
+      "Field-tested writing on running Facebook and Instagram programs that keep improving.",
     primaryKeyword: "meta ads",
     pillarSlug: "meta-ads-2026-guide",
     seo: {
@@ -111,33 +111,33 @@ export const topics: Topic[] = [
     slug: "ai-automation",
     name: "AI Automation",
     description:
-      "How marketing teams actually operationalize AI — workflows, tools, governance, and where humans still belong.",
+      "How marketing teams actually put AI to work: workflows, tools, governance, and where humans still belong.",
     primaryKeyword: "ai automation",
     pillarSlug: "ai-automation-field-guide",
     seo: {
       metaTitle: "AI Automation — Field Guide — JDT Inc.",
       metaDescription:
-        "A field guide to AI automation for marketing operations — workflows, tooling, governance, and the human-in-the-loop principle.",
+        "A field guide to AI automation for marketing operations: workflows, tooling, governance, and the human-in-the-loop principle.",
     },
   },
   {
     slug: "funnel-optimization",
     name: "Funnel Optimization",
     description:
-      "Conversion rate work that holds up to statistics — instrumentation first, opinions second.",
+      "Conversion rate work that holds up to statistics. Instrumentation first, opinions second.",
     primaryKeyword: "funnel optimization",
     pillarSlug: "funnel-optimization-end-to-end",
     seo: {
       metaTitle: "Funnel Optimization — JDT Inc. Journal",
       metaDescription:
-        "Funnel optimization, end-to-end CRO, instrumentation, and statistical rigor — from JDT Inc.",
+        "Funnel optimization, end-to-end CRO, instrumentation, and statistical rigor, from JDT Inc.",
     },
   },
   {
     slug: "creative-strategy",
     name: "Creative Strategy",
     description:
-      "Editorial standards, creative systems, and the discipline that lifts performance creative above the platform's average.",
+      "Editorial standards and the discipline that lifts performance creative above the platform's average.",
     primaryKeyword: "creative strategy",
     pillarSlug: "creative-as-a-system",
     seo: {
@@ -150,39 +150,39 @@ export const topics: Topic[] = [
     slug: "luxury-brand-marketing",
     name: "Luxury Brand Marketing",
     description:
-      "How restraint compounds — performance marketing principles for brands where craft is the price of entry.",
+      "Why restraint wins: performance marketing principles for brands where craft is the baseline.",
     primaryKeyword: "luxury brand marketing",
     pillarSlug: "luxury-brand-marketing",
     seo: {
       metaTitle: "Luxury Brand Marketing — JDT Inc. Journal",
       metaDescription:
-        "Luxury brand marketing — restraint, editorial standards, and the performance principles that work in premium categories.",
+        "Luxury brand marketing: restraint, editorial standards, and the performance principles that work in premium categories.",
     },
   },
   {
     slug: "miami-marketing",
     name: "Miami Marketing",
     description:
-      "Field reports from a Miami growth agency — bilingual audiences, hospitality, real estate, and the city's category brands.",
+      "Field reports from a Miami agency: bilingual audiences, hospitality, real estate, and the city's category brands.",
     primaryKeyword: "miami marketing",
     pillarSlug: "miami-growth-economy",
     seo: {
       metaTitle: "Miami Marketing — JDT Inc. Journal",
       metaDescription:
-        "Field reports on Miami marketing — bilingual audiences, hospitality, real estate, and South Florida's category brands.",
+        "Field reports on Miami marketing: bilingual audiences, hospitality, real estate, and South Florida's category brands.",
     },
   },
   {
     slug: "aeo-geo",
     name: "AEO & GEO",
     description:
-      "Optimization for the next era of search — ChatGPT, Perplexity, Claude, Google AI Overviews. Citation, structure, and entity work.",
+      "Optimization for the next era of search: ChatGPT, Perplexity, Claude, Google AI Overviews. Citation, structure, and entity work.",
     primaryKeyword: "AEO GEO",
     pillarSlug: "aeo-geo-rules",
     seo: {
       metaTitle: "AEO & GEO — AI Search Optimization — JDT Inc.",
       metaDescription:
-        "Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) — how to be cited by AI search engines.",
+        "Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO): how to be cited by AI search engines.",
     },
   },
 ];
@@ -264,19 +264,19 @@ export const articles: Article[] = [
     slug: "ai-marketing-operation",
     title:
       "What AI actually changes about running a marketing operation",
-    dek: "An honest field report on what AI does, what it doesn't, and where senior operators still have to do the work.",
+    dek: "An honest field report on what AI does, what it doesn't, and where people still have to do the work.",
     topic: "ai-marketing",
     isPillar: true,
     publishedAt: "2026-05-07",
     readingMinutes: 7,
     tags: ["AI marketing", "Operations", "Field notes"],
     excerpt:
-      "AI compresses the slow parts of marketing — research, variant generation, reporting — and leaves the judgment work intact. Here's what that actually looks like in production.",
+      "AI compresses the slow parts of marketing (research, variant generation, reporting) and leaves the judgment work intact. Here's what that actually looks like in production.",
     seo: {
       metaTitle:
         "What AI Actually Changes About Marketing — JDT Inc.",
       metaDescription:
-        "AI compresses the slow parts of marketing — research, variant generation, reporting. Senior operators still own the judgment. Field notes from JDT Inc.",
+        "AI compresses the slow parts of marketing: research, variant generation, reporting. People still own the judgment. Field notes from JDT Inc.",
       primaryKeyword: "AI marketing",
       secondaryKeywords: [
         "AI-powered marketing",
@@ -293,25 +293,25 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "It is meaningfully different — but the differences aren't where the pitch decks pointed. AI hasn't replaced the senior operator. It has compressed the slow parts of the operation and left the judgment work intact. Knowing which is which is most of the job.",
+        text: "It is meaningfully different, but the differences aren't where the pitch decks pointed. AI hasn't replaced the experienced marketer. It has compressed the slow parts of the operation and left the judgment work intact. Knowing which is which is most of the job.",
       },
       {
         type: "p",
-        text: "This is a field report from inside an AI-powered marketing agency. We'll walk through the three layers where AI actually shows up, the failure modes we've seen most often, and the test we use to decide whether to apply it at all.",
+        text: "This is a field report from inside an agency that uses AI in nearly every workflow. We'll walk through the three layers where AI actually shows up, the failure modes we've seen most often, and the test we use to decide whether to apply it at all.",
       },
       { type: "h2", text: "The three layers where AI earns its keep", id: "three-layers" },
       {
         type: "p",
-        text: "If you map a marketing operation as a stack — research at the bottom, production in the middle, measurement at the top — AI shows up most usefully at the bottom and the top, and least usefully in the middle. That ordering matters because it's the opposite of what most agencies pitch.",
+        text: "If you map a marketing operation as a stack (research at the bottom, production in the middle, measurement at the top), AI shows up most usefully at the bottom and the top, and least usefully in the middle. That ordering matters because it's the opposite of what most agencies pitch.",
       },
       { type: "h3", text: "1. Research compression" },
       {
         type: "p",
-        text: "Audience research is the part of marketing where AI is most underrated. Customer support transcripts, sales call recordings, review datasets, and survey responses are all unstructured text — exactly the medium language models were built to read. We routinely take a year of customer-call transcripts, run them through a structured clustering pipeline, and surface audience territories that a manual analyst team would have taken weeks to extract by hand.",
+        text: "Audience research is the part of marketing where AI is most underrated. Customer support transcripts, sales call recordings, review datasets, and survey responses are all unstructured text, exactly the medium language models were built to read. We routinely take a year of customer-call transcripts, run them through a structured clustering pipeline, and surface audiences and angles that a manual analyst team would have taken weeks to extract by hand.",
       },
       {
         type: "p",
-        text: "The output isn't a report; it's a working document the creative team uses to brief variants. The compression is real — what used to be a six-week research engagement now ships in five days. The quality is not just preserved, it's better, because the model reads everything instead of sampling.",
+        text: "The output isn't a report; it's a working document the creative team uses to brief variants. The compression is real. What used to be a six-week research engagement now ships in five days. The quality is not just preserved, it's better, because the model reads everything instead of sampling.",
       },
       {
         type: "p",
@@ -320,28 +320,28 @@ export const articles: Article[] = [
       { type: "h3", text: "2. Variant generation" },
       {
         type: "p",
-        text: "Variant generation is the middle layer, and where the most agencies overpromise. Generating fifty headlines is trivially easy and not the work. The work is having taste — knowing which three of the fifty are worth testing, which forty-seven are forgettable, and which one is brilliant in a way the model couldn't have planned.",
+        text: "Variant generation is the middle layer, and where the most agencies overpromise. Generating fifty headlines is trivially easy and not the work. The work is having taste: knowing which three of the fifty are worth testing, which forty-seven are forgettable, and which one is brilliant in a way the model couldn't have planned.",
       },
       {
         type: "p",
-        text: "Used well, AI here is a pool-widener. We write a brand-voice constraint document, generate 10× the testing pool, and then a senior writer culls. The writer's job changes — less typing, more judgment — but it doesn't disappear. The agencies that ship raw AI output to clients are the ones whose work has noticeably degraded over the last 18 months.",
+        text: "Used well, AI here is a pool-widener. We write a brand-voice constraint document, generate 10× the testing pool, and then a senior writer culls. The writer's job changes (less typing, more judgment) but it doesn't disappear. The agencies that ship raw AI output to clients are the ones whose work has noticeably degraded over the last 18 months.",
       },
       {
         type: "p",
-        text: "The taste filter is the entire game in this layer. A model can produce a hundred plausible headlines; only a writer who has shipped against this audience can spot the three that read like the brand and the ninety-seven that read like a competitor. Treating that filtering capacity as the bottleneck — and protecting it — is what keeps an AI-assisted creative system editorial rather than industrial.",
+        text: "The taste filter is the entire game in this layer. A model can produce a hundred plausible headlines; only a writer who has shipped against this audience can spot the three that read like the brand and the ninety-seven that read like a competitor. Treating that filtering capacity as the bottleneck, and protecting it, is what keeps a creative system that uses AI editorial rather than industrial.",
       },
       { type: "h3", text: "3. Measurement and anomaly detection" },
       {
         type: "p",
-        text: "The top of the stack — reporting, anomaly detection, attribution stitching — is where AI does the dullest, most useful work. Weekly performance reads can be compiled automatically from Meta, Google, GA4, and the CRM, written in the team's voice, and delivered before the Monday meeting. Anomaly detection on spend, attribution gaps, and audience fatigue runs continuously and catches issues that a human dashboard-watcher would notice three days later.",
+        text: "The top of the stack (reporting, anomaly detection, attribution stitching) is where AI does the dullest, most useful work. Weekly performance reads can be compiled automatically from Meta, Google, GA4, and the CRM, written in the team's voice, and delivered before the Monday meeting. Anomaly detection on spend, attribution gaps, and audience fatigue runs continuously and catches issues that a human dashboard-watcher would notice three days later.",
       },
       {
         type: "p",
-        text: "This layer is unglamorous. It's also where AI's compounding return on time investment is highest, because the work happens whether the team is awake or not.",
+        text: "This layer is unglamorous. It's also where AI's return on time invested is highest, because the work happens whether the team is awake or not.",
       },
       {
         type: "p",
-        text: "There is a quieter benefit too. Anomaly-detection systems force a discipline that most agencies skip — the discipline of defining, in writing, what normal looks like for the account. CPMs in this band, conversion rates in that band, audience saturation curves shaped this way. Once normal is codified, deviation is detectable. Once deviation is detectable, the team stops arguing about whether something is broken and starts deciding what to do about it.",
+        text: "There is a quieter benefit too. Anomaly-detection systems force a discipline that most agencies skip: defining, in writing, what normal looks like for the account. CPMs in this band, conversion rates in that band, audience saturation curves shaped this way. Once normal is written down, deviation is detectable. Once deviation is detectable, the team stops arguing about whether something is broken and starts deciding what to do about it.",
       },
       { type: "divider" },
       { type: "h2", text: "Where AI quietly fails", id: "failure-modes" },
@@ -357,12 +357,12 @@ export const articles: Article[] = [
       {
         type: "callout",
         title: "Failure mode 2 — Tool sprawl",
-        body: "Five AI tools doing 60% of three jobs each, with overlapping costs and no integration. The fix is workload-driven tool selection. We pick tools by job — Clay for enrichment, n8n or Zapier for orchestration, the OpenAI and Anthropic APIs for generation — and the stack stays small.",
+        body: "Five AI tools doing 60% of three jobs each, with overlapping costs and no integration. The fix is picking tools by job: Clay for enrichment, n8n or Zapier for orchestration, the OpenAI and Anthropic APIs for generation. The stack stays small.",
       },
       {
         type: "callout",
         title: "Failure mode 3 — Replacing senior people",
-        body: "The most expensive mistake. Senior operators are not the bottleneck AI can replace; they are the judgment AI relies on. A team that uses AI to fire its strategists ends up with a louder, faster version of the wrong work.",
+        body: "The most expensive mistake. Your senior people are not the bottleneck AI can replace; they are the judgment AI relies on. A team that uses AI to fire its strategists ends up with a louder, faster version of the wrong work.",
       },
       { type: "h2", text: "The two-question test", id: "test" },
       {
@@ -374,7 +374,7 @@ export const articles: Article[] = [
         ordered: true,
         items: [
           "Is the work repeatable, or is it judgment? Repeatable work compounds with automation. Judgment doesn't.",
-          "Is the data clean enough that a model can trust it? Garbage in still produces garbage out — faster.",
+          "Is the data clean enough that a model can trust it? Garbage in still produces garbage out, just faster.",
         ],
       },
       {
@@ -383,7 +383,7 @@ export const articles: Article[] = [
       },
       {
         type: "pullquote",
-        text: "AI hasn't replaced the senior operator. It has compressed the slow parts of the operation and left the judgment work intact. Knowing which is which is most of the job.",
+        text: "AI hasn't replaced the experienced marketer. It has compressed the slow parts of the operation and left the judgment work intact. Knowing which is which is most of the job.",
       },
       { type: "h2", text: "What this looks like in production" },
       {
@@ -396,7 +396,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "The shift is cultural before it is technical. Teams that were used to month-long planning cycles start operating in weeks. Teams that were used to weekly reviews start running a daily loop. The pace is set by the slowest review, not the fastest model — and the slowest review is almost always still a senior operator deciding what's worth doing. The model just makes more options available for that decision.",
+        text: "The shift is cultural before it is technical. Teams that were used to month-long planning cycles start operating in weeks. Teams that were used to weekly reviews start running a daily loop. The pace is set by the slowest review, not the fastest model, and the slowest review is almost always still a person deciding what's worth doing. The model just makes more options available for that decision.",
       },
       { type: "h2", text: "How to evaluate an AI marketing agency" },
       {
@@ -414,7 +414,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "An agency that can answer all three concretely — with named workflows, named reviewers, named failure modes — is operating an AI-native practice. An agency that answers in adjectives is selling the same retainer with new vocabulary.",
+        text: "An agency that can answer all three concretely, with named workflows, named reviewers, and named failure modes, is doing the real thing. An agency that answers in adjectives is selling the same retainer with new vocabulary.",
       },
       {
         type: "p",
@@ -423,7 +423,7 @@ export const articles: Article[] = [
       { type: "divider" },
       {
         type: "p",
-        text: "AI in marketing isn't a feature. It's a way of operating that compresses some kinds of work and leaves others untouched. The agencies winning the next decade are the ones who know which is which — and aren't afraid to admit, in writing, where the model belongs and where it doesn't.",
+        text: "AI in marketing isn't a feature. It's a way of operating that compresses some kinds of work and leaves others untouched. The agencies winning the next decade are the ones who know which is which, and aren't afraid to admit, in writing, where the model belongs and where it doesn't.",
       },
     ],
     internalLinks: [
@@ -433,8 +433,8 @@ export const articles: Article[] = [
     ],
     cta: {
       eyebrow: "Engage",
-      title: "Map an AI-native marketing operation.",
-      body: "Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your stack, your team's leverage points, and where AI actually pays back inside your operation.",
+      title: "See where AI fits in your operation.",
+      body: "Book a 30-minute call. We'll walk through your stack, where your team's time goes, and where AI actually pays back inside your operation.",
       primary: { label: "Book a strategy call", href: "/contact" },
       secondary: { label: "See the work", href: "/work" },
     },

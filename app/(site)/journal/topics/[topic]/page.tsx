@@ -169,7 +169,7 @@ export default function TopicPage({ params }: Params) {
       <CTA
         eyebrow="Engage"
         title={`Bring ${topic.name} thinking into your business.`}
-        body="Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your goals, your numbers, and where this kind of work fits."
+        body="Book a 30-minute call. We'll walk through your goals, your numbers, and where this kind of work fits."
         primary={{ label: "Book a strategy call", href: "/contact" }}
         secondary={{ label: "See the work", href: "/work" }}
       />

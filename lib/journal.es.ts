@@ -22,21 +22,21 @@ export const topicsEs: TopicEs[] = [
     slug: "ai-marketing",
     name: "IA en marketing",
     description:
-      "Cómo la IA cambia — y no cambia — la operación real de marketing moderno.",
+      "Qué cambia la IA, y qué no, en la operación real de marketing.",
     primaryKeyword: "ia en marketing",
   },
   {
     slug: "performance-marketing",
     name: "Performance marketing",
     description:
-      "Performance media como sistema — medición, creatividad, atribución y la matemática que lo sostiene.",
+      "Medición, creatividad, atribución y la matemática que sostiene el paid media.",
     primaryKeyword: "performance marketing miami",
   },
   {
     slug: "meta-ads",
     name: "Meta Ads",
     description:
-      "Notas de campo sobre operar programas de Meta — Facebook e Instagram — que componen.",
+      "Notas de campo sobre manejar programas de Facebook e Instagram que siguen mejorando.",
     primaryKeyword: "meta ads",
   },
   {
@@ -50,14 +50,14 @@ export const topicsEs: TopicEs[] = [
     slug: "ai-automation",
     name: "Automatización con IA",
     description:
-      "Cómo los equipos de marketing realmente operacionalizan IA — workflows, herramientas, gobernanza.",
+      "Cómo los equipos de marketing realmente ponen la IA a trabajar: workflows, herramientas, gobernanza.",
     primaryKeyword: "automatización con ia marketing",
   },
   {
     slug: "funnel-optimization",
     name: "Optimización de embudos",
     description:
-      "Trabajo de conversión que se sostiene contra estadística — instrumentación primero, opiniones después.",
+      "Trabajo de conversión que se sostiene contra estadística. Instrumentación primero, opiniones después.",
     primaryKeyword: "optimización de embudos",
   },
   {
@@ -71,21 +71,21 @@ export const topicsEs: TopicEs[] = [
     slug: "luxury-brand-marketing",
     name: "Marketing de marcas premium",
     description:
-      "Cómo la restricción compone — principios de performance para marcas donde el oficio es el piso.",
+      "Por qué gana la contención: principios de performance para marcas donde el oficio es la base.",
     primaryKeyword: "marketing marcas premium",
   },
   {
     slug: "miami-marketing",
     name: "Miami",
     description:
-      "Reportes de campo desde una agencia de Miami — audiencias bilingües, hospitalidad, real estate.",
+      "Reportes de campo desde una agencia de Miami: audiencias bilingües, hospitalidad, real estate.",
     primaryKeyword: "marketing miami",
   },
   {
     slug: "aeo-geo",
     name: "AEO y GEO",
     description:
-      "Optimización para la siguiente era de búsqueda — ChatGPT, Perplexity, Claude, AI Overviews.",
+      "Optimización para la siguiente era de búsqueda: ChatGPT, Perplexity, Claude, AI Overviews.",
     primaryKeyword: "AEO GEO",
   },
 ];

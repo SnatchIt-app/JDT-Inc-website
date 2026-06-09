@@ -12,10 +12,10 @@
 
 export const siteEs = {
   /** Spanish-language tagline. */
-  tagline: "Agencia de marketing y crecimiento en Miami, potenciada por IA.",
+  tagline: "Agencia de marketing en Miami. Ads, embudos y automatización.",
   /** Spanish-language description for OG, schema, llms.txt. */
   description:
-    "JDT Inc. es una agencia de marketing y sistemas de crecimiento en Miami, potenciada por inteligencia artificial. Estrategia senior, dirección creativa editorial, Meta Ads, Google Ads, automatización con IA, generación de leads, sistemas CRM y optimización de embudos — diseñados para componer resultados mes tras mes.",
+    "JDT Inc. es una agencia de marketing en Miami. Manejamos Meta y Google Ads, producimos la creatividad, construimos landing pages y embudos, montamos CRM y programas de email, y automatizamos el trabajo manual. Nuestros clientes quieren más leads y números en los que puedan confiar.",
   /** Localized navigation for /es/* pages. */
   nav: [
     { label: "Inicio", href: "/es" },

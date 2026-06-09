@@ -10,8 +10,10 @@
  * Editorial voice rules:
  *   - confident, not boastful
  *   - specific over generic; operational AI examples, not buzzwords
- *   - hyphens as parenthetical breaks (matches the rest of the site)
- *   - "system," "compounding," "engineered," "senior operators" recur
+ *   - plain sentences; periods over em dashes
+ *   - name the deliverable, the tool, the number — no stock agency vocabulary
+ *     (banned: "growth systems," "senior operators," "compounding growth,"
+ *     "ambitious brands," "AI-powered," "audience modeling," "engineered")
  *
  * SEO rules:
  *   - meta titles ≤ 60 characters, descriptions ≤ 160
@@ -78,11 +80,11 @@ export const services: Service[] = [
     slug: "meta-ads",
     title: "Meta Ads",
     short:
-      "Facebook and Instagram campaigns engineered around audience modeling, creative testing, and ROAS — not vanity reach.",
+      "Facebook and Instagram campaigns built on real customer research, steady creative testing, and return on ad spend. Not vanity reach.",
     outcome:
-      "A Meta program where every dollar is accounted for and the cohort improves month over month.",
+      "A Meta account where every dollar is accounted for and results improve month over month.",
     details: [
-      "Audience modeling & lookalike strategy",
+      "Audience research & lookalike strategy",
       "Creative testing matrices",
       "Attribution & post-iOS measurement",
       "Budget scaling & cohort reporting",
@@ -90,7 +92,7 @@ export const services: Service[] = [
     seo: {
       metaTitle: "Meta Ads Agency in Miami — JDT Inc.",
       metaDescription:
-        "Meta Ads built for measurable growth. JDT Inc. designs Facebook and Instagram campaigns engineered around audience modeling, creative testing, and ROAS.",
+        "Meta Ads built for measurable growth. JDT Inc. runs Facebook and Instagram campaigns built on customer research, creative testing, and ROAS.",
       primaryKeyword: "meta ads agency",
       secondaryKeywords: [
         "facebook ads agency",
@@ -103,13 +105,13 @@ export const services: Service[] = [
     },
     hero: {
       eyebrow: "Service · Meta Ads",
-      h1: "Meta Ads, built for compounding growth.",
+      h1: "Meta Ads that pay for themselves.",
       subheadline:
-        "JDT Inc. is a Miami-based Meta Ads agency. We run Facebook and Instagram programs as engineered systems — audience modeling, creative variants, structured testing, and post-iOS measurement, all aligned to the metric that pays your bills.",
+        "JDT Inc. is a Meta Ads agency in Miami. We run Facebook and Instagram campaigns with real customer research, a steady creative testing cadence, and measurement that survived iOS. Everything is judged against the metric that pays your bills.",
     },
     outcomes: [
       { value: "−25–40%", label: "Target cost per lead reduction" },
-      { value: "2–4×", label: "Return on ad spend we engineer for" },
+      { value: "2–4×", label: "Return on ad spend we aim for" },
       { value: "30+", label: "Creative variants tested per quarter" },
       { value: "Weekly", label: "Cohort reporting cadence" },
     ],
@@ -140,8 +142,8 @@ export const services: Service[] = [
       steps: [
         {
           step: "01",
-          title: "Audience modeling",
-          body: "We map the buyer using first-party data — purchase history, customer-call transcripts, support tickets, reviews — and cluster behavioral patterns into audience territories with concrete creative angles.",
+          title: "Audience research",
+          body: "We map the buyer using your first-party data: purchase history, customer-call transcripts, support tickets, reviews. From that we build a short list of audiences, each with concrete creative angles.",
         },
         {
           step: "02",
@@ -151,12 +153,12 @@ export const services: Service[] = [
         {
           step: "03",
           title: "Structured testing",
-          body: "Audiences and creatives are tested under controlled conditions — not throwing variants at the wall. Winning combinations graduate, losers are retired, and the matrix evolves every two weeks.",
+          body: "Audiences and creatives are tested under controlled conditions, not thrown at the wall. Winning combinations graduate, losers are retired, and the matrix evolves every two weeks.",
         },
         {
           step: "04",
           title: "Cohort optimization",
-          body: "Spend scales against verified contribution, not platform-reported attribution alone. We report on cohorts, payback windows, and the leading indicators that predict the next quarter — not the last one.",
+          body: "Spend scales against verified contribution, not platform-reported attribution alone. We report on cohorts, payback windows, and the leading indicators that predict the next quarter rather than the last one.",
         },
       ],
     },
@@ -166,11 +168,11 @@ export const services: Service[] = [
       items: [
         {
           title: "Account architecture",
-          body: "Campaign structure, audience hierarchy, exclusion logic, and naming conventions designed for clean reads at scale — not legacy chaos.",
+          body: "Campaign structure, audience hierarchy, exclusion logic, and naming conventions designed for clean reads at scale. No legacy chaos.",
         },
         {
           title: "Creative production system",
-          body: "Editorial direction, art direction, and ongoing creative output — static, motion, UGC. Built to run, not to deliver one-time files.",
+          body: "Editorial direction, art direction, and ongoing creative output: static, motion, UGC. Built to run, not to deliver one-time files.",
         },
         {
           title: "Measurement stack",
@@ -178,29 +180,29 @@ export const services: Service[] = [
         },
         {
           title: "Testing roadmap",
-          body: "A live document that maps the next 30, 60, and 90 days of audience, creative, and offer tests — so the work compounds.",
+          body: "A live document that maps the next 30, 60, and 90 days of audience, creative, and offer tests, so the testing never stalls.",
         },
         {
           title: "Cohort reporting",
-          body: "Weekly performance reads tied to revenue, payback, and contribution — not impressions and CPMs.",
+          body: "Weekly performance reads tied to revenue, payback, and contribution. Not impressions and CPMs.",
         },
       ],
     },
     aiDifferentiation: {
       intro:
-        "AI in Meta Ads is overpromised in pitch decks and underused in practice. Here is exactly where we apply it — and where we deliberately don't.",
+        "AI in Meta Ads is overpromised in pitch decks and underused in practice. Here is exactly where we apply it, and where we deliberately don't.",
       pillars: [
         {
-          title: "LLM-clustered audience modeling",
-          body: "Customer support transcripts, sales call recordings, and review datasets are run through a structured language-model pipeline that surfaces audience territories — concepts and angles a manual analyst team would take weeks to extract from the same data.",
+          title: "Customer research at scale",
+          body: "We run support transcripts, sales calls, and review data through a language-model pipeline that clusters them into audiences and angles. Work a manual analyst team would take weeks to do by hand.",
         },
         {
           title: "Creative variant matrices",
-          body: "Hooks, headlines, and copy are generated under brand-voice constraints, then human-edited. The output isn't auto-published — it's a 10× larger testing pool, every variant reviewed by a senior creative before it sees a dollar.",
+          body: "Hooks, headlines, and copy are generated under brand-voice constraints, then human-edited. Nothing is auto-published. The result is a 10× larger testing pool, with every variant reviewed by a creative lead before it sees a dollar.",
         },
         {
           title: "Anomaly detection in spend",
-          body: "Daily performance is monitored by a model that flags statistically meaningful deviations — sudden CPM spikes, audience fatigue, attribution gaps — before a human would catch them in the dashboard.",
+          body: "Daily performance is monitored by a model that flags meaningful deviations, like sudden CPM spikes, audience fatigue, or attribution gaps, before a human would catch them in the dashboard.",
         },
       ],
     },
@@ -209,12 +211,12 @@ export const services: Service[] = [
       {
         question: "What's the minimum monthly Meta Ads budget you work with?",
         answer:
-          "We typically start at $10K/month in media spend, plus the management retainer. Below that, structured testing breaks down — there isn't enough volume to read variants statistically, and the work stops compounding.",
+          "We typically start at $10K/month in media spend, plus the management retainer. Below that, structured testing breaks down. There isn't enough volume to read variants statistically.",
       },
       {
         question: "How is JDT different from a traditional Meta Ads agency?",
         answer:
-          "Three differences. Senior operators run every account — no junior handoff. Creative is produced in-house, so testing volume isn't gated by external partners. And our reporting ties spend to verified contribution and payback windows, not platform-reported ROAS.",
+          "Three differences. The people who run your account have done this for years, and there's no junior handoff. Creative is produced in-house, so testing volume isn't gated by external partners. And our reporting ties spend to verified contribution and payback windows, not platform-reported ROAS.",
       },
       {
         question: "How long until we see results?",
@@ -224,12 +226,12 @@ export const services: Service[] = [
       {
         question: "Do you handle creative in-house?",
         answer:
-          "Yes — editorial direction, art direction, static, motion, and UGC sourcing are all in-house. That's the leverage. Agencies that outsource creative can't run a real testing matrix.",
+          "Yes. Editorial direction, art direction, static, motion, and UGC sourcing are all in-house. Agencies that outsource creative can't run a real testing matrix.",
       },
       {
         question: "What happens after the first 90 days?",
         answer:
-          "The system is in production by day 90. The work shifts to optimization, scaling, and adding new audience territories. Most clients stay 12+ months because the cohort improves quarter over quarter.",
+          "The account is fully running by day 90. The work shifts to optimization, scaling, and adding new audiences. Most clients stay 12+ months because results keep improving quarter over quarter.",
       },
     ],
     related: ["google-ads", "funnel-optimization", "creative-direction"],
@@ -242,9 +244,9 @@ export const services: Service[] = [
     slug: "google-ads",
     title: "Google Ads",
     short:
-      "Search, Performance Max, and Shopping campaigns engineered for qualified pipeline — not impressions.",
+      "Search, Performance Max, and Shopping campaigns built for qualified leads, not impressions.",
     outcome:
-      "A Google program that captures intent and feeds your sales motion with leads it can actually close.",
+      "A Google account that captures real buying intent and feeds your sales team leads it can actually close.",
     details: [
       "Search & Performance Max strategy",
       "Keyword research & SQR mining",
@@ -254,7 +256,7 @@ export const services: Service[] = [
     seo: {
       metaTitle: "Google Ads Agency, Miami — JDT Inc.",
       metaDescription:
-        "Google Ads — Search, Performance Max, Shopping — engineered for qualified pipeline. Senior operators, AI-assisted bidding, transparent reporting.",
+        "Google Ads: Search, Performance Max, and Shopping built for qualified leads. Experienced hands on every account, transparent reporting.",
       primaryKeyword: "google ads agency",
       secondaryKeywords: [
         "google ads management",
@@ -267,13 +269,13 @@ export const services: Service[] = [
     },
     hero: {
       eyebrow: "Service · Google Ads",
-      h1: "Google Ads, engineered for qualified pipeline.",
+      h1: "Google Ads that bring in leads your sales team can close.",
       subheadline:
-        "JDT Inc. is a Miami-based Google Ads agency. We run Search, Performance Max, and Shopping programs that capture real buying intent — built around tight account architecture, AI-assisted bidding, and conversion tracking that survives the next privacy change.",
+        "JDT Inc. is a Google Ads agency in Miami. We run Search, Performance Max, and Shopping campaigns that capture real buying intent, with tight account structure and conversion tracking that survives the next privacy change.",
     },
     outcomes: [
       { value: "−20–35%", label: "Target cost per acquisition reduction" },
-      { value: "3–6×", label: "Return on ad spend we engineer for" },
+      { value: "3–6×", label: "Return on ad spend we aim for" },
       { value: "Daily", label: "SQR + bid review cadence" },
       { value: "Quarterly", label: "Account architecture audit" },
     ],
@@ -300,22 +302,22 @@ export const services: Service[] = [
     },
     methodology: {
       intro:
-        "Google Ads rewards architecture and discipline. Our four-stage loop is built to compound those advantages.",
+        "Google Ads rewards structure and discipline. Our four-stage loop is built around both.",
       steps: [
         {
           step: "01",
           title: "Account architecture",
-          body: "We rebuild — or build from scratch — the campaign structure, ad group taxonomy, and naming logic so the account can scale without becoming unreadable.",
+          body: "We rebuild, or build from scratch, the campaign structure, ad group taxonomy, and naming logic so the account can scale without becoming unreadable.",
         },
         {
           step: "02",
           title: "Intent mapping",
-          body: "Keyword research is paired with search query mining — running historical SQRs through an LLM classifier to surface intent clusters, negative-keyword opportunities, and the gaps competitors leave open.",
+          body: "Keyword research is paired with search query mining. We run historical search query reports through an LLM classifier to surface intent clusters, negative-keyword opportunities, and the gaps competitors leave open.",
         },
         {
           step: "03",
           title: "Creative & landing alignment",
-          body: "Ad copy and landing pages are produced in matched pairs. Each variant lines up to a specific intent cluster — no more sending high-intent traffic to a generic homepage.",
+          body: "Ad copy and landing pages are produced in matched pairs. Each variant lines up to a specific intent cluster, so high-intent traffic stops landing on a generic homepage.",
         },
         {
           step: "04",
@@ -338,7 +340,7 @@ export const services: Service[] = [
         },
         {
           title: "Search query mining",
-          body: "A monthly review of every paid query — graduating winners, building negatives, surfacing intent shifts before they become budget leaks.",
+          body: "A monthly review of every paid query: graduating winners, building negatives, and catching intent shifts before they become budget leaks.",
         },
         {
           title: "Landing page system",
@@ -346,7 +348,7 @@ export const services: Service[] = [
         },
         {
           title: "Quarterly architecture audit",
-          body: "Once a quarter we tear down the account and rebuild what's drifted — keeping the structure clean as it scales.",
+          body: "Once a quarter we tear down the account and rebuild what's drifted, keeping the structure clean as it scales.",
         },
       ],
     },
@@ -360,11 +362,11 @@ export const services: Service[] = [
         },
         {
           title: "Brand-voice ad copy at scale",
-          body: "Responsive Search Ad assets are generated under documented brand-voice constraints, then human-edited. RSA pinning and asset diversity follow Google's best practices — but the volume of high-quality variants is what compounds.",
+          body: "Responsive Search Ad assets are generated under documented brand-voice constraints, then human-edited. RSA pinning and asset diversity follow Google's best practices, but the volume of good variants is what wins over time.",
         },
         {
           title: "Bid strategy guardrails",
-          body: "Automated bidding is monitored by anomaly detection — sudden CPC spikes, conversion-tracking gaps, geographic anomalies — flagged before the platform finishes learning from a bad signal.",
+          body: "Automated bidding is monitored for anomalies, like sudden CPC spikes, conversion-tracking gaps, or geographic outliers, and flagged before the platform finishes learning from a bad signal.",
         },
       ],
     },
@@ -373,7 +375,7 @@ export const services: Service[] = [
       {
         question: "Do you work with both Search and Performance Max?",
         answer:
-          "Yes — and we treat them as complementary, not competitive. Search owns the highest-intent queries with full transparency; Performance Max captures incremental demand with proper exclusion strategy. Most accounts run both.",
+          "Yes, and we treat them as complementary, not competitive. Search owns the highest-intent queries with full transparency; Performance Max captures incremental demand with proper exclusion strategy. Most accounts run both.",
       },
       {
         question: "How do you handle conversion tracking with privacy changes?",
@@ -383,17 +385,17 @@ export const services: Service[] = [
       {
         question: "What's the minimum spend to run a real Google program?",
         answer:
-          "$5K–10K/month is the floor for our engagement model. Below that, you can't gather enough data for clean reads and the work doesn't compound.",
+          "$5K–10K/month is the floor for our engagement model. Below that, you can't gather enough data for clean reads.",
       },
       {
         question: "Can you take over an existing Google Ads account?",
         answer:
-          "Yes — and we usually do. The first 30 days are an audit and rebuild plan, not a full teardown. We preserve what's working, document what isn't, and migrate carefully so historical learning isn't lost.",
+          "Yes, and we usually do. The first 30 days are an audit and rebuild plan, not a full teardown. We preserve what's working, document what isn't, and migrate carefully so historical learning isn't lost.",
       },
       {
         question: "How is reporting different from what an in-house team would build?",
         answer:
-          "We tie every dollar of spend to revenue, payback, and contribution — not platform-reported conversions. The weekly read shows what's driving the business, not what makes the dashboard look full.",
+          "We tie every dollar of spend to revenue, payback, and contribution, not platform-reported conversions. The weekly read shows what's driving the business, not what makes the dashboard look full.",
       },
     ],
     related: ["meta-ads", "lead-generation", "funnel-optimization"],
@@ -406,9 +408,9 @@ export const services: Service[] = [
     slug: "ai-automation",
     title: "AI Automation",
     short:
-      "Operational AI systems that compress weeks of analyst work into hours — across marketing, sales, and reporting.",
+      "Automations that compress weeks of manual work into hours, across marketing, sales, and reporting.",
     outcome:
-      "A workflow stack that runs in the background, surfaces signals faster than humans can, and frees senior people from manual work.",
+      "Automations that run in the background and free your team from repetitive work.",
     details: [
       "Lead enrichment & scoring workflows",
       "Content & creative generation pipelines",
@@ -418,7 +420,7 @@ export const services: Service[] = [
     seo: {
       metaTitle: "AI Automation for Marketing & Ops — JDT Inc.",
       metaDescription:
-        "AI automation that compresses weeks of analyst work into hours — audience modeling, lead enrichment, content workflows, and reporting that runs on its own.",
+        "AI automation that compresses weeks of manual work into hours: customer research, lead enrichment, content workflows, and reporting that runs on its own.",
       primaryKeyword: "ai automation agency",
       secondaryKeywords: [
         "AI marketing automation",
@@ -431,9 +433,9 @@ export const services: Service[] = [
     },
     hero: {
       eyebrow: "Service · AI Automation",
-      h1: "AI automation, where it actually compounds.",
+      h1: "AI automation that actually ships.",
       subheadline:
-        "Most agencies sell AI as a buzzword. We design and operate the systems — lead enrichment, audience modeling, content workflows, brand-voice generation, and reporting agents — that compress weeks of manual work into hours, with senior humans still in the loop where it matters.",
+        "Most agencies sell AI as a buzzword. We build and run the actual systems: lead enrichment, customer research, content workflows, and reports that write themselves. People stay in the loop wherever judgment matters.",
     },
     outcomes: [
       { value: "10×+", label: "Speed on audience research" },
@@ -464,7 +466,7 @@ export const services: Service[] = [
     },
     methodology: {
       intro:
-        "Every AI automation engagement runs through the same four-stage loop. We don't ship demos — we ship production systems with documentation, monitoring, and a runbook.",
+        "Every AI automation engagement runs through the same four stages. We don't ship demos. We ship working systems with documentation, monitoring, and a runbook.",
       steps: [
         {
           step: "01",
@@ -474,17 +476,17 @@ export const services: Service[] = [
         {
           step: "02",
           title: "System design",
-          body: "Each workflow is designed as a graph — inputs, transformations, validation, human-review gates, output. We pick tools (Clay, n8n, Zapier, Make, custom code, the OpenAI / Anthropic APIs) based on the job, not the trend.",
+          body: "Each workflow is designed step by step: inputs, transformations, validation, human-review gates, output. We pick tools (Clay, n8n, Zapier, Make, custom code, the OpenAI / Anthropic APIs) based on the job, not the trend.",
         },
         {
           step: "03",
           title: "Production build",
-          body: "Systems are built with monitoring, error handling, and clear ownership. Senior humans review where judgment matters — copy approval, lead qualification, anomaly response — so quality holds at scale.",
+          body: "Systems are built with monitoring, error handling, and clear ownership. People review where judgment matters: copy approval, lead qualification, anomaly response. Quality holds at scale because someone owns it.",
         },
         {
           step: "04",
           title: "Operating handoff",
-          body: "We document the runbook, train the in-house team, and stay on retainer for the first quarter to tune. The system is yours when we're done — not a black box that breaks the moment we leave.",
+          body: "We document the runbook, train your team, and stay on retainer for the first quarter to tune. The system is yours when we're done, not a black box that breaks the moment we leave.",
         },
       ],
     },
@@ -494,23 +496,23 @@ export const services: Service[] = [
       items: [
         {
           title: "Lead enrichment & scoring",
-          body: "Inbound and outbound leads enriched with firmographic, intent, and persona data — then scored against your ICP using a model trained on your closed-won history.",
+          body: "Inbound and outbound leads enriched with firmographic, intent, and persona data, then scored against your ideal customer profile using a model trained on your closed-won history.",
         },
         {
           title: "Content & creative pipelines",
-          body: "Brand-voice generation pipelines for ad copy, email, social, and short-form video scripts. Senior creative reviews every output before it ships.",
+          body: "Brand-voice generation pipelines for ad copy, email, social, and short-form video scripts. A creative lead reviews every output before it ships.",
         },
         {
           title: "Reporting agents",
-          body: "Weekly performance digests compiled automatically — pulling from Meta, Google, GA4, your CRM — and written in your team's voice, not template English.",
+          body: "Weekly performance digests compiled automatically from Meta, Google, GA4, and your CRM, written in your team's voice instead of template English.",
         },
         {
-          title: "Audience modeling",
-          body: "Customer-call transcripts, support tickets, and review data clustered into audience territories that inform creative, copy, and product positioning.",
+          title: "Customer research",
+          body: "Customer-call transcripts, support tickets, and review data clustered into audiences that inform creative, copy, and product positioning.",
         },
         {
           title: "Operations runbook",
-          body: "Documentation of every workflow, owner, monitoring alert, and escalation path — so the team can run the system without us.",
+          body: "Documentation of every workflow, owner, monitoring alert, and escalation path, so your team can run the system without us.",
         },
       ],
     },
@@ -520,15 +522,15 @@ export const services: Service[] = [
       pillars: [
         {
           title: "Structured prompting, not chat",
-          body: "Production systems use structured prompts with explicit schemas, validation, and retry logic — not a teammate copying outputs out of ChatGPT. The difference is reliability and audit trail.",
+          body: "Production systems use structured prompts with explicit schemas, validation, and retry logic, not a teammate copying outputs out of ChatGPT. The difference is reliability and an audit trail.",
         },
         {
           title: "Human-in-the-loop where it matters",
-          body: "Every system has a defined gate where a senior human reviews. Copy ships through editors. Leads route through a qualifier. Reports are signed off before they leave the building. Speed without judgment is just faster mistakes.",
+          body: "Every system has a defined gate where a person reviews. Copy ships through editors. Leads route through a qualifier. Reports are signed off before they leave the building. Speed without judgment is just faster mistakes.",
         },
         {
           title: "Tool-agnostic by design",
-          body: "We build on Clay, n8n, Make, Zapier, custom code, and the major model APIs depending on the workload. The systems aren't locked into a single vendor — so when models or pricing change, the work doesn't break.",
+          body: "We build on Clay, n8n, Make, Zapier, custom code, and the major model APIs depending on the workload. Nothing is locked into a single vendor, so when models or pricing change, the work doesn't break.",
         },
       ],
     },
@@ -537,7 +539,7 @@ export const services: Service[] = [
       {
         question: "Is this AI strategy or AI implementation?",
         answer:
-          "Both, but heavily weighted toward implementation. We won't ship a strategy deck without ownership of the systems that come from it. The deliverable is working software — production workflows, documented and monitored — not a roadmap.",
+          "Both, but heavily weighted toward implementation. We won't ship a strategy deck without owning the systems that come from it. The deliverable is working software, documented and monitored. Not a roadmap.",
       },
       {
         question: "Which tools do you build on?",
@@ -547,7 +549,7 @@ export const services: Service[] = [
       {
         question: "Do you replace our marketing team?",
         answer:
-          "No — we make it harder to replace them. The goal is leverage, not headcount reduction. Senior humans get freed from manual work to do the judgment-heavy parts that matter.",
+          "No. We make it harder to replace them. The goal is leverage, not headcount reduction. Your best people get freed from manual work to do the parts that need judgment.",
       },
       {
         question: "How long does a build take?",
@@ -570,9 +572,9 @@ export const services: Service[] = [
     slug: "content-production",
     title: "Content Production",
     short:
-      "Editorial content systems — short-form, long-form, talent, and post — built to drive both brand and pipeline.",
+      "Short-form, long-form, talent, and post, run on an editorial calendar and built to drive both brand and pipeline.",
     outcome:
-      "Consistent, high-signal content that compounds attention and converts it into real revenue.",
+      "A steady stream of content people actually watch, tied to leads and revenue.",
     details: [
       "Editorial direction & content pillars",
       "Short-form & long-form production",
@@ -582,7 +584,7 @@ export const services: Service[] = [
     seo: {
       metaTitle: "Content Production for Brands — JDT Inc.",
       metaDescription:
-        "Editorial content systems — short-form, long-form, talent, and post — built to drive both brand and pipeline. Senior direction, AI-accelerated production.",
+        "Content production run on an editorial calendar: short-form, long-form, talent, and post. Built to drive both brand and pipeline.",
       primaryKeyword: "content production agency",
       secondaryKeywords: [
         "content marketing agency",
@@ -597,7 +599,7 @@ export const services: Service[] = [
       eyebrow: "Service · Content Production",
       h1: "Content production, treated as a system.",
       subheadline:
-        "JDT Inc. produces content the way a magazine produces an issue — with editorial direction, a calendar, a roster of voices, and a post system. Short-form, long-form, video, written. Built for brands that want consistency, not one-off virality.",
+        "JDT Inc. produces content the way a magazine produces an issue: editorial direction, a calendar, a roster of voices, and a post system. Short-form, long-form, video, written. Built for brands that want consistency, not one-off virality.",
     },
     outcomes: [
       { value: "30+", label: "Pieces produced per quarter" },
@@ -607,7 +609,7 @@ export const services: Service[] = [
     ],
     whoFor: {
       intro:
-        "Content production pays back when there's a real story to tell, an audience worth showing up for, and the patience to build over months — not weeks.",
+        "Content production pays back when there's a real story to tell, an audience worth showing up for, and the patience to build over months, not weeks.",
       clients: [
         "DTC brands building brand equity alongside performance",
         "Founder-led businesses where the founder is the voice",
@@ -628,27 +630,27 @@ export const services: Service[] = [
     },
     methodology: {
       intro:
-        "Content as a system, not as a sprint. The four stages of every engagement:",
+        "Content runs on a calendar, not on bursts of motivation. The four stages of every engagement:",
       steps: [
         {
           step: "01",
           title: "Editorial direction",
-          body: "Pillars, voice, point of view, visual standards. The codified version of what makes the brand worth listening to — the document every later decision is checked against.",
+          body: "Pillars, voice, point of view, visual standards. A written document covering what makes the brand worth listening to, which every later decision is checked against.",
         },
         {
           step: "02",
           title: "Calendar & cadence",
-          body: "An 8–12 week look-ahead calendar tied to business goals — campaigns, launches, seasonal beats. Each piece sized, scoped, and slotted before production starts.",
+          body: "An 8–12 week look-ahead calendar tied to business goals: campaigns, launches, seasonal beats. Each piece sized, scoped, and slotted before production starts.",
         },
         {
           step: "03",
           title: "Production batching",
-          body: "Shoots and recordings batched for efficiency. One day on set yields 30 pieces of content — short-form, long-form, stills, captions, scripts. Every shoot is engineered for repurposing.",
+          body: "Shoots and recordings batched for efficiency. One day on set yields 30 pieces of content: short-form, long-form, stills, captions, scripts. Every shoot is planned for repurposing.",
         },
         {
           step: "04",
           title: "Distribution & repurposing",
-          body: "Each piece is cut for the surface it lives on — owned, paid, organic. Performance is read against pillars, not posts, so the system improves issue over issue.",
+          body: "Each piece is cut for the surface it lives on, whether owned, paid, or organic. Performance is read against pillars, not posts, so the output improves issue over issue.",
         },
       ],
     },
@@ -658,7 +660,7 @@ export const services: Service[] = [
       items: [
         {
           title: "Editorial guideline document",
-          body: "Voice, pillars, visual standards, talent direction — the source of truth every freelancer and editor works from.",
+          body: "Voice, pillars, visual standards, talent direction. The source of truth every freelancer and editor works from.",
         },
         {
           title: "Production calendar",
@@ -666,15 +668,15 @@ export const services: Service[] = [
         },
         {
           title: "Short-form video output",
-          body: "Reels, TikToks, YouTube Shorts — produced under direction, captioned, optimized per platform, scheduled.",
+          body: "Reels, TikToks, and YouTube Shorts, produced under direction, captioned, optimized per platform, and scheduled.",
         },
         {
           title: "Long-form direction",
-          body: "Articles, podcasts, video features — fewer pieces, higher craft, treated as flagship content the brand can stand behind.",
+          body: "Articles, podcasts, and video features. Fewer pieces, higher craft, treated as flagship content the brand can stand behind.",
         },
         {
           title: "Talent & creator sourcing",
-          body: "Casting, briefing, and managing creators and presenters who fit the brand — not the lowest-CPM voice on the platform.",
+          body: "Casting, briefing, and managing creators and presenters who fit the brand, not the lowest-CPM voice on the platform.",
         },
         {
           title: "Performance reporting",
@@ -684,19 +686,19 @@ export const services: Service[] = [
     },
     aiDifferentiation: {
       intro:
-        "AI accelerates production without lowering the bar — when used precisely. Where we use it, and where we don't:",
+        "AI speeds up production without lowering quality, when used precisely. Where we use it, and where we don't:",
       pillars: [
         {
           title: "Ideation acceleration",
-          body: "We use LLMs to expand from a single editorial pillar into 50+ topic angles, then a senior editor culls to the 5–8 worth producing. The model widens the funnel; the human picks.",
+          body: "We use LLMs to expand from a single editorial pillar into 50+ topic angles, then an editor culls to the 5–8 worth producing. The model widens the funnel; the human picks.",
         },
         {
           title: "Repurposing pipelines",
-          body: "Long-form content is processed through a transcription and segmentation pipeline that surfaces clip-worthy moments, generates captions, and proposes short-form cuts — reviewed before anything ships.",
+          body: "Long-form content runs through a transcription and segmentation pipeline that surfaces clip-worthy moments, generates captions, and proposes short-form cuts. Everything is reviewed before it ships.",
         },
         {
           title: "Brand-voice draft generation",
-          body: "Captions, headlines, and email subject lines drafted in the documented brand voice. Senior writers approve every line before it leaves the system. The output isn't 'AI content' — it's accelerated editing.",
+          body: "Captions, headlines, and email subject lines drafted in the documented brand voice. Writers approve every line before it leaves the system. The output isn't 'AI content.' It's faster editing.",
         },
       ],
     },
@@ -705,27 +707,27 @@ export const services: Service[] = [
       {
         question: "Do you produce video, or just write?",
         answer:
-          "Both. Editorial direction is the system; video, photo, and written are surfaces. A typical production day yields output across all of them — that's the leverage.",
+          "Both. Editorial direction sets the standard; video, photo, and written are the formats. A typical production day yields output across all of them.",
       },
       {
         question: "Can we work with our in-house creators?",
         answer:
-          "Yes — and many of our best engagements do. We bring direction, calendar, and post; your team brings the voice and on-camera presence. The handoff stays clean because everyone works from the same editorial document.",
+          "Yes, and many of our best engagements do. We bring direction, calendar, and post; your team brings the voice and on-camera presence. The handoff stays clean because everyone works from the same editorial document.",
       },
       {
         question: "How many pieces of content per month should we expect?",
         answer:
-          "Typical engagements produce 20–30 pieces a month across surfaces, batched for efficiency. Volume isn't the point — pillar coverage and consistency are. We'd rather ship 12 strong pieces than 60 weak ones.",
+          "Typical engagements produce 20–30 pieces a month across formats, batched for efficiency. Volume isn't the point; coverage and consistency are. We'd rather ship 12 strong pieces than 60 weak ones.",
       },
       {
         question: "Do you use AI for the writing?",
         answer:
-          "We use AI to widen ideation and accelerate first drafts. Every line that ships has been edited by a human. The output is content with editorial standards, not 'AI content.'",
+          "We use AI to widen ideation and speed up first drafts. Every line that ships has been edited by a human. The output is content with editorial standards, not 'AI content.'",
       },
       {
         question: "How do you measure content performance?",
         answer:
-          "Against business pillars, not posts. Reach and engagement matter, but they're leading indicators. The lagging measures — pipeline contribution, brand search lift, audience depth — are what the work is judged on.",
+          "Against business goals, not posts. Reach and engagement matter, but they're leading indicators. The work is judged on pipeline contribution, brand search lift, and audience depth.",
       },
     ],
     related: ["creative-direction", "ai-automation", "meta-ads"],
@@ -738,9 +740,9 @@ export const services: Service[] = [
     slug: "creative-direction",
     title: "Creative Direction",
     short:
-      "Editorial-grade creative direction — campaign concepts, art direction, and content systems that elevate brand and outperform in feed.",
+      "Campaign concepts, art direction, and content systems that make the brand look its best and outperform in feed.",
     outcome:
-      "Creative that earns attention before it converts it — and a system that keeps the bar high every quarter.",
+      "Creative that earns attention before it converts it, and stays sharp quarter after quarter.",
     details: [
       "Campaign concept & art direction",
       "Visual identity & system extension",
@@ -750,7 +752,7 @@ export const services: Service[] = [
     seo: {
       metaTitle: "Creative Direction & Art Direction — JDT Inc.",
       metaDescription:
-        "Editorial creative direction — campaign concepts, art direction, and content systems that elevate the brand and outperform in feed.",
+        "Creative direction with editorial standards: campaign concepts, art direction, and content systems that outperform in feed.",
       primaryKeyword: "creative direction agency",
       secondaryKeywords: [
         "art direction agency",
@@ -765,17 +767,17 @@ export const services: Service[] = [
       eyebrow: "Service · Creative Direction",
       h1: "Creative direction, with editorial standards.",
       subheadline:
-        "JDT Inc. is a Miami-based creative direction studio. We build campaign concepts, art direction, and content systems that look like an editorial publication — and outperform in feed because the bar is higher than the platform's average.",
+        "JDT Inc. is a creative direction studio in Miami. We build campaign concepts, art direction, and content systems that look like an editorial publication, and outperform in feed because the standard is higher than the platform's average.",
     },
     outcomes: [
       { value: "Editorial", label: "The standard, not the goal" },
-      { value: "1", label: "Senior director per engagement" },
+      { value: "1", label: "Director per engagement, start to finish" },
       { value: "12+", label: "Concept directions per campaign" },
-      { value: "Quarterly", label: "Brand-bar audit" },
+      { value: "Quarterly", label: "Creative review" },
     ],
     whoFor: {
       intro:
-        "Creative direction is what raises the floor for everything downstream. The clients who get the most out of it are the ones who treat brand as a competitive advantage:",
+        "Creative direction raises the floor for everything downstream. It pays off most for clients who treat brand as a competitive advantage:",
       clients: [
         "Luxury and lifestyle brands where craft is the price of entry",
         "DTC brands competing on positioning, not price",
@@ -801,22 +803,22 @@ export const services: Service[] = [
         {
           step: "01",
           title: "Brief & territory",
-          body: "We translate the business problem into a creative brief — audience, message, surface, constraints. Then we explore territories: tone, references, visual codes, what the campaign is and is not.",
+          body: "We translate the business problem into a creative brief: audience, message, surface, constraints. Then we explore directions: tone, references, visual codes, what the campaign is and is not.",
         },
         {
           step: "02",
           title: "Direction document",
-          body: "The chosen territory becomes a direction document — moodboards, references, type, color, motion principles. The document the rest of the work is checked against.",
+          body: "The chosen direction becomes a document: moodboards, references, type, color, motion principles. Everything that follows is checked against it.",
         },
         {
           step: "03",
           title: "Production & supervision",
-          body: "Production runs against the direction — photo, motion, design, copy. A senior director supervises every milestone so the work doesn't drift in the hands of vendors.",
+          body: "Production runs against the direction: photo, motion, design, copy. The director supervises every milestone so the work doesn't drift in the hands of vendors.",
         },
         {
           step: "04",
           title: "System extension",
-          body: "The campaign becomes a system the in-house team can extend — templates, guidelines, approved variant logic. Brand consistency stops depending on one person.",
+          body: "The campaign becomes templates, guidelines, and approved variant logic your in-house team can extend. Brand consistency stops depending on one person.",
         },
       ],
     },
@@ -826,7 +828,7 @@ export const services: Service[] = [
       items: [
         {
           title: "Creative direction document",
-          body: "The campaign or brand direction made canonical — references, principles, do's and don'ts, type and color systems, motion direction.",
+          body: "The campaign or brand direction in writing: references, principles, do's and don'ts, type and color systems, motion direction.",
         },
         {
           title: "Campaign assets",
@@ -834,33 +836,33 @@ export const services: Service[] = [
         },
         {
           title: "Brand system extension",
-          body: "Templates and component guidelines for the in-house team — so the work compounds without our supervision on every piece.",
+          body: "Templates and component guidelines for your in-house team, so the work holds up without our supervision on every piece.",
         },
         {
           title: "Production supervision",
-          body: "On-set or in-post oversight by a senior director, so what was approved in the deck is what arrives on the timeline.",
+          body: "On-set or in-post oversight by the director, so what was approved in the deck is what arrives on the timeline.",
         },
         {
-          title: "Quarterly brand-bar audit",
+          title: "Quarterly creative review",
           body: "A standing review of what's shipped against the direction. Drift gets caught and corrected before it becomes the new normal.",
         },
       ],
     },
     aiDifferentiation: {
       intro:
-        "Creative direction is judgment, not generation. AI shows up in the supporting work — never in the choices that matter.",
+        "Creative direction is judgment, not generation. AI shows up in the supporting work, never in the choices that matter.",
       pillars: [
         {
           title: "Reference exploration",
-          body: "Image and video reference search accelerated by multimodal models — wider sourcing, faster moodboards, more rigor in the early-territory phase. The director chooses; the model widens the field.",
+          body: "Image and video reference search sped up by multimodal models: wider sourcing, faster moodboards, more rigor early on. The director chooses; the model widens the field.",
         },
         {
           title: "Variant exploration under direction",
-          body: "Once a direction is locked, model-assisted variant exploration helps test crops, color treatments, and layout permutations at speed. The principle is set by a human; the iterations get faster.",
+          body: "Once a direction is locked, models help test crops, color treatments, and layout permutations at speed. The principle is set by a human; the iterations get faster.",
         },
         {
           title: "Asset triage",
-          body: "On a 2,000-frame shoot, multimodal models help triage — surfacing the strongest takes for review. Final selection is always the director's. The model saves three days of editor time.",
+          body: "On a 2,000-frame shoot, multimodal models help triage by surfacing the strongest takes for review. Final selection is always the director's. The model saves three days of editor time.",
         },
       ],
     },
@@ -874,12 +876,12 @@ export const services: Service[] = [
       {
         question: "How is this different from hiring a freelance creative director?",
         answer:
-          "A freelancer ships their work. We ship a system — direction, templates, supervision, a quarterly bar check — so the work compounds across campaigns and surfaces, not just the one we touched.",
+          "A freelancer ships their work and leaves. We leave behind direction, templates, supervision, and a quarterly review, so the standard holds across campaigns, not just the one we touched.",
       },
       {
         question: "Do you do logo design and identity work?",
         answer:
-          "We extend and refine identity systems. We don't take on full ground-up identity rebuilds — those are best handled by branding studios. We work alongside them or pick up where they left off.",
+          "We extend and refine identity systems. We don't take on full ground-up identity rebuilds; those are best handled by branding studios. We work alongside them or pick up where they left off.",
       },
       {
         question: "Can creative direction live alongside performance work?",
@@ -889,7 +891,7 @@ export const services: Service[] = [
       {
         question: "Who reviews the work?",
         answer:
-          "A senior creative director — the same person from kickoff to delivery. No junior handoff. That's the leverage.",
+          "The creative director. The same person from kickoff to delivery, with no junior handoff.",
       },
     ],
     related: ["content-production", "meta-ads", "ai-automation"],
@@ -902,9 +904,9 @@ export const services: Service[] = [
     slug: "lead-generation",
     title: "Lead Generation",
     short:
-      "Lead generation systems that produce qualified, sales-ready inbound — paid acquisition, landing pages, scoring, and CRM handoff designed as one machine.",
+      "Qualified, sales-ready inbound. Paid acquisition, landing pages, scoring, and CRM handoff designed as one machine.",
     outcome:
-      "A predictable pipeline of buyers your sales team can actually close — not a Zendesk full of tire-kickers.",
+      "A predictable pipeline of buyers your sales team can actually close. Not an inbox full of tire-kickers.",
     details: [
       "Paid acquisition for lead-gen offers",
       "Landing page & form architecture",
@@ -914,7 +916,7 @@ export const services: Service[] = [
     seo: {
       metaTitle: "Lead Generation Agency, Miami — JDT Inc.",
       metaDescription:
-        "Lead generation systems that produce qualified, sales-ready inbound — paid acquisition, landing pages, scoring, and CRM handoff designed as one machine.",
+        "Qualified, sales-ready inbound leads. Paid acquisition, landing pages, scoring, and CRM handoff designed as one machine. JDT Inc., Miami.",
       primaryKeyword: "lead generation agency",
       secondaryKeywords: [
         "B2B lead generation agency",
@@ -929,7 +931,7 @@ export const services: Service[] = [
       eyebrow: "Service · Lead Generation",
       h1: "Lead generation, built as one system.",
       subheadline:
-        "Most lead-gen programs leak between channels and the CRM. JDT Inc. designs the whole thing as one machine — paid acquisition, landing pages, qualifying logic, enrichment, and sales handoff — so leads arrive on the rep's desk pre-qualified and in context.",
+        "Most lead-gen programs leak between channels and the CRM. We design the whole thing as one machine: paid acquisition, landing pages, qualifying logic, enrichment, and sales handoff. Leads arrive on the rep's desk pre-qualified and in context.",
     },
     outcomes: [
       { value: "−30–50%", label: "Target cost per qualified lead" },
@@ -965,22 +967,22 @@ export const services: Service[] = [
         {
           step: "01",
           title: "ICP & offer",
-          body: "We map the ideal buyer using closed-won data, then design or sharpen the lead offer — the thing actually worth giving up an email for. The offer is half the work; the channels are the easy part.",
+          body: "We map the ideal buyer using closed-won data, then design or sharpen the lead offer: the thing actually worth giving up an email for. The offer is half the work; the channels are the easy part.",
         },
         {
           step: "02",
           title: "Acquisition stack",
-          body: "Paid channels — Meta, Google, LinkedIn where appropriate — paired with landing pages designed for the offer, not retrofitted from a homepage. Tracking is set up before a dollar of spend goes live.",
+          body: "Paid channels (Meta, Google, LinkedIn where appropriate) paired with landing pages designed for the offer, not retrofitted from a homepage. Tracking is set up before a dollar of spend goes live.",
         },
         {
           step: "03",
           title: "Qualification & enrichment",
-          body: "Every inbound lead is enriched on submission — firmographic, persona, intent. A scoring model trained on your closed-won history routes hot leads directly to reps and disqualifies the obvious noise.",
+          body: "Every inbound lead is enriched on submission with firmographic, persona, and intent data. A scoring model trained on your closed-won history routes hot leads directly to reps and disqualifies the obvious noise.",
         },
         {
           step: "04",
           title: "Sales handoff",
-          body: "Hot leads land in the CRM with full context — source, score, enrichment, prior interactions — and reps are notified within five minutes. Nurture sequences pick up everyone else without a human touch.",
+          body: "Hot leads land in the CRM with full context: source, score, enrichment, prior interactions. Reps are notified within five minutes. Nurture sequences pick up everyone else automatically.",
         },
       ],
     },
@@ -990,11 +992,11 @@ export const services: Service[] = [
       items: [
         {
           title: "Offer & ICP document",
-          body: "The codified buyer and the codified offer — what we're saying, to whom, in exchange for what.",
+          body: "The buyer and the offer, in writing: what we're saying, to whom, in exchange for what.",
         },
         {
           title: "Acquisition campaigns",
-          body: "Paid acquisition across Meta, Google, and LinkedIn where the math supports it. Senior operators run the campaigns; creative is produced in-house.",
+          body: "Paid acquisition across Meta, Google, and LinkedIn where the math supports it. The people who designed the campaigns run them; creative is produced in-house.",
         },
         {
           title: "Conversion landing pages",
@@ -1002,7 +1004,7 @@ export const services: Service[] = [
         },
         {
           title: "Lead enrichment pipeline",
-          body: "Real-time enrichment on every inbound — firmographic, persona, intent — feeding the scoring model.",
+          body: "Real-time enrichment on every inbound lead (firmographic, persona, intent), feeding the scoring model.",
         },
         {
           title: "Scoring & routing",
@@ -1010,25 +1012,25 @@ export const services: Service[] = [
         },
         {
           title: "Nurture & re-engagement",
-          body: "Email sequences that move warm leads toward a real conversation — and re-engage stale ones without spamming the list.",
+          body: "Email sequences that move warm leads toward a real conversation, and re-engage stale ones without spamming the list.",
         },
       ],
     },
     aiDifferentiation: {
       intro:
-        "AI shows up across the lead-gen system — quietly. Where it earns its keep:",
+        "AI shows up across the lead-gen system, quietly. Where it does real work:",
       pillars: [
         {
-          title: "ICP scoring trained on your data",
-          body: "We build a scoring model on your closed-won and closed-lost history — not a generic template. Each lead arrives with a score that means something specific about your funnel.",
+          title: "Scoring trained on your data",
+          body: "We build a scoring model on your closed-won and closed-lost history, not a generic template. Each lead arrives with a score that means something specific about your funnel.",
         },
         {
           title: "Real-time enrichment & intent",
-          body: "Inbound leads are enriched on submission with firmographic and intent signals — Clay, Apollo, ZoomInfo, custom feeds — so the rep gets context before the first call.",
+          body: "Inbound leads are enriched on submission with firmographic and intent signals from Clay, Apollo, ZoomInfo, or custom feeds, so the rep gets context before the first call.",
         },
         {
-          title: "AI-assisted reply drafts",
-          body: "First-touch replies are drafted in your brand voice with full lead context — score, source, enrichment. The rep edits and sends. Speed-to-lead drops without quality dropping.",
+          title: "Drafted first replies",
+          body: "First-touch replies are drafted in your brand voice with full lead context: score, source, enrichment. The rep edits and sends. Response time drops without quality dropping.",
         },
       ],
     },
@@ -1042,7 +1044,7 @@ export const services: Service[] = [
       {
         question: "How is a 'qualified lead' defined?",
         answer:
-          "By your sales team's closed-won data, not a generic template. We codify what a real buyer looks like for your business — firmographic, persona, behavioral signals — and the scoring model holds the rest of the system to it.",
+          "By your sales team's closed-won data, not a generic template. We write down what a real buyer looks like for your business (firmographic, persona, behavioral signals), and the scoring model holds the rest of the system to it.",
       },
       {
         question: "Do you integrate with our CRM?",
@@ -1057,7 +1059,7 @@ export const services: Service[] = [
       {
         question: "Can we keep our existing landing pages?",
         answer:
-          "If they're converting, yes — we audit before rebuilding. Most engagements end up with a mix of existing pages we tune and new ones we build for new offers.",
+          "If they're converting, yes. We audit before rebuilding. Most engagements end up with a mix of existing pages we tune and new ones we build for new offers.",
       },
     ],
     related: ["meta-ads", "google-ads", "crm-systems"],
@@ -1070,9 +1072,9 @@ export const services: Service[] = [
     slug: "crm-systems",
     title: "CRM Systems",
     short:
-      "CRM systems engineered for lifecycle revenue — implementation, automation, segmentation, and email programs that turn pipeline into compounding LTV.",
+      "CRM implementation, automation, segmentation, and email programs that turn one-time buyers into repeat revenue.",
     outcome:
-      "A CRM that earns its keep — driving second purchases, retention, and expansion without manual intervention.",
+      "A CRM that drives second purchases, retention, and expansion without manual work.",
     details: [
       "CRM implementation & migration",
       "Lifecycle automation & journeys",
@@ -1082,7 +1084,7 @@ export const services: Service[] = [
     seo: {
       metaTitle: "CRM Systems & Lifecycle Automation — JDT Inc.",
       metaDescription:
-        "CRM systems engineered for lifecycle revenue — implementation, automation, segmentation, and email programs that turn pipeline into compounding LTV.",
+        "CRM implementation, automation, segmentation, and email programs that turn one-time buyers into repeat revenue. JDT Inc., Miami.",
       primaryKeyword: "crm implementation agency",
       secondaryKeywords: [
         "crm consulting agency",
@@ -1095,9 +1097,9 @@ export const services: Service[] = [
     },
     hero: {
       eyebrow: "Service · CRM Systems",
-      h1: "CRM, engineered for lifecycle revenue.",
+      h1: "A CRM that sells, not just stores contacts.",
       subheadline:
-        "Most CRM implementations stall at 'we have a HubSpot account.' We design and operate CRM systems that drive lifecycle revenue — implementation, segmentation, automation, and email programs that compound long after the acquisition cost is paid.",
+        "Most CRM implementations stall at 'we have a HubSpot account.' We set up and run the whole thing: implementation, segmentation, automation, and email programs that keep paying back long after the acquisition cost is covered.",
     },
     outcomes: [
       { value: "+15–35%", label: "Target lift in repeat revenue" },
@@ -1133,22 +1135,22 @@ export const services: Service[] = [
         {
           step: "01",
           title: "Audit & architecture",
-          body: "We audit the existing setup — properties, lists, automations, email program, integrations — and design the architecture for the next 12 months. What stays, what gets retired, what needs rebuilding.",
+          body: "We audit the existing setup (properties, lists, automations, email program, integrations) and design the architecture for the next 12 months. What stays, what gets retired, what needs rebuilding.",
         },
         {
           step: "02",
           title: "Implementation & migration",
-          body: "Migration to (or refactor inside) HubSpot, Salesforce, Klaviyo, Attio, Close — chosen by fit, not vendor preference. Data is cleaned, properties are codified, integrations are wired.",
+          body: "Migration to (or refactor inside) HubSpot, Salesforce, Klaviyo, Attio, or Close, chosen by fit rather than vendor preference. Data is cleaned, properties are documented, integrations are wired.",
         },
         {
           step: "03",
           title: "Lifecycle program design",
-          body: "Welcome flows, post-purchase journeys, reactivation, win-back, expansion sequences. Each program is mapped to a moment in the customer lifecycle — not a marketing calendar holiday.",
+          body: "Welcome flows, post-purchase journeys, reactivation, win-back, expansion sequences. Each program is mapped to a moment in the customer lifecycle, not a marketing calendar holiday.",
         },
         {
           step: "04",
           title: "Operating cadence",
-          body: "A weekly send calendar, a monthly cohort review, and a quarterly architecture audit. The system stays clean as it scales — most CRMs decay because nobody owns the maintenance.",
+          body: "A weekly send calendar, a monthly cohort review, and a quarterly architecture audit. The system stays clean as it scales. Most CRMs decay because nobody owns the maintenance.",
         },
       ],
     },
@@ -1158,41 +1160,41 @@ export const services: Service[] = [
       items: [
         {
           title: "CRM architecture document",
-          body: "Property model, lifecycle stages, segmentation logic, integration map. The codified version of how the CRM is supposed to work.",
+          body: "Property model, lifecycle stages, segmentation logic, integration map. How the CRM is supposed to work, in writing.",
         },
         {
           title: "Implementation & migration",
-          body: "Setup, refactor, or migration — across HubSpot, Salesforce, Klaviyo, Close, Attio, depending on fit.",
+          body: "Setup, refactor, or migration across HubSpot, Salesforce, Klaviyo, Close, or Attio, depending on fit.",
         },
         {
           title: "Lifecycle journeys",
-          body: "Welcome, onboarding, post-purchase, reactivation, win-back, expansion — each as a documented program with metrics and ownership.",
+          body: "Welcome, onboarding, post-purchase, reactivation, win-back, and expansion, each as a documented program with metrics and an owner.",
         },
         {
           title: "Email & SMS calendar",
-          body: "A standing send calendar with editorial direction, scheduled, written under brand voice — ongoing, not a one-time deliverable.",
+          body: "A standing send calendar with editorial direction, scheduled and written in your brand voice. Ongoing, not a one-time deliverable.",
         },
         {
           title: "Reporting dashboards",
-          body: "CRM-side dashboards on lifecycle KPIs, list health, deliverability, and program contribution — visible to leadership without a manual export.",
+          body: "Dashboards on lifecycle KPIs, list health, deliverability, and program contribution, visible to leadership without a manual export.",
         },
       ],
     },
     aiDifferentiation: {
       intro:
-        "CRM is where AI quietly creates the most leverage — when it's pointed at the right problems.",
+        "CRM is where AI quietly does the most work, when it's pointed at the right problems.",
       pillars: [
         {
           title: "Predictive segmentation",
-          body: "Customer base segmentation trained on transactional and behavioral data — predicting churn risk, second-purchase likelihood, and expansion readiness. Each segment ties to a specific lifecycle program.",
+          body: "Segmentation trained on transactional and behavioral data, predicting churn risk, second-purchase likelihood, and expansion readiness. Each segment ties to a specific lifecycle program.",
         },
         {
           title: "Send-time and content optimization",
-          body: "Cohort-level send-time learning, subject-line testing, and content variant generation under brand-voice constraints. Senior writers approve before send.",
+          body: "Cohort-level send-time learning, subject-line testing, and content variant generation under brand-voice constraints. A writer approves before send.",
         },
         {
           title: "Brand-voice email drafting",
-          body: "First drafts of campaigns, journeys, and one-offs are generated in your documented voice — then edited by a human. The throughput is what makes a real lifecycle program possible.",
+          body: "First drafts of campaigns, journeys, and one-offs are generated in your documented voice, then edited by a human. The throughput is what makes a real lifecycle program possible.",
         },
       ],
     },
@@ -1201,27 +1203,27 @@ export const services: Service[] = [
       {
         question: "Which CRMs do you work with?",
         answer:
-          "HubSpot, Salesforce, Klaviyo, Close, Attio, and Pipedrive are the most common. We can work in others — but we recommend tools we've operated extensively, not whatever's trending this quarter.",
+          "HubSpot, Salesforce, Klaviyo, Close, Attio, and Pipedrive are the most common. We can work in others, but we recommend tools we've operated extensively, not whatever's trending this quarter.",
       },
       {
         question: "Is this implementation or ongoing operation?",
         answer:
-          "Both, in sequence. The first 60–90 days are implementation and journey design. After that, the engagement shifts to ongoing operation — sends, optimization, quarterly architecture audits.",
+          "Both, in sequence. The first 60–90 days are implementation and journey design. After that, the engagement shifts to ongoing operation: sends, optimization, quarterly architecture audits.",
       },
       {
         question: "How does this connect to our acquisition spend?",
         answer:
-          "Acquisition gets cheaper when LTV expands. Our CRM work isn't a separate department from the Meta and Google programs — it's where the post-acquisition revenue happens. The two are budgeted together.",
+          "Acquisition gets cheaper when customers are worth more. Our CRM work isn't a separate department from the Meta and Google programs; it's where the post-acquisition revenue happens. The two are budgeted together.",
       },
       {
         question: "What's the typical first improvement we'll see?",
         answer:
-          "List health and segmentation — most lists are 30–50% larger than they should be once enriched and cleaned. Better targeting drops list fatigue and lifts revenue per send within the first quarter.",
+          "List health and segmentation. Most lists are 30–50% larger than they should be once enriched and cleaned. Better targeting drops list fatigue and lifts revenue per send within the first quarter.",
       },
       {
         question: "Do you write the emails?",
         answer:
-          "Yes — under your brand voice document. AI accelerates first drafts; senior writers approve every send. The output reads like the brand, not a template.",
+          "Yes, under your brand voice document. AI speeds up first drafts; a writer approves every send. The output reads like the brand, not a template.",
       },
     ],
     related: ["lead-generation", "ai-automation", "funnel-optimization"],
@@ -1234,7 +1236,7 @@ export const services: Service[] = [
     slug: "funnel-optimization",
     title: "Funnel Optimization",
     short:
-      "Funnel optimization that turns traffic into pipeline — landing pages, conversion testing, and full-funnel instrumentation engineered for measurable lift.",
+      "Turn more of your traffic into customers. Landing pages, conversion testing, and tracking across the whole funnel.",
     outcome:
       "A funnel where every step is instrumented, every change is tested, and every quarter the conversion math improves.",
     details: [
@@ -1246,7 +1248,7 @@ export const services: Service[] = [
     seo: {
       metaTitle: "Funnel Optimization & CRO Agency — JDT Inc.",
       metaDescription:
-        "Funnel optimization that turns traffic into pipeline — landing pages, conversion testing, and full-funnel instrumentation engineered for measurable lift.",
+        "Turn more of your traffic into customers. Landing pages, conversion testing, and tracking across the whole funnel. JDT Inc., Miami.",
       primaryKeyword: "funnel optimization agency",
       secondaryKeywords: [
         "conversion rate optimization agency",
@@ -1261,7 +1263,7 @@ export const services: Service[] = [
       eyebrow: "Service · Funnel Optimization",
       h1: "Funnel optimization, end to end.",
       subheadline:
-        "Acquisition is the loud half of growth. The funnel is the quiet half — and the one that compounds. JDT Inc. audits, instruments, and rebuilds funnels for measurable lift, from the first paid impression all the way to closed revenue.",
+        "Acquisition is the loud half of growth. The funnel is the quiet half, and the one most businesses ignore. We audit, instrument, and rebuild funnels for measurable lift, from the first paid impression to closed revenue.",
     },
     outcomes: [
       { value: "+20–60%", label: "Target lift on key conversion steps" },
@@ -1271,7 +1273,7 @@ export const services: Service[] = [
     ],
     whoFor: {
       intro:
-        "Funnel optimization compounds where there's enough traffic to test against and a willingness to change what isn't working. The shape that fits:",
+        "Funnel optimization pays off where there's enough traffic to test against and a willingness to change what isn't working. The clients that fit:",
       clients: [
         "Brands with paid acquisition already running and unclear conversion math",
         "Operators sitting on traffic they can't fully convert",
@@ -1297,12 +1299,12 @@ export const services: Service[] = [
         {
           step: "01",
           title: "Audit & instrumentation",
-          body: "We map the full funnel — paid impression to closed revenue — and instrument every step. Most engagements start by exposing 30–60% of the data the existing setup was supposed to capture.",
+          body: "We map the full funnel, from paid impression to closed revenue, and instrument every step. Most engagements start by exposing 30–60% of the data the existing setup was supposed to capture.",
         },
         {
           step: "02",
           title: "Hypothesis stack",
-          body: "Findings become a prioritized stack of hypotheses — ranked by impact, evidence, and effort. We test the highest-leverage assumptions first; opinions about button color come last.",
+          body: "Findings become a prioritized stack of hypotheses, ranked by impact, evidence, and effort. We test the biggest assumptions first; opinions about button color come last.",
         },
         {
           step: "03",
@@ -1311,8 +1313,8 @@ export const services: Service[] = [
         },
         {
           step: "04",
-          title: "Compounding cadence",
-          body: "Bi-weekly test cycles, monthly funnel reads, quarterly architecture audits. The point isn't to win one test — it's to make sure the funnel is improving every quarter without us in the room.",
+          title: "Operating cadence",
+          body: "Bi-weekly test cycles, monthly funnel reads, quarterly architecture audits. The point isn't to win one test. It's to make sure the funnel improves every quarter without us in the room.",
         },
       ],
     },
@@ -1326,11 +1328,11 @@ export const services: Service[] = [
         },
         {
           title: "Instrumentation layer",
-          body: "GA4, server-side tracking, conversion API, custom events — the measurement that should have existed already.",
+          body: "GA4, server-side tracking, conversion API, custom events. The measurement that should have existed already.",
         },
         {
           title: "Landing page system",
-          body: "Templates, components, copy patterns, and instrumentation hooks designed for testing — not one-off pages.",
+          body: "Templates, components, copy patterns, and instrumentation hooks designed for testing, not one-off pages.",
         },
         {
           title: "Test program",
@@ -1338,21 +1340,21 @@ export const services: Service[] = [
         },
         {
           title: "Funnel reporting",
-          body: "Step-by-step conversion reads, drop-off analysis, and cohort behavior — visible without a manual export.",
+          body: "Step-by-step conversion reads, drop-off analysis, and cohort behavior, visible without a manual export.",
         },
       ],
     },
     aiDifferentiation: {
       intro:
-        "AI helps funnel work in three places — and stays out of the rest.",
+        "AI helps funnel work in three places, and stays out of the rest.",
       pillars: [
         {
           title: "Variant generation under brand voice",
-          body: "Headline and body-copy variants generated in the documented brand voice — widening the testing pool without lowering the editorial bar. Every variant is human-edited before it ships.",
+          body: "Headline and body-copy variants generated in the documented brand voice, widening the testing pool without lowering the standard. Every variant is human-edited before it ships.",
         },
         {
           title: "Behavioral session analysis",
-          body: "Session recordings and heatmaps processed by multimodal models to surface patterns — rage clicks, navigation loops, abandonment shapes — at a speed a human analyst can't match.",
+          body: "Session recordings and heatmaps processed by multimodal models to surface patterns like rage clicks, navigation loops, and abandonment shapes, at a speed a human analyst can't match.",
         },
         {
           title: "Anomaly detection in the funnel",
@@ -1365,17 +1367,17 @@ export const services: Service[] = [
       {
         question: "Is this CRO or full-funnel work?",
         answer:
-          "Both. We start at the funnel level — instrumentation, audit, leakage — and the test program runs continuously underneath. CRO without funnel context is whack-a-mole.",
+          "Both. We start at the funnel level (instrumentation, audit, leakage) and the test program runs continuously underneath. CRO without funnel context is whack-a-mole.",
       },
       {
         question: "How much traffic do we need for testing to work?",
         answer:
-          "There's no clean number — it depends on conversion rate and the scale of the test. As a rough floor, 20K monthly visitors and 200+ conversions starts to support meaningful tests on key steps. Below that, we'd focus on funnel structure first, statistical testing later.",
+          "There's no clean number. It depends on conversion rate and the scale of the test. As a rough floor, 20K monthly visitors and 200+ conversions starts to support meaningful tests on key steps. Below that, we'd focus on funnel structure first and statistical testing later.",
       },
       {
         question: "Do you build the landing pages?",
         answer:
-          "Yes — most engagements include a landing page system, built in the brand language with instrumentation baked in. We can also work inside Webflow, Framer, or your existing CMS if you have one.",
+          "Yes. Most engagements include a landing page system, built in the brand language with tracking baked in. We can also work inside Webflow, Framer, or your existing CMS.",
       },
       {
         question: "What's typically broken when you arrive?",
@@ -1385,7 +1387,7 @@ export const services: Service[] = [
       {
         question: "How does funnel work coordinate with the ad accounts?",
         answer:
-          "Tightly. Ad creative, landing copy, and funnel structure are designed as one piece — not three. That's the whole point of the system.",
+          "Tightly. Ad creative, landing copy, and funnel structure are designed as one piece, not three. That's the whole point.",
       },
     ],
     related: ["meta-ads", "google-ads", "lead-generation"],

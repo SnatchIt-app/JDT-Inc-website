@@ -27,7 +27,7 @@ const trustMetrics = [
  *
  * Each Q&A is structured for retrieval by Google AI Overviews, ChatGPT,
  * Perplexity, and Claude search. Answers are first-person plural, anchor
- * the Miami location, the AI-powered positioning, and the priority
+ * the Miami location, the plain-language positioning, and the priority
  * services. The same content is also emitted as FAQPage JSON-LD so it's
  * eligible for rich results.
  */
@@ -35,22 +35,22 @@ const homepageFaqs = [
   {
     question: "What does JDT Inc. do?",
     answer:
-      "JDT Inc. is a Miami-based AI-powered marketing agency. We design growth systems that combine senior strategy, editorial creative, performance media (Meta Ads, Google Ads), AI automation, lead generation, CRM systems, and funnel optimization — built to compound results month over month.",
+      "We're a marketing agency in Miami. We run Meta and Google ad campaigns, produce the creative, build landing pages and funnels, set up CRM and email programs, and build automations that cut manual work. Everything is measured against leads and revenue.",
   },
   {
     question: "Who do you work with?",
     answer:
-      "We partner with ambitious DTC brands, professional services firms, and luxury / lifestyle businesses — typically founder-led companies investing $50K–$500K+ a year in growth and ready to operate against a real system, not one-off campaigns.",
+      "DTC brands, professional services firms, and luxury and lifestyle businesses. Most are founder-led companies investing $50K–$500K a year in marketing and tired of one-off campaigns that go nowhere.",
   },
   {
     question: "How is JDT different from a traditional agency?",
     answer:
-      "Every engagement is run by senior operators, not a layer of junior account managers. We use AI to model audiences, accelerate creative testing, and surface signals weeks faster than a manual analyst team — then we report on the metrics that move the business, not vanity dashboards.",
+      "You work with the people who actually run your account. No junior handoff. We use AI for specific jobs, like clustering customer reviews into research or flagging odd spend, and a person reviews everything before it ships. We report on cost per lead and revenue, not impressions.",
   },
   {
     question: "Where is JDT Inc. located?",
     answer:
-      "We're headquartered in Miami, Florida, and partner with brands across the United States — fully remote when it makes sense, in person when it matters.",
+      "Miami, Florida. We work with brands across the United States, remote for most of the work and in person when it matters.",
   },
 ];
 
@@ -68,20 +68,19 @@ export default function HomePage() {
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <div className="flex flex-col gap-10">
           <p className="eyebrow">
-            Miami · AI-Powered Growth Agency · Est. JDT Inc.
+            Miami · Marketing Agency · JDT Inc.
           </p>
 
           <h1 className="display text-hero max-w-6xl">
-            Strategy, creative, and AI — in service of growth.
+            We run ads, build funnels, and automate the work in between.
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
             <p className="lg:col-span-7 text-lg sm:text-xl text-black/70 leading-relaxed max-w-2xl">
-              JDT Inc. is a Miami-based AI-powered marketing agency. We
-              engineer growth systems for ambitious brands — pairing senior
-              strategy and editorial creative with Meta Ads, Google Ads, AI
-              automation, lead generation, and CRM systems that compound month
-              over month.
+              JDT Inc. is a marketing agency in Miami. We run Meta and Google
+              Ads, design the creative ourselves, build the landing pages, and
+              set up the CRM and automation behind them. Our clients want more
+              leads and numbers they can trust, not more meetings.
             </p>
 
             <div className="lg:col-span-5 flex flex-col sm:flex-row gap-3 lg:justify-end">
@@ -144,7 +143,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">Selected work</p>
             <h2 className="display mt-6 text-display max-w-3xl">
-              Outcomes that compound, not coincidences.
+              Recent work, and the numbers behind it.
             </h2>
           </div>
           <Link
@@ -173,9 +172,9 @@ export default function HomePage() {
             </p>
           </div>
           <p className="lg:col-span-9 font-serif tracking-tightest text-3xl sm:text-4xl lg:text-5xl leading-[1.08] text-ink max-w-4xl">
-            We work like an editorial publication that ships paid media.
-            Senior hands, restrained creative, systems that compound — and
-            a refusal to flatten the brand for a short-term number.
+            We care how the work looks and how it performs. Restrained
+            creative, honest reporting, and a refusal to cheapen a brand
+            for a short-term number.
           </p>
         </div>
       </Section>
@@ -189,13 +188,13 @@ export default function HomePage() {
           </div>
           <div className="lg:col-span-8">
             <h2 className="display text-display max-w-4xl">
-              We build marketing systems — not one-off campaigns.
+              We build marketing that keeps working after the campaign ends.
             </h2>
             <p className="mt-10 text-lg text-gray-700 leading-relaxed max-w-2xl">
-              Most agencies hand you tactics. We design the full system —
-              positioning, creative, funnels, and paid media — tuned in real
-              time with AI automation and grounded in senior strategy. The
-              result is compounding growth, not short-term spikes.
+              Most agencies hand you tactics. We set up the whole thing:
+              positioning, creative, landing pages, paid media, and the
+              tracking that ties them together. Then we improve it month
+              over month.
             </p>
           </div>
         </div>
@@ -245,9 +244,9 @@ export default function HomePage() {
               <span aria-hidden className="text-gray-300">
                 &ldquo;
               </span>
-              They didn&apos;t sell us a campaign — they built us a growth
-              system. Six months in, our cost per lead is down by a third and
-              we&apos;re hiring against a pipeline that finally feels real.
+              They didn&apos;t sell us a campaign. Six months in, our cost per
+              lead is down by a third and we&apos;re hiring against a pipeline
+              that finally feels real.
               <span aria-hidden className="text-gray-300">
                 &rdquo;
               </span>
@@ -272,11 +271,11 @@ export default function HomePage() {
               Why JDT
             </p>
             <h2 className="display mt-6 text-display">
-              A process designed for results.
+              The same four steps, every engagement.
             </h2>
             <p className="mt-8 text-paper/70 text-lg leading-relaxed max-w-md">
-              Every engagement runs through the same four-stage system — so
-              strategy, creative, and media stay aligned and keep improving.
+              Strategy, creative, and media stay aligned because the same
+              people handle all three.
             </p>
           </div>
 
@@ -285,22 +284,22 @@ export default function HomePage() {
               {
                 step: "01",
                 title: "Strategy",
-                body: "Deep research, audience modeling, and positioning — the foundation everything else is built on.",
+                body: "We study your customers, your numbers, and your offer before anything goes live.",
               },
               {
                 step: "02",
                 title: "Creative",
-                body: "Editorial direction, campaign creative, and content systems that elevate the brand and perform in feed.",
+                body: "Ad creative and content made in-house, built to look good and to sell.",
               },
               {
                 step: "03",
                 title: "Execution",
-                body: "Paid media, funnels, AI automation, and launches — run by senior operators, not junior account managers.",
+                body: "Paid media, landing pages, and automation, run by the same people you talked to on the first call.",
               },
               {
                 step: "04",
                 title: "Optimization",
-                body: "AI-assisted testing and iteration loops — turning every cohort of data into compounding performance.",
+                body: "We test, read the results, and adjust every week. The account gets better the longer it runs.",
               },
             ].map((p) => (
               <li
@@ -360,7 +359,7 @@ export default function HomePage() {
       <CTA
         eyebrow="Engage"
         title="Map your first 90 days."
-        body="Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your goals, your numbers, and what the first 90 days should look like."
+        body="It starts with a 30-minute call. No pitch deck. We'll walk through your goals, your numbers, and what the first 90 days should look like."
         primary={{ label: "Book a strategy call", href: "/contact" }}
         secondary={{ label: "See the work", href: "/work" }}
       />

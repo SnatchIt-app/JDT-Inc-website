@@ -100,7 +100,7 @@ export default async function OGImage() {
               fontFamily: "Georgia, 'Times New Roman', serif",
             }}
           >
-            AI-powered marketing & growth systems.
+            Marketing agency in Miami.
           </div>
           <div
             style={{
@@ -111,8 +111,8 @@ export default async function OGImage() {
               maxWidth: 820,
             }}
           >
-            Strategy, creative, and AI — in service of growth. A Miami-based
-            agency for ambitious brands.
+            Paid ads, creative, funnels, and automation. We run the work
+            and report on the numbers that matter.
           </div>
         </div>
 

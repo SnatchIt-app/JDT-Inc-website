@@ -410,7 +410,7 @@ export default function ServicePageEs({ params }: Params) {
       <CTA
         eyebrow="Conversemos"
         title={`¿Listos para poner ${svc.title} a trabajar?`}
-        body="La mayoría de los engagements arrancan con una llamada de estrategia de 30 minutos — sin pitch deck. Hablamos de tus objetivos, tus números y cómo deberían verse los próximos 90 días."
+        body="La mayoría de los engagements arrancan con una llamada de 30 minutos. Hablamos de tus objetivos, tus números y cómo deberían verse los próximos 90 días."
         primary={{ label: siteEs.ui.bookCall, href: "/contact" }}
         secondary={{ label: siteEs.ui.seeWork, href: "/work" }}
       />

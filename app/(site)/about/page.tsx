@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "JDT Inc. is a Miami-based AI-powered marketing and growth systems agency. Senior strategy, editorial creative, and AI-assisted execution.",
+    "JDT Inc. is a marketing agency in Miami. We run paid media, produce the creative, and build the funnels and automation behind them.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: `About — ${site.name}`,
@@ -41,12 +41,12 @@ export default function AboutPage() {
       <Section padded={false} className="pt-40 sm:pt-48 pb-24 sm:pb-32">
         <p className="eyebrow">About — {site.location}</p>
         <h1 className="display mt-8 text-hero max-w-5xl">
-          A modern agency, built for how brands actually grow today.
+          A small Miami agency that does the work itself.
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
-          JDT Inc. is a Miami-based digital agency. We pair AI-driven strategy
-          with senior creative and media operators to help ambitious brands
-          move faster, make better decisions, and grow with intent — not noise.
+          JDT Inc. is a marketing agency in Miami. We run paid media, produce
+          the creative, and build the funnels and automation behind them. You
+          work directly with the people doing the work.
         </p>
       </Section>
 
@@ -60,18 +60,17 @@ export default function AboutPage() {
           </div>
           <div className="lg:col-span-7 flex flex-col gap-8 text-lg text-black/75 leading-relaxed max-w-2xl">
             <p>
-              Most marketing fails for the same reason: great tactics executed
-              without a real strategy behind them. We flip the order. Every
-              engagement starts with a clear picture of the business, the
-              audience, and the outcome — then we build the system that gets
-              you there.
+              Most marketing fails for the same reason: decent tactics with no
+              real strategy behind them. We flip the order. Every engagement
+              starts with a clear picture of the business, the audience, and
+              the outcome. Then we build toward it.
             </p>
             <p>
-              AI is part of how we work, not a buzzword. We use it to model
-              audiences, accelerate creative testing, and surface signals that
-              would take a team of analysts weeks to catch. That edge is
-              multiplied by senior operators who&apos;ve actually run brands —
-              not a layer of junior account managers between you and the work.
+              We use AI for specific jobs: turning customer reviews and call
+              notes into research, drafting copy variants for testing, and
+              flagging odd movements in ad spend. A person reviews everything
+              before it ships. And you work with people who have run brands,
+              not a layer of junior account managers.
             </p>
           </div>
         </div>
@@ -88,20 +87,20 @@ export default function AboutPage() {
             <ul className="divide-y divide-paper/15 border-t border-paper/15">
               {[
                 {
-                  title: "Senior operators, every engagement",
-                  body: "You work directly with strategists and creative leads — no handoffs to a junior team.",
+                  title: "No junior handoff",
+                  body: "You work directly with the strategists and creative leads who run your account.",
                 },
                 {
-                  title: "Strategy grounded in data",
-                  body: "AI-assisted research, audience modeling, and measurement woven into every decision.",
+                  title: "Decisions backed by data",
+                  body: "Customer research, clean tracking, and measurement built into every decision.",
                 },
                 {
                   title: "Creative that performs",
-                  body: "Editorial-quality direction tuned for the feed, the funnel, and the brand — at once.",
+                  body: "Direction with editorial standards, tuned for the feed, the funnel, and the brand.",
                 },
                 {
                   title: "Accountable to outcomes",
-                  body: "We report on the metrics that actually move the business, not vanity dashboards.",
+                  body: "We report on leads, cost per lead, and revenue. Not vanity dashboards.",
                 },
               ].map((item) => (
                 <li
@@ -180,10 +179,9 @@ export default function AboutPage() {
               Where the work lands.
             </h2>
             <p className="mt-8 text-lg text-black/70 leading-relaxed max-w-md">
-              JDT Inc. concentrates on a small number of verticals where
-              senior strategy, editorial creative, and performance media all
-              earn their keep — and where the bar for craft makes the work
-              worth doing.
+              We focus on a small number of industries we know well, where
+              good creative and disciplined paid media make a visible
+              difference.
             </p>
           </div>
           <ul className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 border-t border-black/10 pt-8">
@@ -236,9 +234,9 @@ export default function AboutPage() {
           </div>
           <div className="lg:col-span-5">
             <p className="text-lg text-black/70 leading-relaxed">
-              Our team is headquartered in Miami, FL — but we partner with
-              ambitious brands across the country, fully remote when it makes
-              sense, in-person when it matters.
+              We&apos;re based in Miami, FL and work with brands across the
+              country. Remote for most of the work, in person when it
+              matters.
             </p>
           </div>
         </div>

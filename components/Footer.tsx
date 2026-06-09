@@ -15,7 +15,7 @@ export default function Footer() {
               {site.location}
             </p>
             <h2 className="display mt-6 text-5xl sm:text-6xl lg:text-7xl leading-[0.95]">
-              Let&apos;s build the next chapter of your brand.
+              Tell us what you&apos;re building.
             </h2>
             <Link
               href="/contact"

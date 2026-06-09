@@ -142,9 +142,8 @@ export default function MiamiLocation() {
               The verticals we run hardest in.
             </h2>
             <p className="mt-8 text-lg text-black/70 leading-relaxed max-w-md">
-              JDT Inc. concentrates on five Miami verticals where the work
-              compounds — and where editorial standards and performance
-              math are both required to win.
+              We concentrate on five Miami industries we know well, where
+              good creative and solid numbers are both required to win.
             </p>
           </div>
           <ul className="lg:col-span-8 divide-y divide-black/10 border-t border-black/10">
@@ -277,8 +276,8 @@ export default function MiamiLocation() {
 
       <CTA
         eyebrow="Engage"
-        title="Bring senior operators to your Miami program."
-        body="Most engagements start with a 30-minute strategy call — no pitch deck. We'll walk through your goals, your numbers, and where the next 90 days should focus."
+        title="Let's talk about your Miami program."
+        body="Most engagements start with a 30-minute call. We'll walk through your goals, your numbers, and where the next 90 days should focus."
         primary={{ label: "Book a strategy call", href: "/contact" }}
         secondary={{ label: "See the work", href: "/work" }}
       />

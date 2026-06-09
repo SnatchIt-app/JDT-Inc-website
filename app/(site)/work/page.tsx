@@ -10,7 +10,7 @@ import { breadcrumbSchema, jsonLdGraph } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected case studies from JDT Inc. — outcomes in apparel, local services, and DTC brands across performance media, creative, and funnels.",
+    "Selected case studies from JDT Inc.: results in apparel, local services, and DTC across paid media, creative, and funnels.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: `Work — ${site.name}`,
@@ -34,7 +34,7 @@ export default function WorkPage() {
           Results you can point to.
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-black/70 leading-relaxed">
-          A selection of recent engagements — how we approached each problem,
+          A selection of recent engagements: how we approached each problem,
           what we built, and the numbers we moved.
         </p>
       </Section>
