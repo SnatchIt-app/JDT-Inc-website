@@ -1,5 +1,28 @@
 # Autonomous editorial pipeline
 
+> **⚠️ DISABLED — retired in favour of a manual, human-authored workflow.**
+>
+> As of June 2026 the autonomous article-generation pipeline is **turned off**.
+> JDT Inc. now writes articles by hand with Claude-cowork assistance and a
+> human review gate. Specifically:
+>
+> - The weekly trigger `.github/workflows/autonomous-draft.yml` has been
+>   renamed to `autonomous-draft.yml.disabled` so GitHub Actions no longer
+>   loads or runs it.
+> - The AI generation scripts `scripts/generate-brief.ts` and
+>   `scripts/generate-draft.ts` are now no-op stubs that exit with an error.
+> - The `editorial:brief` and `editorial:draft` npm scripts have been removed.
+>
+> Everything below describes the *former* system and is kept for historical
+> reference only. **How to add an article now:** see
+> [`docs/EDITORIAL.md`](./EDITORIAL.md) and the "Manual article workflow"
+> section at the bottom of this file.
+>
+> What is still active: the editorial linter, article validation, sitemap /
+> RSS / `llms.txt` generation, schema, topic hubs, journal rendering, and the
+> `scheduled-publish` workflow that promotes **manually-written** articles
+> whose `publishAt` has passed.
+
 A weekly cron drafts articles end-to-end. A human is the merge gate. Nothing
 ships to production without an approved PR.
 
@@ -121,3 +144,29 @@ If a generated draft degrades:
    `editorial/voice-reference.md`.
 3. Re-run from step 4 of the manual flow against the same brief — Claude
    will re-draft against the updated rules.
+
+---
+
+## Manual article workflow (current process)
+
+The autonomous generator is off. Add articles by hand:
+
+1. **Plan.** `npm run editorial:gaps` shows which topic clusters still need
+   coverage. Pick one.
+2. **Scaffold.** `npm run editorial:new` creates a new typed `Article` entry
+   (or copy an existing one in `lib/journal.ts`). Start it as
+   `status: "draft"` so it never appears on the live site.
+3. **Write.** Compose the article body, dek, FAQ, tags, and keywords directly
+   in `lib/journal.ts`. Use Claude in Cowork to help draft and edit — but a
+   person owns the final copy.
+4. **Validate.** `npm run editorial:lint` (or `editorial:lint:strict`) checks
+   brand voice, AI tells, keyword density, length, and required fields.
+5. **Link.** `npm run editorial:links` suggests 2–3 internal links.
+6. **Review & ship.** Open a PR. CI re-runs the typecheck, `next lint`, and the
+   editorial linter. A human reviewer reads it end-to-end and sets
+   `status: "published"` (live immediately) or `status: "scheduled"` with a
+   future `publishAt`. The `scheduled-publish` workflow promotes scheduled
+   articles to published once their `publishAt` passes — still via a PR.
+
+Sitemap, RSS, and `llms.txt` regenerate automatically at build time from
+whatever is published. No content is ever created automatically.
