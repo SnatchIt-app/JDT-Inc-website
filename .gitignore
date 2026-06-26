@@ -23,6 +23,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# local SEO automation — runtime logs and cadence stamp, never committed
+/logs/
+
 # local env files
 .env*.local
 .env
