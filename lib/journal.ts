@@ -702,6 +702,170 @@ export const articles: Article[] = [
       secondary: { label: "See the work", href: "/work" },
     },
   },
+  {
+    slug: "meta-ads-2026-guide",
+    title: "Meta Ads in 2026: a working guide for small budgets",
+    dek: "What we'd actually do with $100 a day on Facebook and Instagram: structure, creative, testing, and the mistakes that quietly drain accounts.",
+    topic: "meta-ads",
+    isPillar: true,
+    status: "published",
+    publishedAt: "2026-06-26",
+    updatedAt: "2026-06-26",
+    readingMinutes: 7,
+    tags: ["Meta Ads", "Facebook Ads", "Small business marketing"],
+    excerpt:
+      "Most small accounts don't fail because the budget is too small. They fail on structure, creative, and patience. Here's how we'd run Facebook and Instagram ads on $100 a day.",
+    seo: {
+      metaTitle: "Meta Ads in 2026: A Working Guide — JDT Inc.",
+      metaDescription:
+        "How we run Meta Ads on a small budget: simple structure, creative as the real lever, honest tracking, and the mistakes that quietly drain spend.",
+      primaryKeyword: "meta ads",
+      secondaryKeywords: [
+        "meta ads for small business",
+        "facebook ads",
+        "instagram ads",
+        "advantage+ shopping",
+        "meta ads budget",
+        "how to run meta ads",
+      ],
+    },
+    body: [
+      {
+        type: "p",
+        text: "Most of the Meta Ads advice online is written for people spending fifty thousand dollars a month. If you are a local business or a small brand putting a hundred dollars a day into Facebook and Instagram, a lot of that advice quietly works against you. You do not have the budget to run twelve campaigns, test nine audiences, and wait for an algorithm to sort it out. You need a smaller, sharper version of the same machine.",
+      },
+      {
+        type: "p",
+        text: "We run paid social for service businesses and small brands every day, and the accounts that work share a boring pattern. Simple structure. A few strong pieces of creative. Enough patience to let the platform learn before anyone touches it. The accounts that struggle are almost always busy: too many campaigns, too many edits, too much money spread too thin to ever get out of the learning phase.",
+      },
+      {
+        type: "p",
+        text: "This is what we would do with a small budget in 2026, in the order we would do it. No tricks. Most of it is restraint.",
+      },
+      { type: "h2", text: "Why does a small budget need a simpler account?", id: "why-simple" },
+      {
+        type: "p",
+        text: "Meta's delivery system learns one ad set at a time. It needs roughly fifty conversions a week to get out of what the platform calls the learning phase and start spending efficiently. If your cost per lead is twenty dollars, a single ad set needs about a thousand dollars a week to learn properly. On a hundred dollars a day you have seven hundred a week, which is barely enough for one ad set to find its feet.",
+      },
+      {
+        type: "p",
+        text: "So the math makes the decision for you. With a small budget you run one campaign and one, maybe two ad sets. Every extra ad set you add splits the learning data and slows everything down. The most common mistake we see in small accounts is too many ad sets, each starved of the data it needs to work.",
+      },
+      {
+        type: "definition",
+        term: "Learning phase",
+        body: "The period after you launch or significantly edit an ad set while the system gathers data to predict who will convert. Delivery is unstable and costs swing. The ad set exits the phase after roughly 50 conversions in a week. Edit it and the clock resets, which is why constant tinkering keeps small accounts broke.",
+      },
+      { type: "h2", text: "Start with one campaign, broad targeting, and Advantage+", id: "structure" },
+      {
+        type: "p",
+        text: "In 2026, detailed interest targeting matters far less than it used to. Broad targeting and Advantage+ now read your creative and your pixel data to find buyers better than most hand-built audiences. For a small account that is good news: you can stop guessing at interests and let the system do the part it is genuinely good at.",
+      },
+      {
+        type: "p",
+        text: "We usually start with one sales or leads campaign, a broad audience (your city or service area, a wide age range, almost no interest stacking), and Advantage+ placements so the budget flows wherever it performs. Then we put the real energy where it belongs: the creative.",
+      },
+      {
+        type: "callout",
+        title: "Broad beats clever on a small budget",
+        body: "Owners love to narrow the audience because it feels like control. On a small budget it backfires. Tight audiences hit frequency caps fast, costs climb, and you run out of people before the system learns. Go broad, give it strong creative, and let delivery find the buyers.",
+      },
+      { type: "h2", text: "Creative is the real lever", id: "creative" },
+      {
+        type: "p",
+        text: "Here is the part nobody wants to hear: on Facebook and Instagram in 2026, your creative is your targeting. The system decides who sees your ad based largely on who responds to it. A great video shown to a broad audience will find its own audience. A weak ad with perfect targeting will still lose. If you only fix one thing in your account, fix the creative.",
+      },
+      {
+        type: "p",
+        text: "You do not need a studio. You need volume and variety. We typically launch with four to six pieces: a couple of plain phone-shot videos of the work or the product, a customer talking, a simple before-and-after, and one or two clean images with a clear offer. The point is range, so the system has different angles to test against different people.",
+      },
+      {
+        type: "p",
+        text: "Write for the feed. The first three seconds carry the whole ad, so open with the problem, the offer, or a face talking straight to the camera. Keep captions on, because most of the feed is watched on mute. Make the ad look like something a person would stop to watch. The feed is unforgiving to anything that announces itself as an ad.",
+      },
+      { type: "h2", text: "What should a small Meta Ads budget actually be spent on?", id: "budget-split" },
+      {
+        type: "p",
+        text: "Split the thinking into three buckets, even when the budget is small. Most of the money goes to people who do not know you yet. A smaller slice retargets people who engaged or visited but did not act. And a tiny slice chases anyone who started a form or a checkout and stopped.",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Cold (about 70%): broad prospecting with your strongest creative. This is where growth comes from and where most of the budget belongs.",
+          "Warm retargeting (about 20%): video viewers, page engagers, and site visitors from the last 14 to 30 days. Cheap, and they already know you.",
+          "Hot retargeting (about 10%): people who started a lead form or a checkout and abandoned. The closest money on the table.",
+        ],
+      },
+      {
+        type: "p",
+        text: "On a hundred dollars a day, that is roughly seventy on cold, twenty on warm, ten on hot. You do not need separate campaigns for each on day one. Start with the cold engine, get it working, then add retargeting once there is enough traffic to retarget.",
+      },
+      { type: "h2", text: "Give it two weeks before you judge anything", id: "patience" },
+      {
+        type: "p",
+        text: "The fastest way to waste money here is to panic on day three. You launch, the first day looks rough, you switch off the ad, change the audience, and reset the learning phase. Now the system starts over and you have learned nothing except how to keep it permanently confused.",
+      },
+      {
+        type: "p",
+        text: "We hold changes for the first seven to fourteen days unless something is clearly broken, like a disapproved ad or a tracking error. We judge on cost per result over a week, not a day. Daily numbers on a small budget are noise; weekly numbers are signal. Once an ad set is stable and profitable, we scale it slowly, raising the budget about twenty percent every few days so we do not knock it back into learning.",
+      },
+      { type: "h2", text: "The mistakes that quietly drain small accounts", id: "mistakes" },
+      {
+        type: "p",
+        text: "Most small accounts do not fail dramatically. They bleed. Here are the leaks we fix most often when we take over a Meta Ads account that is not working:",
+      },
+      {
+        type: "list",
+        items: [
+          "Too many ad sets. The budget is sliced so thin nothing ever exits the learning phase. Consolidate down to one or two.",
+          "Editing every day. Each edit resets learning. Set it up well, then leave it alone for a week.",
+          "One ad, no variety. The system has nothing to optimize between. Give it a handful of different angles.",
+          "No tracking. Without a working pixel and the conversions API, you are flying blind and so is the platform. Set this up before you spend a dollar.",
+          "Sending clicks to a weak page. A great ad pointed at a slow, vague landing page wastes the whole budget. The page has to match the promise in the ad.",
+        ],
+      },
+      {
+        type: "p",
+        text: "None of these are about finding a secret audience or a magic button. They are about discipline. A small budget punishes mistakes faster than a big one, which is exactly why a simple, patient account beats a busy, clever one almost every time.",
+      },
+      { type: "h2", text: "How do you know if it's working?", id: "measurement" },
+      {
+        type: "p",
+        text: "Pick one number that matches your business and watch that, not the vanity metrics. For a lead business it is cost per qualified lead. For a shop it is cost per purchase and return on ad spend. Reach, clicks, and engagement are interesting but they do not pay anyone. If your cost per real result is at or below what a customer is worth to you, the account is working, even when the dashboard looks unglamorous.",
+      },
+      {
+        type: "p",
+        text: "Set up tracking so that number is trustworthy: a working pixel, the conversions API connected, and your key events firing. On a small budget, bad data is worse than no data, because it tells you to scale the wrong thing. We get tracking clean before we ever talk about spending more.",
+      },
+      { type: "h2", text: "What happens after the click", id: "after-click" },
+      {
+        type: "p",
+        text: "The ad's only job is to get the right person to raise their hand. What happens next decides whether the money was worth spending. A lead that comes in and sits in an inbox for two days is a lead you paid for and threw away. Before you scale spend, make sure every lead gets a fast, real response with a follow-up sequence behind it. The campaign and the follow-up are one system, and the ad just opens the door.",
+      },
+      {
+        type: "pullquote",
+        text: "On a small budget, your creative is your targeting. A strong ad finds its own audience; a weak one loses with perfect settings.",
+      },
+      {
+        type: "p",
+        text: "None of this requires a big budget or a clever hack. It requires a simple account, real creative, honest tracking, and the patience to let the platform learn. Get those four right and a hundred dollars a day can carry a small business a long way. Get them wrong and no amount of budget will save the account. Start small, keep it boring, and let the results grow from there.",
+      },
+    ],
+    internalLinks: [
+      { href: "/services/meta-ads", label: "Meta Ads services" },
+      { href: "/services/creative-direction", label: "Creative Direction" },
+      { href: "/journal/lead-follow-up-where-businesses-lose-money", label: "The follow-up problem" },
+      { href: "/journal/topics/meta-ads", label: "More on Meta Ads" },
+    ],
+    cta: {
+      eyebrow: "Engage",
+      title: "See what your budget could actually do.",
+      body: "Book a 30-minute call. We'll look at your account, your offer, and where a small budget is most likely to pay back.",
+      primary: { label: "Book a strategy call", href: "/contact" },
+      secondary: { label: "See the work", href: "/work" },
+    },
+  },
 ];
 
 // ─── Helpers ────────────────────────────────────────────────────────
