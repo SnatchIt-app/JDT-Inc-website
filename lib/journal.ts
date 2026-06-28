@@ -866,6 +866,157 @@ export const articles: Article[] = [
       secondary: { label: "See the work", href: "/work" },
     },
   },
+  {
+    slug: "google-ads-playbook",
+    title: "Google Ads in 2026: an operator's playbook for service businesses",
+    dek: "Where search beats every other channel, where it quietly overcharges you, and how we'd structure an account to capture demand instead of renting clicks.",
+    topic: "google-ads",
+    isPillar: true,
+    status: "published",
+    publishedAt: "2026-06-27",
+    updatedAt: "2026-06-27",
+    readingMinutes: 8,
+    tags: ["Google Ads", "Paid search", "Performance marketing"],
+    excerpt:
+      "Google Ads captures demand that already exists, which makes it the highest-intent channel most service businesses can buy and the easiest to overpay for. Here's how we structure an account that works.",
+    seo: {
+      metaTitle: "Google Ads in 2026: An Operator's Playbook — JDT",
+      metaDescription:
+        "How we run Google Ads to capture high-intent demand: account structure, match types, Performance Max, Smart Bidding, and where small budgets quietly leak.",
+      primaryKeyword: "google ads",
+      secondaryKeywords: [
+        "google ads strategy",
+        "google ads agency",
+        "performance max",
+        "smart bidding",
+        "paid search",
+        "google ads for small business",
+      ],
+    },
+    body: [
+      {
+        type: "p",
+        text: "Most of the money wasted in a paid search account isn't lost on bad keywords. It's lost on the quiet assumption that the platform's defaults are tuned for your results instead of Google's revenue. The two goals overlap often enough to keep advertisers comfortable, and diverge often enough to drain a budget over a quarter without anyone noticing.",
+      },
+      {
+        type: "p",
+        text: "Google Ads is the most misunderstood channel we run. Not because it's complicated, though it can be, but because it looks simple enough that an owner turns it on, watches clicks arrive, and assumes motion is progress. Clicks are not the product. Booked work is the product, and the distance between the two is where most accounts leak.",
+      },
+      {
+        type: "p",
+        text: "This is an operator's view of how the channel actually behaves in 2026: what it's genuinely good at, where it quietly overcharges you, and how we'd structure an account for a service business that wants calls and form fills rather than a dashboard full of impressions.",
+      },
+      { type: "h2", text: "What is Google Ads actually good at?", id: "what-good-at" },
+      {
+        type: "p",
+        text: "Every paid channel does one of two jobs. It either creates demand or it captures demand that already exists. Meta, billboards, most of social: those create demand, interrupting someone who wasn't looking for you and convincing them to care. Search does the opposite. When a homeowner types 'emergency AC repair Coral Gables' at 9pm, the wanting is already there. You aren't persuading anyone to need you. You're trying to be the one they pick at the exact moment they've decided to buy.",
+      },
+      {
+        type: "p",
+        text: "That single difference explains most of what's true about the channel. Intent is the highest-value signal in marketing, and search is the only place you can buy it directly. It's why a well-run account for a plumber, a clinic, or a law firm can outperform every other line on the media plan. It's also why the channel is so unforgiving: when someone is ready to buy and your ad shows up slow, vague, or pointed at the wrong page, you've paid for the click and handed the customer to the competitor in the next slot.",
+      },
+      {
+        type: "callout",
+        title: "The one-line test",
+        body: "Before you spend a dollar on search, ask whether people are already typing what you sell into the box. If they are, this is probably your best channel. If they aren't yet, you have a demand-generation problem, and search is the wrong tool to solve it.",
+      },
+      { type: "h2", text: "Structure beats settings", id: "structure" },
+      {
+        type: "p",
+        text: "The instinct with a new account is to obsess over bids and budgets. The real gains are upstream of both, in how the account is organized. We build around how a customer actually thinks, not how the interface invites you to think.",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Tight ad groups. A handful of closely related search terms per group, each with an ad written to echo the exact phrase someone searched. One ad group trying to cover 'AC repair,' 'AC installation,' and 'duct cleaning' will lose to three groups that each say one thing well.",
+          "Match types you control. Broad match hands keyword selection to the algorithm. It has its place once you have conversion data and tight negatives, but starting there is how new accounts bleed. Begin with phrase and exact, read the search terms report weekly, and expand deliberately.",
+          "A negative keyword list you actually maintain. The search terms report shows what people really typed to trigger your ad. 'Free,' 'jobs,' 'DIY,' 'salary,' a competitor's name you don't want: every irrelevant term you add as a negative is budget redirected to a buyer.",
+        ],
+      },
+      {
+        type: "p",
+        text: "None of this is exotic. It's the unglamorous maintenance that separates an account that keeps improving from one that plateaus. We review search terms every week on active accounts, because the queries that trigger your ads drift, and the drift is always toward waste if no one is watching.",
+      },
+      {
+        type: "p",
+        text: "Tight structure also pays you back in a place owners rarely look: Quality Score. Google rates how relevant your keyword, ad, and landing page are to each other, and a higher score earns you a lower cost per click and better positions for the same bid. It isn't a vanity metric. It's a discount the platform hands to advertisers who keep the search, the ad, and the page saying the same thing. The plumber with three focused ad groups pointed at three matching pages will quietly pay less per click than the one running everything through a single catch-all ad and a homepage. Relevance is cheaper than money.",
+      },
+      { type: "h2", text: "Should you trust Performance Max?", id: "performance-max" },
+      {
+        type: "p",
+        text: "Performance Max is Google's most aggressive push toward automation: one campaign type that spreads your budget across Search, Display, YouTube, Gmail, and Maps, with targeting and placement handled by the algorithm. It can work. It can also become a black box that spends smoothly while showing you almost nothing about where the money went.",
+      },
+      {
+        type: "p",
+        text: "Our position is practical. For a business with real conversion data and a clean feed, Performance Max can find buyers that manual campaigns miss. For a small service business just starting out, it's usually the wrong first move, because it learns from your conversions, and if your tracking is thin it optimizes toward noise. We tend to earn the right to run it: establish exact and phrase search campaigns first, get the measurement honest, then test Performance Max against that baseline with proper account-level negatives and disciplined asset groups.",
+      },
+      {
+        type: "callout",
+        title: "Guard the brand",
+        body: "Left unchecked, Performance Max and broad match will both spend heavily on people already heading to you and report those cheap conversions as wins. Add your brand terms as a negative where they belong, so you can see what the account is really doing to find new demand.",
+      },
+      { type: "h2", text: "Smart Bidding is only as smart as your conversions", id: "smart-bidding" },
+      {
+        type: "p",
+        text: "Smart Bidding (Target CPA, Target ROAS, Maximize Conversions) lets Google set bids in real time using signals no human could process at auction speed. The catch is in what it optimizes toward: conversions. If your conversion is a button click that doesn't correlate with revenue, the algorithm will get very good at buying button clicks.",
+      },
+      {
+        type: "p",
+        text: "This is the failure mode we see most often. An account hands bidding to the machine while feeding it a weak definition of success, then wonders why the cost-per-lead looks fine and the phone isn't ringing with the right calls. The fix isn't a different bid strategy. It's better conversion data: track calls over 60 seconds, mark which form fills became booked jobs, and feed offline conversions back from the CRM so the system learns what a good customer looks like and bids toward more of them.",
+      },
+      {
+        type: "definition",
+        term: "Enhanced Conversions",
+        body: "A Google feature that sends hashed first-party data, like email and phone, back to match conversions more accurately as third-party cookies fade. For service businesses it's one of the highest-return setup steps available, and one of the most commonly skipped.",
+      },
+      { type: "h2", text: "How much should a small business spend?", id: "budget" },
+      {
+        type: "p",
+        text: "There's no universal number, but there is a floor. Search bids are an auction, and in competitive local categories a single click can run from a few dollars to well over fifty. If your market's clicks cost $20 and it takes ten to book a job, a $300 monthly budget buys you fifteen clicks and a misleading conclusion that the channel doesn't work. It can't work at that volume, because you never gave the math a chance to play out.",
+      },
+      {
+        type: "p",
+        text: "We'd rather a client run one tightly built campaign, in one service, in one geography, with enough budget to gather real signal, than spread the same money across five half-funded campaigns that each starve. Concentration is how small budgets buy learning. Once a single campaign is profitable and the measurement is trustworthy, expanding is arithmetic.",
+      },
+      { type: "h2", text: "Where Google Ads fits with everything else", id: "the-stack" },
+      {
+        type: "p",
+        text: "The channel is strongest when it isn't asked to work alone. Search captures the buyer at the bottom of the funnel; it doesn't fill the funnel. Pair it with Meta to build the awareness that puts you in the consideration set before anyone searches, and the same query starts converting better because they've seen you. The click is cheaper to win when the name is already familiar.",
+      },
+      {
+        type: "p",
+        text: "Just as important is what happens after the click. The fastest way to ruin a good account is to send hard-won, high-intent traffic to a slow homepage that makes a ready buyer hunt for the phone number. A focused landing page that matches the search, loads fast, and makes the next step obvious will often beat a bid increase. And a lead is only worth what your follow-up makes of it, which is the part most businesses quietly lose.",
+      },
+      {
+        type: "pullquote",
+        text: "Capture the demand that exists with search, create the demand that doesn't with social, and point both at pages built to convert.",
+      },
+      {
+        type: "p",
+        text: "Run together, the picture is simple: capture existing demand with search, create new demand with social, point both at pages built to convert, and answer the leads fast. Google Ads is the sharpest instrument on that bench. It just rewards the businesses that treat it as one instrument in a set.",
+      },
+      { type: "divider" },
+      {
+        type: "p",
+        text: "If you take one thing from this: clicks are inventory, and inventory only matters if everything downstream turns it into booked work. A paid search account earns its budget when the page, the offer, and the follow-up are all built to convert intent. Get that right and search becomes the most reliable line on the plan. Skip it and you're just renting traffic.",
+      },
+    ],
+    internalLinks: [
+      { href: "/services/google-ads", label: "Google Ads services" },
+      { href: "/services/funnel-optimization", label: "Funnel Optimization" },
+      { href: "/journal/meta-ads-2026-guide", label: "Meta Ads in 2026" },
+      { href: "/journal/lead-follow-up-where-businesses-lose-money", label: "The follow-up problem" },
+      { href: "/journal/topics/google-ads", label: "More on Google Ads" },
+    ],
+    cta: {
+      eyebrow: "Engage",
+      title: "See what your search budget is really buying.",
+      body: "Book a 30-minute call. We'll look at your account, your search terms, and where the spend turns into booked work instead of clicks.",
+      primary: { label: "Book a strategy call", href: "/contact" },
+      secondary: { label: "See the work", href: "/work" },
+    },
+  },
 ];
 
 // ─── Helpers ────────────────────────────────────────────────────────
